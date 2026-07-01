@@ -3,11 +3,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const navLinks = [
+  {
+    href: "/",
+    label: "Home",
+  },
+  {
+    href: "/journey",
+    label: "Journey",
+  },
+  {
+    href: "/about-gomata",
+    label: "About Gomata",
+  },
+  {
+    href: "/project",
+    label: "Project",
+  },
+  {
+    href: "/near-by-project",
+    label: "Near by Projects",
+  },
+  {
+    href: "/indradhanu",
+    label: "Indradhanu",
+  },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,50 +41,73 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    /*
+     * Immediately calculate the correct navbar state
+     * after every route change.
+     */
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
-  const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/journey", label: "Journey" },
-  { href: "/about-gomata", label: "About Gomata" },
-  { href: "/project", label: "Project" },
-  { href: "/near-by-project", label: "Near by Projects" },
-  { href: "/indradhanu", label: "Indradhanu" },
-];
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
+
+  const handleLinkClick = (href: string) => {
+    /*
+     * usePathname will only change when navigating to a
+     * different page. This handles clicking the active
+     * page link while already scrolled down.
+     */
+    if (pathname === href) {
+      const html = document.documentElement;
+      const previousBehavior = html.style.scrollBehavior;
+
+      html.style.scrollBehavior = "auto";
+
+      window.scrollTo(0, 0);
+      html.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      requestAnimationFrame(() => {
+        html.style.scrollBehavior = previousBehavior;
+      });
+    }
+  };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[1000] px-6 md:px-8 pt-5">
-      <div className="mx-auto max-w-[1600px] flex items-center justify-between">
-        
-        {/* LOGO */}
+    <nav className="fixed left-0 right-0 top-0 z-[1000] px-6 pt-5 md:px-8">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between">
+        {/* Logo */}
         <Link
           href="/"
-          scroll={false}
-          className="flex items-center gap-4 group"
+          scroll
+          onClick={() => handleLinkClick("/")}
+          className="group flex items-center gap-4"
+          aria-label="Go to home page"
         >
-          <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border border-white/20 shadow-[0_10px_35px_rgba(74,37,103,0.12)]">
-            
+          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/20 shadow-[0_10px_35px_rgba(74,37,103,0.12)] md:h-24 md:w-24">
             <Image
               src="/logoo.jpg"
               alt="Gomata Logo"
               fill
               priority
-              className="object-cover transform-gpu scale-[1.45] group-hover:scale-[1.52] transition-transform duration-300"
+              sizes="(min-width: 768px) 96px, 80px"
+              className="scale-[1.45] object-cover transition-transform duration-300 group-hover:scale-[1.52]"
             />
           </div>
         </Link>
 
-        {/* NAVIGATION */}
+        {/* Navigation */}
         <div
-          className={`relative isolate hidden md:flex items-center rounded-full p-1.5 border border-[#E7D8A2] transition-all duration-300
-  ${
-    scrolled
-      ? "bg-white shadow-[0_10px_40px_rgba(74,37,103,0.08)]"
-      : "bg-[#4A2567]/20 backdrop-blur-xl border-white/20"
-  }`}
+          className={`relative isolate hidden items-center rounded-full border p-1.5 transition-all duration-300 md:flex ${
+            scrolled
+              ? "border-[#E7D8A2] bg-white shadow-[0_10px_40px_rgba(74,37,103,0.08)]"
+              : "border-white/20 bg-[#4A2567]/20 backdrop-blur-xl"
+          }`}
         >
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -67,25 +116,18 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                scroll={false}
-                className={`relative px-6 py-3 rounded-full text-sm font-semibold tracking-[0.12em] uppercase transition-colors duration-300 ${
+                scroll
+                onClick={() => handleLinkClick(link.href)}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-300 ${
                   isActive
                     ? "bg-[#4A2567] text-white"
-                    : ""
-                }`}
-              >
-                {/* TEXT */}
-                <span
-                  className={`transition-colors duration-300 ${
-                    isActive
-                      ? "text-white"
-                      : scrolled
+                    : scrolled
                       ? "text-[#4A2567]/75 hover:text-[#A1268D]"
                       : "text-white/80 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </span>
+                }`}
+              >
+                {link.label}
               </Link>
             );
           })}
