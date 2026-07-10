@@ -411,7 +411,7 @@ export default function AboutPage() {
           </div>
 
           {/* Current Plot Card */}
-          <div className="mt-12 bg-gradient-to-r from-[#C8A2C8] to-[#6105A3] rounded-3xl p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-[#6105A3] to-[#6105A3] rounded-3xl p-8 text-white">
             <h3 className="text-2xl font-bold">Current Investment Plot (TPS-11)</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div>

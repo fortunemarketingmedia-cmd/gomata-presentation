@@ -212,7 +212,7 @@ export default function PlanPage() {
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
-                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#6105A3]">
+                <thead className="bg-gradient-to-r from-[#6105A3] to-[#6105A3]">
                   <tr>
                     <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
                     <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
@@ -308,7 +308,7 @@ export default function PlanPage() {
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
-                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#6105A3]">
+                <thead className="bg-gradient-to-r from-[#6105A3] to-[#6105A3]">
                   <tr>
                     <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
                     <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
@@ -405,7 +405,7 @@ export default function PlanPage() {
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
-                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#6105A3]">
+                <thead className="bg-gradient-to-r from-[#6105A3] to-[#6105A3]">
                   <tr>
                     <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
                     <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
