@@ -257,7 +257,7 @@ export default function JourneyPage() {
             <div className="absolute inset-0 opacity-15 bg-[url('/grid.svg')] mix-blend-multiply pointer-events-none" />
 
             <div className="relative text-center">
-              <MapPinned className="w-14 h-14 text-[#6105A3] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
+              <MapPinned className="w-14 h-14 text-[#FFFFFF] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
               <h2 className="text-4xl md:text-5xl font-black text-[#FFD700] leading-tight tracking-tight">
                 “Jo kaam 25 saal mei nhi hua,
@@ -265,7 +265,7 @@ export default function JourneyPage() {
                 <span className="text-[#FFFFFF]">voh ab hoga”</span>
               </h2>
 
-              <p className="mt-8 text-[#5F5660] text-xl font-black tracking-wide">
+              <p className="mt-8 text-[#FFFFFF] text-xl font-black tracking-wide">
                 — Vikas Koli
               </p>
             </div>
