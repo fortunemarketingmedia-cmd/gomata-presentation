@@ -225,18 +225,18 @@ export default function AboutGomataPage() {
                   className="relative group overflow-hidden bg-white rounded-2xl p-6 border border-[#C8A2C8]/30 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                 >
                   {/* Subtle Interactive Card Accent Glow */}
-                  <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#8E4585] to-[#C8A2C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#6105A3] to-[#C8A2C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                   
                   <div className="flex items-start justify-between">
                     <div>
-                      <span className="block text-4xl md:text-5xl font-black text-[#8E4585] tracking-tight group-hover:text-[#8E4585]/80 transition-colors duration-300">
+                      <span className="block text-4xl md:text-5xl font-black text-[#6105A3] tracking-tight group-hover:text-[#6105A3]/80 transition-colors duration-300">
                         {stat.value}
                       </span>
                       <span className="block text-base font-bold text-[#241F24] mt-1 tracking-wide">
                         {stat.label}
                       </span>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585] group-hover:bg-[#8E4585] group-hover:text-white transition-all duration-300">
+                    <div className="p-3 rounded-xl bg-[#C8A2C8]/18 text-[#6105A3] group-hover:bg-[#6105A3] group-hover:text-white transition-all duration-300">
                       <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
@@ -261,8 +261,8 @@ export default function AboutGomataPage() {
             <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#C8A2C8]/30 relative overflow-hidden group hover:shadow-2xl transition-all">
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#C8A2C8]/10 rounded-full blur-2xl" />
               <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-[#8E4585]/10 flex items-center justify-center mb-6">
-                  <Eye className="w-8 h-8 text-[#8E4585]" />
+                <div className="w-16 h-16 rounded-full bg-[#6105A3]/10 flex items-center justify-center mb-6">
+                  <Eye className="w-8 h-8 text-[#6105A3]" />
                 </div>
                 <h2 className="text-3xl font-bold text-[#241F24]">Our Vision</h2>
                 <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
@@ -277,7 +277,7 @@ export default function AboutGomataPage() {
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#C8A2C8]/10 rounded-full blur-2xl" />
               <div className="relative">
                 <div className="w-16 h-16 rounded-full bg-[#C8A2C8]/20 flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-[#8E4585]" />
+                  <Target className="w-8 h-8 text-[#6105A3]" />
                 </div>
                 <h2 className="text-3xl font-bold text-[#241F24]">Our Mission</h2>
                 <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
@@ -294,7 +294,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Foundation
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -311,7 +311,7 @@ export default function AboutGomataPage() {
                 key={idx}
                 className="bg-[#C8A2C8]/15 rounded-2xl p-6 border border-[#C8A2C8]/30 text-center hover:shadow-lg transition"
               >
-                <div className="flex justify-center mb-4 text-[#8E4585]">
+                <div className="flex justify-center mb-4 text-[#6105A3]">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-bold text-[#241F24]">{value.title}</h3>
@@ -328,7 +328,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Why Gomata Vision
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -345,7 +345,7 @@ export default function AboutGomataPage() {
                 key={idx}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-[#C8A2C8]/30 hover:-translate-y-2 transition duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#8E4585]/20 flex items-center justify-center text-[#8E4585] mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#6105A3]/20 flex items-center justify-center text-[#6105A3] mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-[#241F24]">{item.title}</h3>
@@ -362,7 +362,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Services
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -376,8 +376,8 @@ export default function AboutGomataPage() {
                 key={idx}
                 className="bg-[#C8A2C8]/15 rounded-2xl p-6 border border-[#C8A2C8]/30 flex gap-4 items-start hover:shadow-md transition"
               >
-                <div className="w-10 h-10 rounded-full bg-[#8E4585]/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                <div className="w-10 h-10 rounded-full bg-[#6105A3]/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#241F24]">{offer.title}</h3>
@@ -393,7 +393,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Space
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -464,7 +464,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Meet Our Team
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -479,7 +479,7 @@ export default function AboutGomataPage() {
             {leadershipTeam.map((leader, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-3xl bg-white border border-[#C8A2C8]/30 hover:border-[#8E4585] shadow-lg transition-all duration-500"
+                className="group relative overflow-hidden rounded-3xl bg-white border border-[#C8A2C8]/30 hover:border-[#6105A3] shadow-lg transition-all duration-500"
               >
                 <div className="relative h-[520px] overflow-hidden">
                   <Image
@@ -513,7 +513,7 @@ export default function AboutGomataPage() {
       {/* ========== FOUNDER'S NOTE / QUOTE ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#8E4585] px-10 md:px-20 py-16 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#6105A3] px-10 md:px-20 py-16 shadow-2xl">
             <div className="relative text-center">
               <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">

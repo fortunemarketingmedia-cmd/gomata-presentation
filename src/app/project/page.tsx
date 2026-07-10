@@ -268,7 +268,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">Watch & Learn</span>
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">Watch & Learn</span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Invest in TPS-11, NAINA?</h2>
             <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Hear directly from our leadership about this transformative opportunity
@@ -310,14 +310,14 @@ export default function AboutPage() {
             </div>
             <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30">
               <div className="text-center">
-                <Globe className="w-12 h-12 text-[#8E4585] mx-auto mb-4" />
+                <Globe className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
                 <p className="font-bold text-[#241F24] mb-2">Facebook Post</p>
                 <p className="text-sm text-[#5F5660] mb-4">Transforming Maharashtra's Healthcare and Education Landscape</p>
                 <a 
                   href="https://www.facebook.com/devendra.fadnavis/posts/transforming-maharashtras-healthcare-and-education-landscapechaired-a-review-mee/1561692341980657/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 bg-[#8E4585] text-white font-semibold rounded-full hover:bg-[#75386E] transition"
+                  className="inline-block px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition"
                 >
                   View on Facebook →
                 </a>
@@ -330,7 +330,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
               Strategic Advantage
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why NAINA?</h2>
@@ -365,14 +365,14 @@ export default function AboutPage() {
               {/* FIXED CENTRAL LOCATION PIN WITH GLOW EFFECT */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
                 {/* Pulsing Base Ring */}
-                <div className="absolute bottom-1 w-8 h-2 bg-[#8E4585]/30 rounded-full blur-[2px] animate-ping" />
+                <div className="absolute bottom-1 w-8 h-2 bg-[#6105A3]/30 rounded-full blur-[2px] animate-ping" />
                 {/* MapPin / MapPinned Icon */}
-                <MapPinned className="w-10 h-10 text-[#8E4585] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
+                <MapPinned className="w-10 h-10 text-[#6105A3] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
               </div>
 
               {/* Floating Premium Airport Stat Overlay Pill at Bottom */}
               <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/90 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
-                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585]">
+                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#6105A3]">
                   <Plane className="w-6 h-6" />
                 </div>
                 <div>
@@ -390,7 +390,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
               Prime Location
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Only TPS-11?</h2>
@@ -405,14 +405,14 @@ export default function AboutPage() {
                 key={idx}
                 className="bg-[#C8A2C8]/15 rounded-2xl p-6 shadow-md border border-[#C8A2C8]/30 flex gap-4"
               >
-                <LocateFixed className="w-6 h-6 text-[#8E4585] flex-shrink-0 mt-1" />
+                <LocateFixed className="w-6 h-6 text-[#6105A3] flex-shrink-0 mt-1" />
                 <p className="text-[#241F24]">{adv}</p>
               </div>
             ))}
           </div>
 
           {/* Current Plot Card */}
-          <div className="mt-12 bg-gradient-to-r from-[#C8A2C8] to-[#8E4585] rounded-3xl p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-[#C8A2C8] to-[#6105A3] rounded-3xl p-8 text-white">
             <h3 className="text-2xl font-bold">Current Investment Plot (TPS-11)</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div>
@@ -444,7 +444,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
               Wealth Creation
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">
@@ -457,24 +457,24 @@ export default function AboutPage() {
           </div>
 
           {/* Investment Card */}
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#8E4585] p-8 md:p-10 shadow-xl">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#6105A3] p-8 md:p-10 shadow-xl">
             <h3 className="text-3xl font-bold text-center text-[#241F24]">
               Total Investment: ₹39,70,000*
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div className="space-y-4">
                 <div className="border-b pb-3">
-                  <p className="font-bold text-[#8E4585]">To Landowner</p>
+                  <p className="font-bold text-[#6105A3]">To Landowner</p>
                   <p className="text-2xl font-bold text-black">₹20,00,000</p>
                   <p className="text-sm text-[#5F5660]">+ ₹2,00,000 (SD + Reg + Legal)</p>
                 </div>
                 <div>
-                  <p className="font-bold text-[#8E4585]">To Gomata Vision LLP</p>
+                  <p className="font-bold text-[#6105A3]">To Gomata Vision LLP</p>
                   <p className="text-2xl font-bold text-black">₹15,00,000</p>
                   <p className="text-sm text-[#5F5660]">+ ₹2,70,000 (18% GST)</p>
                 </div>
               </div>
-              <div className="bg-[#8E4585] p-5 rounded-xl text-white">
+              <div className="bg-[#6105A3] p-5 rounded-xl text-white">
                 <p className="font-semibold text-white">Payment Schedule (100% Cheque):</p>
                 <ul className="mt-3 space-y-2 text-sm text-white/90">
                   <li>1️⃣ Booking (Immediate): ₹1,18,000 (incl. GST)</li>
@@ -504,7 +504,7 @@ export default function AboutPage() {
               <div className="mt-8 space-y-4">
                 {investmentModels.map((model, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30">
-                    <h3 className="font-bold text-[#8E4585]">{model.title}</h3>
+                    <h3 className="font-bold text-[#6105A3]">{model.title}</h3>
                     <p className="text-[#5F5660]">{model.description}</p>
                   </div>
                 ))}
@@ -512,7 +512,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-black text-[#241F24]">Investor Benefits</h2>
-              <div className="mt-8 bg-[#8E4585] rounded-3xl p-8 shadow-xl text-white">
+              <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white">
                 <ul className="space-y-4">
                   {investorBenefits.map((benefit, idx) => (
                     <li key={idx} className="flex gap-3 items-center">
@@ -536,7 +536,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">FAQs</span>
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">FAQs</span>
             <h2 className="mt-4 text-4xl font-black text-[#241F24]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
@@ -544,9 +544,9 @@ export default function AboutPage() {
               <details key={idx} className="group bg-[#C8A2C8]/15 rounded-2xl p-6 open:bg-white transition-all border border-[#C8A2C8]/30">
                 <summary className="flex justify-between items-center cursor-pointer list-none">
                   <h3 className="font-bold text-[#241F24] text-lg pr-4">{faq.q}</h3>
-                  <span className="text-[#8E4585] group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-[#6105A3] group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="mt-4 text-[#5F5660] leading-relaxed pl-2 border-l-4 border-[#8E4585]">{faq.a}</p>
+                <p className="mt-4 text-[#5F5660] leading-relaxed pl-2 border-l-4 border-[#6105A3]">{faq.a}</p>
               </details>
             ))}
           </div>
@@ -566,7 +566,7 @@ export default function AboutPage() {
       {/* ========== QUOTE + CTA ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#8E4585] px-10 md:px-20 py-20 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
             <div className="relative text-center">
               <p className="text-3xl md:text-4xl font-bold text-white italic">
                 "Even a correct decision is wrong when it is too late."
@@ -574,7 +574,7 @@ export default function AboutPage() {
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
                 <a
                   href="tel:+91 9892784379"
-                  className="inline-block px-8 py-3 bg-[#8E4585] text-white font-bold rounded-full hover:bg-[#75386E] transition shadow-lg"
+                  className="inline-block px-8 py-3 bg-[#6105A3] text-white font-bold rounded-full hover:bg-[#75386E] transition shadow-lg"
                 >
                   📞 Contact - +91 9892784379
                 </a>

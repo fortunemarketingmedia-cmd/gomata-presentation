@@ -121,8 +121,8 @@ export default function Navbar() {
                 aria-current={isActive ? "page" : undefined}
                 className={`relative rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-300 ${
                   isActive
-                    ? "bg-[#8E4585] text-white"
-                    : "text-[#241F24]/80 hover:text-[#8E4585]"
+                    ? "bg-[#6105A3] text-white"
+                    : "text-[#241F24]/80 hover:text-[#6105A3]"
                 }`}
               >
                 {link.label}

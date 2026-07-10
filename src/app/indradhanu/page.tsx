@@ -211,17 +211,17 @@ export default function BrochurePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-white rounded-2xl shadow-xl p-6 border border-[#C8A2C8]/30">
             <div className="text-center p-4">
-              <Building2 className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <Building2 className="w-10 h-10 mx-auto text-[#6105A3]" />
               <p className="text-3xl font-black text-[#241F24] mt-2">58,000+</p>
               <p className="text-[#5F5660] text-sm font-semibold mt-1">Sq.Ft. Spread Area</p>
             </div>
             <div className="text-center p-4 border-y md:border-y-0 md:border-x border-[#C8A2C8]/30">
-              <Users className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <Users className="w-10 h-10 mx-auto text-[#6105A3]" />
               <p className="text-3xl font-black text-[#241F24] mt-2">3,000+</p>
               <p className="text-[#5F5660] text-sm font-semibold mt-1">Residential Hub Population</p>
             </div>
             <div className="text-center p-4">
-              <Award className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <Award className="w-10 h-10 mx-auto text-[#6105A3]" />
               <p className="text-3xl font-black text-[#241F24] mt-2">RERA</p>
               <p className="text-[#5F5660] text-sm font-semibold mt-1">Registered Project</p>
             </div>
@@ -234,7 +234,7 @@ export default function BrochurePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-[#241F24]">
-              Project <span className="text-[#8E4585]">Video Tour</span>
+              Project <span className="text-[#6105A3]">Video Tour</span>
             </h2>
             <p className="mt-2 text-[#5F5660] text-base">Experience the grandeur of Indradhanu Township instantly</p>
           </div>
@@ -247,7 +247,7 @@ export default function BrochurePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+              <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
                 About Indradhanu
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -272,19 +272,19 @@ export default function BrochurePage() {
             {/* Key Distances */}
             <div className="bg-white rounded-3xl p-8 border border-[#C8A2C8]/30 h-max shadow-md">
               <h3 className="text-2xl font-bold text-[#241F24] mb-6 flex items-center gap-2">
-                <MapPin className="w-6 h-6 text-[#8E4585]" />
+                <MapPin className="w-6 h-6 text-[#6105A3]" />
                 Key Distances
               </h3>
               <div className="space-y-4">
                 {keyDistances.map((item, idx) => (
                   <div key={idx} className="flex justify-between items-center border-b border-[#C8A2C8]/20 pb-3 last:border-0 last:pb-0">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#C8A2C8]/18 flex items-center justify-center text-[#8E4585]">
+                      <div className="w-10 h-10 rounded-full bg-[#C8A2C8]/18 flex items-center justify-center text-[#6105A3]">
                         {item.icon}
                       </div>
                       <span className="font-semibold text-[#241F24] text-sm md:text-base">{item.place}</span>
                     </div>
-                    <span className="text-[#8E4585] font-bold text-sm md:text-base">{item.distance}</span>
+                    <span className="text-[#6105A3] font-bold text-sm md:text-base">{item.distance}</span>
                   </div>
                 ))}
               </div>
@@ -297,11 +297,11 @@ export default function BrochurePage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               World-Class Features
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
-              Shop, Dine, <span className="text-[#8E4585]">Enjoy!</span>
+              Shop, Dine, <span className="text-[#6105A3]">Enjoy!</span>
             </h2>
             <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Experience a lifestyle of convenience and luxury with our premium amenities
@@ -314,7 +314,7 @@ export default function BrochurePage() {
                 key={idx}
                 className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#C8A2C8]/30 hover:-translate-y-2 transition duration-300"
               >
-                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#8E4585]/20 flex items-center justify-center text-[#8E4585] mb-4">
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#6105A3]/20 flex items-center justify-center text-[#6105A3] mb-4">
                   {amenity.icon}
                 </div>
                 <h3 className="font-bold text-[#241F24] text-sm md:text-base">{amenity.title}</h3>
@@ -328,11 +328,11 @@ export default function BrochurePage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Visual Tour
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
-              Project <span className="text-[#8E4585]">Gallery</span>
+              Project <span className="text-[#6105A3]">Gallery</span>
             </h2>
           </div>
 
@@ -352,7 +352,7 @@ export default function BrochurePage() {
                     const parent = target.parentElement;
                     if (parent) {
                       const fallback = document.createElement("div");
-                      fallback.className = "w-full h-full bg-gradient-to-br from-[#C8A2C8] to-[#8E4585] flex items-center justify-center";
+                      fallback.className = "w-full h-full bg-gradient-to-br from-[#C8A2C8] to-[#6105A3] flex items-center justify-center";
                       fallback.innerHTML = `<div class="text-center text-white p-4"><Building2 class="w-12 h-12 mx-auto mb-2 opacity-50" /><p class="font-semibold">${image.title}</p></div>`;
                       parent.appendChild(fallback);
                     }
@@ -375,7 +375,7 @@ export default function BrochurePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-black text-[#241F24]">
-                Prime Location in <span className="text-[#8E4585]">Solapur</span>
+                Prime Location in <span className="text-[#6105A3]">Solapur</span>
               </h2>
               <p className="mt-4 text-[#5F5660] leading-relaxed">
                 Strategically located with excellent connectivity to all major landmarks of Solapur.
@@ -384,19 +384,19 @@ export default function BrochurePage() {
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                   <span className="text-black font-medium">650 meters from Solapur Railway Station</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                   <span className="text-black font-medium">2.3 km from Central Bus Stand</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                   <span className="text-black font-medium">Excellent rail & road connectivity</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                   <span className="text-black font-medium">Adjacent to residential hub of 3000+ people</span>
                 </div>
               </div>
@@ -414,12 +414,12 @@ export default function BrochurePage() {
               />
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
-                <div className="absolute bottom-1 w-8 h-2 bg-[#8E4585]/30 rounded-full blur-[2px] animate-ping" />
-                <MapPin className="w-10 h-10 text-[#8E4585] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
+                <div className="absolute bottom-1 w-8 h-2 bg-[#6105A3]/30 rounded-full blur-[2px] animate-ping" />
+                <MapPin className="w-10 h-10 text-[#6105A3] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/95 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
-                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585]">
+                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#6105A3]">
                   <Building2 className="w-6 h-6" />
                 </div>
                 <div>
@@ -436,11 +436,11 @@ export default function BrochurePage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Team
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
-              Project <span className="text-[#8E4585]">Credits</span>
+              Project <span className="text-[#6105A3]">Credits</span>
             </h2>
           </div>
 
@@ -450,7 +450,7 @@ export default function BrochurePage() {
                 key={idx}
                 className="bg-[#C8A2C8]/10 rounded-2xl p-6 border border-[#C8A2C8]/30 hover:shadow-lg transition"
               >
-                <h3 className="font-bold text-[#8E4585] text-lg">{credit.role}</h3>
+                <h3 className="font-bold text-[#6105A3] text-lg">{credit.role}</h3>
                 <p className="mt-2 text-[#5F5660] text-sm leading-relaxed">{credit.name}</p>
               </div>
             ))}

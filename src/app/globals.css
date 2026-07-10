@@ -5,7 +5,7 @@
   --color-surface: #FFFFFF;
   --color-secondary: #C8A2C8;
   --color-secondary-soft: rgba(200, 162, 200, 0.18);
-  --color-accent: #8E4585;
+  --color-accent: #6105A3;
   --color-accent-hover: #75386E;
   --color-accent-soft: rgba(142, 69, 133, 0.12);
 
@@ -13,7 +13,7 @@
   --color-text-secondary: #5F5660;
   --color-border-custom: rgba(142, 69, 133, 0.22);
   
-  --color-button-primary-bg: #8E4585;
+  --color-button-primary-bg: #6105A3;
   --color-button-primary-text: #FFFFFF;
   --color-button-secondary-bg: #C8A2C8;
   --color-button-secondary-text: #241F24;
@@ -72,7 +72,7 @@ body {
 
 /* Force the inner label div to be solid deep plum, fully opaque, without any blur or opacity reductions */
 .leaflet-tooltip.location-tooltip > div {
-  background-color: #8E4585 !important;
+  background-color: #6105A3 !important;
   opacity: 1 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;

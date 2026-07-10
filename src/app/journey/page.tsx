@@ -77,7 +77,7 @@ export default function JourneyPage() {
 
             <h1 className="text-5xl md:text-6xl font-black leading-tight text-[#241F24]">
               The Visionary Journey of{" "}
-              <span className="text-[#8E4585] whitespace-nowrap">
+              <span className="text-[#6105A3] whitespace-nowrap">
                 Vikas Koli
               </span>
             </h1>
@@ -95,7 +95,7 @@ export default function JourneyPage() {
           {/* IMAGE CARD */}
           <div className="relative max-w-[430px] mx-auto">
             <div className="absolute -top-6 -left-6 w-40 h-40 rounded-full bg-[#C8A2C8]/25 blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-44 h-44 rounded-full bg-[#8E4585]/15 blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-44 h-44 rounded-full bg-[#6105A3]/15 blur-3xl" />
 
             <div className="relative rounded-[32px] overflow-hidden border border-[#C8A2C8]/30 shadow-2xl bg-white">
               <Image
@@ -127,13 +127,13 @@ export default function JourneyPage() {
       {/* ============================================================ */}
       <section className="relative px-6 md:px-16 lg:px-24 py-32 bg-[#C8A2C8]/20">
         {/* COSMIC NEBULA GLOWS */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-[#8E4585]/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-10 left-10 w-96 h-96 bg-[#6105A3]/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C8A2C8]/20 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto">
           {/* HEADING */}
           <div className="text-center mb-24">
-            <span className="uppercase tracking-[0.4em] text-[#8E4585] font-bold text-sm">
+            <span className="uppercase tracking-[0.4em] text-[#6105A3] font-bold text-sm">
               Journey Timeline
             </span>
 
@@ -151,8 +151,8 @@ export default function JourneyPage() {
             
             {/* HORIZONTAL TIMELINE LINE RUNNING THROUGHOUT */}
             <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[4px] w-full pointer-events-none z-0">
-              <div className="h-[1px] bg-[#8E4585]/20 w-full" />
-              <div className="h-[1px] bg-[#8E4585]/20 w-full" />
+              <div className="h-[1px] bg-[#6105A3]/20 w-full" />
+              <div className="h-[1px] bg-[#6105A3]/20 w-full" />
             </div>
 
             {/* Grid container with 6 columns for desktop, dropping to grid columns on mobile natively */}
@@ -166,23 +166,23 @@ export default function JourneyPage() {
                     className="relative flex flex-col items-center justify-center h-16 group"
                   >
                     {/* HUB TRACK POINT PIN */}
-                    <div className="relative z-20 w-5 h-5 rounded-full bg-white border border-[#8E4585]/40 group-hover:border-[#8E4585] flex items-center justify-center shadow-md transition-all duration-300">
-                      <div className="w-2 h-2 rounded-full bg-[#8E4585] shadow-[0_0_8px_#8E4585]" />
+                    <div className="relative z-20 w-5 h-5 rounded-full bg-white border border-[#6105A3]/40 group-hover:border-[#6105A3] flex items-center justify-center shadow-md transition-all duration-300">
+                      <div className="w-2 h-2 rounded-full bg-[#6105A3] shadow-[0_0_8px_#6105A3]" />
                     </div>
 
                     {/* AXIS DURATION TRACK LABEL */}
-                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[11px] font-mono font-bold text-[#5F5660] group-hover:text-[#8E4585] tracking-wider transition-all duration-300 z-20`}>
+                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[11px] font-mono font-bold text-[#5F5660] group-hover:text-[#6105A3] tracking-wider transition-all duration-300 z-20`}>
                       {item.year}
                     </div>
 
                     {isAbove ? (
                       <>
                         {/* STEM LINE UP */}
-                        <div className="absolute bottom-1/2 w-[1px] h-14 bg-gradient-to-t from-[#8E4585]/30 via-[#8E4585]/10 to-transparent group-hover:from-[#8E4585]/50 transition-all duration-500 z-10" />
+                        <div className="absolute bottom-1/2 w-[1px] h-14 bg-gradient-to-t from-[#6105A3]/30 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/50 transition-all duration-500 z-10" />
                         
                         {/* STATIC HEADING ABOVE TRACK */}
                         <div className="absolute bottom-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
-                          <h4 className="text-[#8E4585] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                          <h4 className="text-[#6105A3] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
                             {item.title}
                           </h4>
                         </div>
@@ -194,7 +194,7 @@ export default function JourneyPage() {
                         >
                           <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-r border-b border-[#C8A2C8]/40" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#8E4585] mb-1 block">
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
                               {item.year}
                             </span>
                             <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
@@ -209,11 +209,11 @@ export default function JourneyPage() {
                     ) : (
                       <>
                         {/* STEM LINE DOWN */}
-                        <div className="absolute top-1/2 w-[1px] h-14 bg-gradient-to-b from-[#8E4585]/30 via-[#8E4585]/10 to-transparent group-hover:from-[#8E4585]/50 transition-all duration-500 z-10" />
+                        <div className="absolute top-1/2 w-[1px] h-14 bg-gradient-to-b from-[#6105A3]/30 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/50 transition-all duration-500 z-10" />
                         
                         {/* STATIC HEADING BELOW TRACK */}
                         <div className="absolute top-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
-                          <h4 className="text-[#8E4585] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                          <h4 className="text-[#6105A3] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
                             {item.title}
                           </h4>
                         </div>
@@ -225,7 +225,7 @@ export default function JourneyPage() {
                         >
                           <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[#C8A2C8]/40" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#8E4585] mb-1 block">
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
                               {item.year}
                             </span>
                             <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
@@ -252,17 +252,17 @@ export default function JourneyPage() {
       {/* ============================================================ */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8]/20 to-[#8E4585]/10 px-10 md:px-20 py-20 shadow-xl border border-[#C8A2C8]/30">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8]/20 to-[#6105A3]/10 px-10 md:px-20 py-20 shadow-xl border border-[#C8A2C8]/30">
             {/* Decorative Texture Grid overlay */}
             <div className="absolute inset-0 opacity-15 bg-[url('/grid.svg')] mix-blend-multiply pointer-events-none" />
 
             <div className="relative text-center">
-              <MapPinned className="w-14 h-14 text-[#8E4585] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
+              <MapPinned className="w-14 h-14 text-[#6105A3] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
               <h2 className="text-4xl md:text-5xl font-black text-[#241F24] leading-tight tracking-tight">
                 “Jo kaam 25 saal mei nhi hua,
                 <br />
-                <span className="text-[#8E4585]">voh ab hoga”</span>
+                <span className="text-[#6105A3]">voh ab hoga”</span>
               </h2>
 
               <p className="mt-8 text-[#5F5660] text-xl font-black tracking-wide">

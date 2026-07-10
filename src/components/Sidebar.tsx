@@ -156,7 +156,7 @@ export default function Sidebar({
               height: "54px",
               borderRadius: "50%",
               border: "none",
-              background: "#8E4585",
+              background: "#6105A3",
               color: "#ffffff",
               fontSize: "22px",
               cursor: "pointer",
@@ -174,7 +174,7 @@ export default function Sidebar({
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.background = "#8E4585";
+              e.currentTarget.style.background = "#6105A3";
               e.currentTarget.style.boxShadow =
                 "0 10px 25px rgba(142,69,133,0.22)";
             }}
@@ -326,7 +326,7 @@ export default function Sidebar({
               style={{
                 fontSize: "22px",
                 fontWeight: 700,
-                color: "#8E4585",
+                color: "#6105A3",
                 margin: 0,
               }}
             >
@@ -385,7 +385,7 @@ export default function Sidebar({
                       display: "inline-block",
                       width: "8px",
                       height: "8px",
-                      background: "#8E4585",
+                      background: "#6105A3",
                       borderRadius: "50%",
                       marginTop: "10px",
                       flexShrink: 0,

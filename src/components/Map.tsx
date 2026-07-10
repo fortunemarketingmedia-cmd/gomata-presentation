@@ -153,7 +153,7 @@ export default function Map({
       px-3
       py-1
       rounded-full
-      !bg-[#8E4585]
+      !bg-[#6105A3]
       !bg-opacity-100
       !opacity-100
       !backdrop-blur-none
@@ -202,7 +202,7 @@ export default function Map({
             }}
           >
             <Tooltip sticky>
-              <span className="font-semibold text-[#8E4585]">{route.name}</span>
+              <span className="font-semibold text-[#6105A3]">{route.name}</span>
             </Tooltip>
           </Polyline>
         ))
