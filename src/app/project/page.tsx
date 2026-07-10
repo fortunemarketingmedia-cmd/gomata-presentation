@@ -254,7 +254,7 @@ export default function AboutPage() {
           {/* Gomata Vision LLP Title */}
           <div className="mb-4">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
-              <span className="text-[#C8A2C8]">Gomata</span> Vision LLP
+              <span className="text-[#FFD700]">Gomata</span> Vision LLP
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-[#C8A2C8] mt-8 max-w-4xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
               Your Boarding Pass to Wealth Creation through Land Pooling
@@ -565,9 +565,9 @@ export default function AboutPage() {
       {/* ========== QUOTE + CTA ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#6105A3] via-[#6105A3]/60 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
             <div className="relative text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white italic">
+              <p className="text-3xl md:text-4xl font-bold text-[#FFFFFF] italic">
                 "Even a correct decision is wrong when it is too late."
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">

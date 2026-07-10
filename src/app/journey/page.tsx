@@ -252,17 +252,17 @@ export default function JourneyPage() {
       {/* ============================================================ */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8]/20 to-[#6105A3]/10 px-10 md:px-20 py-20 shadow-xl border border-[#C8A2C8]/30">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#6105A3] via-[#6105A3]/60 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
             {/* Decorative Texture Grid overlay */}
             <div className="absolute inset-0 opacity-15 bg-[url('/grid.svg')] mix-blend-multiply pointer-events-none" />
 
             <div className="relative text-center">
               <MapPinned className="w-14 h-14 text-[#6105A3] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
-              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] leading-tight tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-[#FFD700] leading-tight tracking-tight">
                 “Jo kaam 25 saal mei nhi hua,
                 <br />
-                <span className="text-[#6105A3]">voh ab hoga”</span>
+                <span className="text-[#FFFFFF]">voh ab hoga”</span>
               </h2>
 
               <p className="mt-8 text-[#5F5660] text-xl font-black tracking-wide">

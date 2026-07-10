@@ -142,23 +142,10 @@ export default function PlanPage() {
 
       {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
       <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-        {/* Background Image Layer */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920&auto=format&fit=crop" 
-            alt="Premium Residential Architectural Projects Landscape"
-            fill
-            priority
-            unoptimized
-            className="object-cover"
-          />
-          {/* Translucent Dark Mask to isolate text contrast safely */}
-          <div className="absolute inset-0 bg-[#241F24]/40 backdrop-blur-[1px]" />
-        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10 ">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-            Nearby <span className="text-[#C8A2C8]">Projects</span>
+            <span className="text-[#FFD700]">Nearby</span> <span className="text-[#FFFFFF]">Projects</span>
           </h1>
           <p className="text-xl md:text-2xl text-[#C8A2C8] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">
             Discover luxury living at its finest with our curated collection of

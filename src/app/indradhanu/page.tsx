@@ -191,7 +191,7 @@ export default function BrochurePage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-            Indradhanu <span className="text-[#C8A2C8]">Township</span>
+            Indradhanu <span className="text-[#FFD700]">Township</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-[#C8A2C8] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">

@@ -198,7 +198,7 @@ export default function AboutGomataPage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-            <span className="text-[#C8A2C8]">Gomata</span> Vision
+            <span className="text-[#FFD700]">Gomata</span> Vision
           </h1>
           
           <p className="text-xl md:text-2xl text-[#C8A2C8] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
@@ -512,7 +512,7 @@ export default function AboutGomataPage() {
       {/* ========== FOUNDER'S NOTE / QUOTE ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#6105A3] px-10 md:px-20 py-16 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#6105A3] via-[#6105A3]/60 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
             <div className="relative text-center">
               <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
