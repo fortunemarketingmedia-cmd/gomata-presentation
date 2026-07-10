@@ -186,7 +186,6 @@ export default function AboutGomataPage() {
           />
           {/* CLEAN, REDUCED BLEND OVERLAY Matrix: Keeps image crisp while ensuring high text contrast */}
           <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
         </div>
 
         {/* Hero Content Grid */}

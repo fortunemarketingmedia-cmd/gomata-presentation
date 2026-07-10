@@ -21,8 +21,10 @@ export const locations = [
       "• India's first 'EduCity' near Navi Mumbai International Airport (NMIA)\n" +
       "• Spanning approximately 100 hectares (approx. 250 acres) in the Karanjade area of Panvel\n" +
       "• A world-class knowledge township and flagship CIDCO project designed to attract premier global institutions\n" +
-      "• Involves research centers, innovation hubs, modern student housing, and skilling facilities\n" +
+      "• Focuses on professional higher education, global research collaborations, technology incubation, and executive training\n" +
+      "• Aiming to host over 50,000 students with state-of-the-art academic blocks, central library, sports complex, and student housing\n" +
       "• Strategic partnerships and MoUs signed with leading universities including University of York (UK), University of Aberdeen (Scotland), University of Western Australia, Illinois Institute of Technology (USA), and Istituto Europeo di Design (Italy)\n" +
+      "• Features a dedicated R&D hub for artificial intelligence, sustainable engineering, biotechnology, and clean energy\n" +
       "• Connects directly to local expressways, NH-348, and the proposed Metro Line M-24 for seamless regional access",
     images: [
       "/images/educity/educity1.webp",
@@ -35,11 +37,13 @@ export const locations = [
     position: [18.973154, 73.048807],
     description:
       "• Upcoming Navi Mumbai International Medicity (NMIMC) project spread over 250 acres\n" +
-      "• Strategically located adjacent to the new international airport to facilitate medical tourism\n" +
+      "• Spanning super-specialty healthcare, oncology, cardiology, neurology, and advanced organ transplantation\n" +
       "• Backed by an estimated investment of $1.2 Billion (approx. ₹10,000 Cr), creating over 10,000 direct jobs\n" +
       "• State government signed key MoUs in June 2026 with anchor partner Cleveland Clinic, Brookfield Asset Management, and Arodhan Health City (AHC)\n" +
       "• Features multi-specialty hospitals, research campuses, medical/nursing colleges, AI-driven diagnostic centers, and genomics research labs\n" +
-      "• Promotes the 'Heal in India' initiative, creating a self-sustaining world-class healthcare destination",
+      "• Includes wellness retreats, alternative medicine centers, and high-capacity rehabilitation clinics\n" +
+      "• Promotes the 'Heal in India' initiative, creating a self-sustaining world-class healthcare and medical tourism destination\n" +
+      "• Supported by dedicated airport transit corridors for international patient transfers",
     images: [
       "/images/medicity/medicity1.webp",
       "/images/medicity/medicity2.webp"
@@ -53,8 +57,10 @@ export const locations = [
       "• Planned world-class 'Aerotropolis' spanning 667 acres adjacent to the upcoming Navi Mumbai International Airport (NMIA)\n" +
       "• Master plan and transaction advisory managed by Japanese firm Nippon Koei India\n" +
       "• Features cluster-based zoning: 123 acres residential, 123 acres commercial (Grade-A offices), and 123 acres retail and high streets\n" +
-      "• Host to international business districts, hospitality hubs, convention centers, and mixed-use spaces\n" +
+      "• Host to international business districts, hospitality hubs (3-star to 7-star hotels with 5,000+ keys), and convention centers\n" +
+      "• Attracting multinational corporations, aviation headquarters, global financial entities, and tech services\n" +
       "• Integrated with major transport routes like Atal Setu (MTHL), upcoming metro lines, and the Mumbai-Pune Expressway\n" +
+      "• Features a high-tech logistics cargo city connected directly to the airport freight gates and JNPT port\n" +
       "• Designed as a major economic engine, easing density in traditional business hubs and driving high-value real estate demand",
     images: [
       "/images/airocity/airocity1.webp",
@@ -232,7 +238,7 @@ export const locations = [
       "• Runs along the western side of the project boundary, providing key coastal and southern transit connectivity\n" +
       "• Fosters warehousing, logistics, and residential development along its route",
     images: [
-      "/images/palaspe_phata.webp"
+      "/images/highway.webp"
     ]
   }
 ];

@@ -154,7 +154,6 @@ export default function PlanPage() {
           />
           {/* Translucent Dark Mask to isolate text contrast safely */}
           <div className="absolute inset-0 bg-[#241F24]/40 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">

@@ -248,7 +248,6 @@ export default function AboutPage() {
           />
           {/* Clean, Reduced Translucent Mask Matrix */}
           <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white to-95%" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center">

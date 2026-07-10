@@ -142,7 +142,7 @@ export default function BrochurePage() {
       <Navbar />
 
       {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+      <section className="relative w-full min-h-[105vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
         {/* Background Image Layer with Cross-fade */}
         <div className="absolute inset-0 z-0">
           {heroImages.map((src, idx) => (
@@ -164,7 +164,6 @@ export default function BrochurePage() {
           ))}
           {/* Transparent Dark Shield Overlay to guarantee readability */}
           <div className="absolute inset-0 bg-[#241F24]/40 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
         </div>
 
         {/* Slide Indicators/Dots */}
@@ -432,32 +431,7 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      {/* ========== CREDITS & TEAM SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
-              Our Team
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
-              Project <span className="text-[#6105A3]">Credits</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {credits.map((credit, idx) => (
-              <div
-                key={idx}
-                className="bg-[#C8A2C8]/10 rounded-2xl p-6 border border-[#C8A2C8]/30 hover:shadow-lg transition"
-              >
-                <h3 className="font-bold text-[#6105A3] text-lg">{credit.role}</h3>
-                <p className="mt-2 text-[#5F5660] text-sm leading-relaxed">{credit.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* ========== DISCLAIMER ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-8 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
