@@ -55,3 +55,25 @@ html {
 body {
   overflow-x: hidden;
 }
+/* Force Leaflet tooltip container to be fully opaque and transparent */
+.leaflet-tooltip.location-tooltip {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Remove Leaflet tooltip default arrow/pointer */
+.leaflet-tooltip.location-tooltip::before {
+  display: none !important;
+}
+
+/* Force the inner label div to be solid deep plum, fully opaque, without any blur or opacity reductions */
+.leaflet-tooltip.location-tooltip > div {
+  background-color: #8E4585 !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

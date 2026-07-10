@@ -137,43 +137,39 @@ export default function Map({
               zoomLevel >= 11 && (
 
                 <Tooltip
-                    permanent
-                    direction="top"
-                    offset={[0, -12]}
-                    interactive={true}
-                    className="!bg-transparent !border-0 !shadow-none"
-                  >
-                    <div
-                      onClick={() => setSelectedLocation(location)}
-                      className="
-                        text-[13px]
-                        font-semibold
-                        text-white
-
-                        px-3
-                        py-1
-
-                        rounded-full
-
-                        bg-[#8E4585]
-                        backdrop-blur-md
-
-                        border border-[#C8A2C8]
-
-                        shadow-lg
-
-                        whitespace-nowrap
-
-                        cursor-pointer
-                        pointer-events-auto
-
-                        hover:scale-105
-                        transition-all
-                      "
-                    >
-                      {location.name}
-                    </div>
-                  </Tooltip>
+  permanent
+  direction="top"
+  offset={[0, -12]}
+  interactive
+  opacity={1}
+  className="location-tooltip !border-0 !shadow-none !p-0 !opacity-100 !bg-transparent !backdrop-blur-none"
+>
+  <div
+    onClick={() => setSelectedLocation(location)}
+    className="
+      text-[13px]
+      font-semibold
+      text-white
+      px-3
+      py-1
+      rounded-full
+      !bg-[#8E4585]
+      !bg-opacity-100
+      !opacity-100
+      !backdrop-blur-none
+      border
+      border-[#C8A2C8]
+      shadow-lg
+      whitespace-nowrap
+      cursor-pointer
+      pointer-events-auto
+      hover:scale-105
+      transition-transform
+    "
+  >
+    {location.name}
+  </div>
+</Tooltip>
 
               )
             }
