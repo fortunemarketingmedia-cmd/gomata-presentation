@@ -256,7 +256,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
               <span className="text-[#FFD700]">Gomata</span> Vision LLP
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-[#C8A2C8] mt-8 max-w-4xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-[#FFFFFF] mt-8 max-w-4xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
               Your Boarding Pass to Wealth Creation through Land Pooling
             </p>
           </div>

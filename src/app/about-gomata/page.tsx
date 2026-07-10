@@ -201,7 +201,7 @@ export default function AboutGomataPage() {
             <span className="text-[#FFD700]">Gomata</span> Vision
           </h1>
           
-          <p className="text-xl md:text-2xl text-[#C8A2C8] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#FFFFFF] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
             Vision to Build Dreams — Transforming Land into Legacy
           </p>
           

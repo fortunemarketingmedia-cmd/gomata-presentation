@@ -194,7 +194,7 @@ export default function BrochurePage() {
             Indradhanu <span className="text-[#FFD700]">Township</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-[#C8A2C8] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#FFFFFF] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">
             The Quest for Utopia Ends Here
           </p>
           
