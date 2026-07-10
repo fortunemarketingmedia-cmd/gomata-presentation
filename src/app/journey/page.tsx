@@ -1,15 +1,9 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import {
-  Briefcase,
-  Building2,
-  GraduationCap,
-  Hotel,
-  Landmark,
-  MapPinned,
-  ShieldCheck,
-  TrendingUp,
-} from "lucide-react";
+import { MapPinned } from "lucide-react";
 
 const milestones = [
   {
@@ -47,88 +41,48 @@ const milestones = [
     title: "Mentorship & Innovation",
     description:
       "Guiding entrepreneurs, communities, and future leaders with strategic investment knowledge and visionary leadership.",
-  },
-];
-
-const leadershipCards = [
-  {
-    icon: <Landmark className="w-8 h-8" />,
-    title: "Former Director – NHAI",
-    subtitle:
-      "Maharashtra & Goa • Ministry of Road Transport, Government of India",
-  },
-  {
-    icon: <Building2 className="w-8 h-8" />,
-    title: "Real Estate Visionary",
-    subtitle:
-      "Indradhanu Township & Vrundavan Park with decades of ground-level expertise",
-  },
-  {
-    icon: <Hotel className="w-8 h-8" />,
-    title: "Founder – Monarch Group",
-    subtitle:
-      "Building excellence in hospitality with customer-first experiences",
-  },
-  {
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: "Educational Leadership",
-    subtitle:
-      "Director of Indian Model School & Indo British Global School",
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8" />,
-    title: "Investment Coach",
-    subtitle:
-      "Trusted advisor for TPS-11, NAINA area, farmers & village communities",
-  },
-  {
-    icon: <ShieldCheck className="w-8 h-8" />,
-    title: "Community Builder",
-    subtitle:
-      "Empowering people through infrastructure, strategy, and mentorship",
-  },
+  }
 ];
 
 export default function JourneyPage() {
   return (
-    <main className="min-h-screen bg-[#F9F2D8] overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
       {/* HERO SECTION */}
       <section className="relative pt-34">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F9F2D8] via-[#FFF7E7] to-[#F9F2D8]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-[#C8A2C8]/10 to-white" />
 
         <div className="relative w-full max-w-[1500px] mx-auto overflow-hidden rounded-[32px]">
-  <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  className="w-full h-auto object-contain"
->
-  <source src="/journey-video.mp4" type="video/mp4" />
-</video>
-</div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="w-full h-auto object-contain"
+          >
+            <source src="/journey-video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       {/* INTRO */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="inline-block px-5 py-2 rounded-full bg-[#422565] text-white text-sm tracking-widest uppercase mb-6">
+            <span className="inline-block px-5 py-2 rounded-full bg-[#C8A2C8] text-[#241F24] text-sm tracking-widest uppercase mb-6 font-semibold">
               Journey of Leadership
             </span>
 
-            <h1 className="text-5xl md:text-6xl font-black leading-tight text-[#2B1A0D]">
-  The Visionary Journey of{" "}
-  
-  <span className="text-[#A1268D] whitespace-nowrap">
-    Vikas Koli
-  </span>
-</h1>
+            <h1 className="text-5xl md:text-6xl font-black leading-tight text-[#241F24]">
+              The Visionary Journey of{" "}
+              <span className="text-[#8E4585] whitespace-nowrap">
+                Vikas Koli
+              </span>
+            </h1>
 
-            <p className="mt-8 text-lg leading-9 text-[#5C4A3B]">
+            <p className="mt-8 text-lg leading-9 text-[#5F5660]">
               From engineering excellence to entrepreneurial leadership,
               Vikas Koli Sir’s journey is a story of resilience, innovation,
               and nation-building. With decades of experience across
@@ -140,210 +94,178 @@ export default function JourneyPage() {
 
           {/* IMAGE CARD */}
           <div className="relative max-w-[430px] mx-auto">
-  <div className="absolute -top-6 -left-6 w-40 h-40 rounded-full bg-[#F3C12F]/20 blur-3xl" />
-  <div className="absolute bottom-0 right-0 w-44 h-44 rounded-full bg-[#A1268D]/15 blur-3xl" />
+            <div className="absolute -top-6 -left-6 w-40 h-40 rounded-full bg-[#C8A2C8]/25 blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-44 h-44 rounded-full bg-[#8E4585]/15 blur-3xl" />
 
-  <div className="relative rounded-[32px] overflow-hidden border border-[#E5D7B2] shadow-2xl bg-white">
-    <Image
-      src="/vikas.png"
-      alt="Vikas Koli"
-      width={700}
-      height={850}
-      className="w-full h-[560px] object-cover"
-    />
+            <div className="relative rounded-[32px] overflow-hidden border border-[#C8A2C8]/30 shadow-2xl bg-white">
+              <Image
+                src="/vikas.webp"
+                alt="Vikas Koli"
+                width={700}
+                height={850}
+                className="w-full h-[560px] object-cover"
+              />
 
-    <div className="absolute inset-0 bg-gradient-to-t from-[#2B1A0D]/85 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#241F24]/85 via-transparent to-transparent" />
 
-    <div className="absolute bottom-0 left-0 p-6">
-      <h3 className="text-2xl font-bold text-white leading-tight">
-        Engineer • Mentor • Entrepreneur
-      </h3>
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-bold text-white leading-tight">
+                  Engineer • Mentor • Entrepreneur
+                </h3>
 
-      <p className="text-[#F9F2D8] mt-2 text-sm leading-6">
-        Building roads, communities, businesses & futures.
-      </p>
-    </div>
-  </div>
-</div>
+                <p className="text-white/80 mt-2 text-sm leading-6">
+                  Building roads, communities, businesses & futures.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* TIMELINE */}
-<section className="relative px-6 md:px-16 lg:px-24 py-28 bg-[#FCFBF7] overflow-hidden">
-  {/* BACKGROUND GLOW */}
-  <div className="absolute top-20 left-0 w-72 h-72 bg-[#F3C12F]/10 rounded-full blur-3xl" />
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#A1268D]/10 rounded-full blur-3xl" />
+      {/* ============================================================ */}
+      {/* TIMELINE SECTION */}
+      {/* ============================================================ */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-32 bg-[#C8A2C8]/20">
+        {/* COSMIC NEBULA GLOWS */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-[#8E4585]/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C8A2C8]/20 rounded-full blur-[120px] pointer-events-none" />
 
-  <div className="relative max-w-7xl mx-auto">
-    {/* HEADING */}
-    <div className="text-center mb-24">
-      <span className="uppercase tracking-[0.35em] text-[#A1268D] font-semibold">
-        Journey Timeline
-      </span>
-
-      <h2 className="mt-5 text-5xl md:text-6xl font-black text-[#171717] leading-tight">
-        Milestones of Excellence
-      </h2>
-
-      <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-[#666666]">
-        A transformational journey built on engineering, leadership,
-        entrepreneurship, and visionary growth.
-      </p>
-    </div>
-
-    {/* TIMELINE */}
-    <div className="relative">
-      {/* CENTER LINE */}
-      <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-[4px] bg-gradient-to-b from-[#F3C12F] via-[#D4AF37] to-[#A1268D]" />
-
-      <div className="space-y-24">
-        {milestones.map((item, index) => (
-          <div
-            key={index}
-            className="relative grid lg:grid-cols-2 gap-16 items-center"
-          >
-            {/* LEFT SIDE */}
-            {index % 2 === 0 ? (
-              <>
-                {/* CARD */}
-                <div className="relative lg:pr-24">
-                  {/* CONNECTOR LINE */}
-                  <div className="hidden lg:block absolute top-1/2 right-0 w-24 h-[3px] bg-gradient-to-r from-[#D4AF37] to-[#A1268D]" />
-
-                  <div className="bg-white border border-[#EFE6D0] rounded-[32px] p-8 shadow-xl hover:shadow-2xl transition-all duration-500">
-                    {/* YEAR */}
-                    <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#FCFBF7] border border-[#E9DFC1] mb-6">
-                      <span className="text-[#4A2567] font-bold">
-                        {item.year}
-                      </span>
-                    </div>
-
-                    {/* CONTENT */}
-                    <h3 className="text-3xl font-black text-[#171717]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-5 text-[#666666] leading-8 text-lg">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* CENTER NODE */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white border-4 border-[#F3C12F] shadow-2xl flex items-center justify-center">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#F3C12F] to-[#A1268D]" />
-                  </div>
-                </div>
-
-                {/* EMPTY SIDE */}
-                <div />
-              </>
-            ) : (
-              <>
-                {/* EMPTY SIDE */}
-                <div />
-
-                {/* CARD */}
-                <div className="relative lg:pl-24">
-                  {/* CONNECTOR LINE */}
-                  <div className="hidden lg:block absolute top-1/2 left-0 w-24 h-[3px] bg-gradient-to-r from-[#A1268D] to-[#D4AF37]" />
-
-                  <div className="bg-white border border-[#EFE6D0] rounded-[32px] p-8 shadow-xl hover:shadow-2xl transition-all duration-500">
-                    {/* YEAR */}
-                    <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#FCFBF7] border border-[#E9DFC1] mb-6">
-                      <span className="text-[#4A2567] font-bold">
-                        {item.year}
-                      </span>
-                    </div>
-
-                    {/* CONTENT */}
-                    <h3 className="text-3xl font-black text-[#171717]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-5 text-[#666666] leading-8 text-lg">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* CENTER NODE */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white border-4 border-[#A1268D] shadow-2xl flex items-center justify-center">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#F3C12F] to-[#A1268D]" />
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-      {/* LEADERSHIP SECTION */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#F9F2D8]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
-              Leadership
+        <div className="relative max-w-7xl mx-auto">
+          {/* HEADING */}
+          <div className="text-center mb-24">
+            <span className="uppercase tracking-[0.4em] text-[#8E4585] font-bold text-sm">
+              Journey Timeline
             </span>
 
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">
-              What Defines His Leadership?
+            <h2 className="mt-4 text-4xl md:text-5xl font-black text-[#241F24] leading-tight font-serif tracking-tight">
+              Milestones of Excellence
             </h2>
 
-            <p className="max-w-3xl mx-auto mt-6 text-lg leading-8 text-[#5C4A3B]">
-              A rare blend of technical expertise, visionary planning,
-              business intelligence, and people-centric leadership.
+            <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-[#5F5660]">
+              A legendary path of engineering, nation-building, and visionary leadership.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {leadershipCards.map((card, index) => (
-              <div
-                key={index}
-                className="group relative bg-white rounded-[32px] p-8 shadow-xl border border-[#EFE2C4] hover:-translate-y-2 transition-all duration-500 overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#FDD91D]/20 to-[#A1268D]/20 rounded-full blur-3xl" />
+          {/* SINGLE SECTION STATIC GRID LAYOUT */}
+          <div className="relative px-4 pb-12 pt-12">
+            
+            {/* HORIZONTAL TIMELINE LINE RUNNING THROUGHOUT */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[4px] w-full pointer-events-none z-0">
+              <div className="h-[1px] bg-[#8E4585]/20 w-full" />
+              <div className="h-[1px] bg-[#8E4585]/20 w-full" />
+            </div>
 
-                <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FDD91D] to-[#DBAB26] flex items-center justify-center text-[#422565] shadow-lg">
-                    {card.icon}
+            {/* Grid container with 6 columns for desktop, dropping to grid columns on mobile natively */}
+            <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-36 lg:gap-y-0 gap-x-4 z-10">
+              {milestones.map((item, index) => {
+                const isAbove = index % 2 === 0;
+
+                return (
+                  <div 
+                    key={index} 
+                    className="relative flex flex-col items-center justify-center h-16 group"
+                  >
+                    {/* HUB TRACK POINT PIN */}
+                    <div className="relative z-20 w-5 h-5 rounded-full bg-white border border-[#8E4585]/40 group-hover:border-[#8E4585] flex items-center justify-center shadow-md transition-all duration-300">
+                      <div className="w-2 h-2 rounded-full bg-[#8E4585] shadow-[0_0_8px_#8E4585]" />
+                    </div>
+
+                    {/* AXIS DURATION TRACK LABEL */}
+                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[11px] font-mono font-bold text-[#5F5660] group-hover:text-[#8E4585] tracking-wider transition-all duration-300 z-20`}>
+                      {item.year}
+                    </div>
+
+                    {isAbove ? (
+                      <>
+                        {/* STEM LINE UP */}
+                        <div className="absolute bottom-1/2 w-[1px] h-14 bg-gradient-to-t from-[#8E4585]/30 via-[#8E4585]/10 to-transparent group-hover:from-[#8E4585]/50 transition-all duration-500 z-10" />
+                        
+                        {/* STATIC HEADING ABOVE TRACK */}
+                        <div className="absolute bottom-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
+                          <h4 className="text-[#8E4585] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                            {item.title}
+                          </h4>
+                        </div>
+
+                        {/* HOVER HOVER TOOLTIP POPUP */}
+                        <div 
+                          className="absolute bottom-[calc(50%+104px)] z-40 w-64 p-4 bg-white border border-[#C8A2C8]/40 rounded-xl shadow-xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                          style={{ transformOrigin: "bottom center" }}
+                        >
+                          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-r border-b border-[#C8A2C8]/40" />
+                          <div className="relative z-10 text-left">
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#8E4585] mb-1 block">
+                              {item.year}
+                            </span>
+                            <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
+                              {item.title}
+                            </h5>
+                            <p className="text-[11px] text-[#5F5660] leading-relaxed font-sans">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {/* STEM LINE DOWN */}
+                        <div className="absolute top-1/2 w-[1px] h-14 bg-gradient-to-b from-[#8E4585]/30 via-[#8E4585]/10 to-transparent group-hover:from-[#8E4585]/50 transition-all duration-500 z-10" />
+                        
+                        {/* STATIC HEADING BELOW TRACK */}
+                        <div className="absolute top-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
+                          <h4 className="text-[#8E4585] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                            {item.title}
+                          </h4>
+                        </div>
+
+                        {/* HOVER HOVER TOOLTIP POPUP */}
+                        <div 
+                          className="absolute top-[calc(50%+104px)] z-40 w-64 p-4 bg-white border border-[#C8A2C8]/40 rounded-xl shadow-xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                          style={{ transformOrigin: "top center" }}
+                        >
+                          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[#C8A2C8]/40" />
+                          <div className="relative z-10 text-left">
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#8E4585] mb-1 block">
+                              {item.year}
+                            </span>
+                            <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
+                              {item.title}
+                            </h5>
+                            <p className="text-[11px] text-[#5F5660] leading-relaxed font-sans">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
+                );
+              })}
+            </div>
 
-                  <h3 className="mt-8 text-2xl font-bold text-[#2B1A0D]">
-                    {card.title}
-                  </h3>
-
-                  <p className="mt-4 text-[#5C4A3B] leading-7">
-                    {card.subtitle}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
+      {/* ============================================================ */}
       {/* QUOTE SECTION */}
+      {/* ============================================================ */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#422565] via-[#5B2B7A] to-[#A1268D] px-10 md:px-20 py-20 shadow-2xl">
-            <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')]" />
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8]/20 to-[#8E4585]/10 px-10 md:px-20 py-20 shadow-xl border border-[#C8A2C8]/30">
+            {/* Decorative Texture Grid overlay */}
+            <div className="absolute inset-0 opacity-15 bg-[url('/grid.svg')] mix-blend-multiply pointer-events-none" />
 
             <div className="relative text-center">
-              <MapPinned className="w-14 h-14 text-[#FDD91D] mx-auto mb-8" />
+              <MapPinned className="w-14 h-14 text-[#8E4585] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                “Jo kam 25 saal mei nhi hua,
+              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] leading-tight tracking-tight">
+                “Jo kaam 25 saal mei nhi hua,
                 <br />
-                voh ab hoga”
+                <span className="text-[#8E4585]">voh ab hoga”</span>
               </h2>
 
-              <p className="mt-8 text-[#F9F2D8] text-xl">
+              <p className="mt-8 text-[#5F5660] text-xl font-black tracking-wide">
                 — Vikas Koli
               </p>
             </div>

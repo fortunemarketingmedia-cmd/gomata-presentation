@@ -89,9 +89,9 @@ export default function Navbar() {
           className="group flex items-center gap-4"
           aria-label="Go to home page"
         >
-          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/20 shadow-[0_10px_35px_rgba(74,37,103,0.12)] md:h-24 md:w-24">
+          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/20 shadow-[0_10px_35px_rgba(142,69,133,0.12)] md:h-24 md:w-24">
             <Image
-              src="/logoo.jpg"
+              src="/logoo.webp"
               alt="Gomata Logo"
               fill
               priority
@@ -105,8 +105,8 @@ export default function Navbar() {
         <div
           className={`relative isolate hidden items-center rounded-full border p-1.5 transition-all duration-300 md:flex ${
             scrolled
-              ? "border-[#E7D8A2] bg-white shadow-[0_10px_40px_rgba(74,37,103,0.08)]"
-              : "border-white/20 bg-[#4A2567]/20 backdrop-blur-xl"
+              ? "border-[#C8A2C8]/30 bg-white shadow-[0_10px_40px_rgba(142,69,133,0.08)]"
+              : "border-white/20 bg-white/80 backdrop-blur-md"
           }`}
         >
           {navLinks.map((link) => {
@@ -121,10 +121,8 @@ export default function Navbar() {
                 aria-current={isActive ? "page" : undefined}
                 className={`relative rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-300 ${
                   isActive
-                    ? "bg-[#4A2567] text-white"
-                    : scrolled
-                      ? "text-[#4A2567]/75 hover:text-[#A1268D]"
-                      : "text-white/80 hover:text-white"
+                    ? "bg-[#8E4585] text-white"
+                    : "text-[#241F24]/80 hover:text-[#8E4585]"
                 }`}
               >
                 {link.label}

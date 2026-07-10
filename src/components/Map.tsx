@@ -21,6 +21,8 @@ import { locations } from "@/data/locations";
 
 import { projectBoundary } from "@/data/projectBoundary";
 
+import { highwayRoutes } from "@/data/highways";
+
 
 // ZOOM HANDLER
 
@@ -132,7 +134,7 @@ export default function Map({
             {/* LOCATION LABEL */}
 
             {
-              zoomLevel >= 13 && (
+              zoomLevel >= 11 && (
 
                 <Tooltip
                     permanent
@@ -153,10 +155,10 @@ export default function Map({
 
                         rounded-full
 
-                        bg-[#4A2567]
+                        bg-[#8E4585]
                         backdrop-blur-md
 
-                        border border-[#4A2567]
+                        border border-[#C8A2C8]
 
                         shadow-lg
 
@@ -178,6 +180,35 @@ export default function Map({
 
           </Marker>
 
+        ))
+      }
+
+      {/* HIGHWAY CORRIDORS */}
+      {
+        highwayRoutes.map((route) => (
+          <Polyline
+            key={route.id}
+            positions={route.positions}
+            pathOptions={{
+              color: route.color,
+              weight: route.weight,
+              opacity: 0.85,
+              dashArray: route.dashArray
+            }}
+            eventHandlers={{
+              click: () => {
+                setSelectedLocation({
+                  name: route.name,
+                  description: route.description,
+                  images: route.images
+                });
+              }
+            }}
+          >
+            <Tooltip sticky>
+              <span className="font-semibold text-[#8E4585]">{route.name}</span>
+            </Tooltip>
+          </Polyline>
         ))
       }
 
@@ -209,7 +240,7 @@ export default function Map({
                 "Infrastructure project boundary visualization across the Navi Mumbai development corridor.",
 
               images: [
-                "/images/project.jpg"
+                "/images/project.webp"
               ]
 
             });

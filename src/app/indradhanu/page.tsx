@@ -1,4 +1,3 @@
-// app/brochure/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -24,98 +23,65 @@ import {
   Award,
   ArrowRight,
   Play,
-  X,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-// YouTube Video Component
+// YouTube Video Component with Direct Inline Playback
 function YouTubeVideo({ videoId }: { videoId: string }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [thumbnailSrc, setThumbnailSrc] = useState(
+    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  );
 
   return (
-    <>
-      <div
-        className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer group"
-        onClick={() => setIsOpen(true)}
-      >
-        <Image
-          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-          alt="Indradhanu Township Video"
-          width={800}
-          height={450}
-          className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-        />
-        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-20 h-20 rounded-full bg-[#F3C12F] flex items-center justify-center shadow-xl group-hover:scale-110 transition">
-            <Play className="w-10 h-10 text-[#2B1A0D] ml-1" />
-          </div>
-        </div>
-        <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-4 py-2 rounded-full">
-          <p className="text-white text-sm font-semibold">Watch Video Tour</p>
-        </div>
-      </div>
-
-      {/* Modal */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setIsOpen(false)}
+    <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video w-full max-w-5xl mx-auto bg-black group">
+      {!isPlaying ? (
+        <div 
+          className="absolute inset-0 cursor-pointer w-full h-full z-10"
+          onClick={() => setIsPlaying(true)}
         >
-          <div
-            className="relative w-full max-w-5xl rounded-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute -top-12 right-0 text-white hover:text-[#F3C12F] transition z-10"
-            >
-              <X className="w-8 h-8" />
-            </button>
-            <div className="relative pb-[56.25%] h-0">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                title="Indradhanu Township Solapur"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          <Image
+            src={thumbnailSrc}
+            alt="Indradhanu Township Video Preview Tour"
+            fill
+            unoptimized
+            className="object-cover group-hover:scale-103 transition duration-700"
+            onError={() => {
+              setThumbnailSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
+            }}
+          />
+          <div className="absolute inset-0 bg-black/35 group-hover:bg-black/20 transition" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-20 h-20 rounded-full bg-[#F3C12F] flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+              <Play className="w-10 h-10 text-[#2B1A0D] ml-1" />
             </div>
           </div>
+          <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-4 py-2 rounded-full">
+            <p className="text-white text-sm font-semibold">Watch Video Tour</p>
+          </div>
         </div>
+      ) : (
+        <iframe
+          className="absolute top-0 left-0 w-full h-full z-0"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+          title="Indradhanu Township Solapur Video Tour"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
       )}
-    </>
+    </div>
   );
 }
 
-// Gallery Images (Replace with actual image paths in your public folder)
-// Add your images to: public/images/gallery/
+// Gallery Images
 const galleryImages = [
-  {
-    src: "/images/indradhanu/gallery2.jpg",
-    title: "infrastructure",
-  },
-  {
-    src: "/images/indradhanu/gallery1.jpg",
-    title: "Gym",
-  },
-  {
-    src: "/images/indradhanu/gallery3.jpg",
-    title: "Green Landscapes",
-  },
-  {
-    src: "/images/indradhanu/gallery4.jpg",
-    title: "Clubhouse",
-  },
-  {
-    src: "/images/indradhanu/gallery5.jpg",
-    title: "Library",
-  },
-  {
-    src: "/images/indradhanu/gallery6.jpg",
-    title: "Kids Play Area",
-  },
+  { src: "/images/indradhanu/gallery2.webp", title: "Infrastructure" },
+  { src: "/images/indradhanu/gallery1.webp", title: "Gym" },
+  { src: "/images/indradhanu/gallery3.webp", title: "Green Landscapes" },
+  { src: "/images/indradhanu/gallery4.webp", title: "Clubhouse" },
+  { src: "/images/indradhanu/gallery5.webp", title: "Library" },
+  { src: "/images/indradhanu/gallery6.webp", title: "Kids Play Area" },
 ];
 
 // Key Distances
@@ -149,125 +115,176 @@ const credits = [
   { role: "Technical Co-ordinator", name: "Abhishek Apte (B.E. Civil, M.S., Construction Management, Arizona State University, USA)" }
 ];
 
+const heroImages = [
+  "/images/indradhanu/hero1.webp",
+  "/images/indradhanu/hero2.webp",
+  "/images/indradhanu/hero3.webp",
+  "/images/indradhanu/hero4.webp",
+  "/images/indradhanu/hero5.webp",
+  "/images/indradhanu/hero6.webp",
+  "/images/indradhanu/hero7.webp",
+  "/images/indradhanu/hero8.webp",
+  "/images/indradhanu/hero9.webp",
+];
+
 export default function BrochurePage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <main className="min-h-screen bg-[#F9F2D8] overflow-x-hidden">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
 
-      {/* ============================================================ */}
-      {/* HERO SECTION */}
-      {/* ============================================================ */}
-      <section className="relative pt-28 md:pt-36 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#422565]/10 via-[#F9F2D8] to-[#F9F2D8]" />
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#F3C12F]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#A1268D]/10 rounded-full blur-3xl" />
+      {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+        {/* Background Image Layer with Cross-fade */}
+        <div className="absolute inset-0 z-0">
+          {heroImages.map((src, idx) => (
+            <div
+              key={idx}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                idx === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={src}
+                alt={`Indradhanu Presentation Slide ${idx + 1}`}
+                fill
+                priority={idx === 0}
+                unoptimized
+                className="object-cover"
+              />
+            </div>
+          ))}
+          {/* Transparent Dark Shield Overlay to guarantee readability */}
+          <div className="absolute inset-0 bg-[#241F24]/40 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#422565]/10 backdrop-blur mb-6">
-            <Building2 className="w-4 h-4 text-[#A1268D]" />
-            <span className="text-sm font-semibold text-[#A1268D] uppercase tracking-wide">
+        {/* Slide Indicators/Dots */}
+        <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentImageIndex(idx)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                idx === currentImageIndex
+                  ? "bg-[#C8A2C8] w-6"
+                  : "bg-white/50 hover:bg-white"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
+            <Building2 className="w-4 h-4 text-[#C8A2C8]" />
+            <span className="text-xs font-bold text-white uppercase tracking-widest">
               Premium Township
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight">
-            <span className="text-[#2B1A0D]">Indradhanu</span>
-            <span className="text-[#A1268D]"> Township</span>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+            Indradhanu <span className="text-[#C8A2C8]">Township</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#5C4A3B] mt-6 max-w-3xl mx-auto">
+          
+          <p className="text-xl md:text-2xl text-[#C8A2C8] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">
             The Quest for Utopia Ends Here
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <MapPin className="w-5 h-5 text-[#A1268D]" />
-            <p className="text-[#5C4A3B]">Vishnu Mill Compound, Near Railway Station, Solapur - 413001</p>
+          
+          <div className="flex items-center justify-center gap-2 mt-6 bg-black/20 backdrop-blur px-5 py-2.5 rounded-full w-max mx-auto border border-white/10 shadow-md">
+            <MapPin className="w-4 h-4 text-[#C8A2C8]" />
+            <p className="text-sm text-white/95 font-medium">Vishnu Mill Compound, Near Railway Station, Solapur - 413001</p>
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* STATS BAR */}
-      {/* ============================================================ */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-8">
+      {/* ========== STATS BAR ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-8 z-10 -mt-8 md:-mt-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white rounded-2xl shadow-xl p-6 border border-[#EFE2C4]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-white rounded-2xl shadow-xl p-6 border border-[#C8A2C8]/30">
             <div className="text-center p-4">
-              <Building2 className="w-10 h-10 mx-auto text-[#A1268D]" />
-              <p className="text-2xl font-bold text-[#2B1A0D] mt-2">58,000+</p>
-              <p className="text-[#5C4A3B]">Sq.Ft. Spread Area</p>
+              <Building2 className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <p className="text-3xl font-black text-[#241F24] mt-2">58,000+</p>
+              <p className="text-[#5F5660] text-sm font-semibold mt-1">Sq.Ft. Spread Area</p>
             </div>
-            <div className="text-center p-4 border-x border-[#EFE2C4]">
-              <Users className="w-10 h-10 mx-auto text-[#A1268D]" />
-              <p className="text-2xl font-bold text-[#2B1A0D] mt-2">3,000+</p>
-              <p className="text-[#5C4A3B]">Residential Hub Population</p>
+            <div className="text-center p-4 border-y md:border-y-0 md:border-x border-[#C8A2C8]/30">
+              <Users className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <p className="text-3xl font-black text-[#241F24] mt-2">3,000+</p>
+              <p className="text-[#5F5660] text-sm font-semibold mt-1">Residential Hub Population</p>
             </div>
             <div className="text-center p-4">
-              <Award className="w-10 h-10 mx-auto text-[#A1268D]" />
-              <p className="text-2xl font-bold text-[#2B1A0D] mt-2">RERA</p>
-              <p className="text-[#5C4A3B]">Registered Project</p>
+              <Award className="w-10 h-10 mx-auto text-[#8E4585]" />
+              <p className="text-3xl font-black text-[#241F24] mt-2">RERA</p>
+              <p className="text-[#5F5660] text-sm font-semibold mt-1">Registered Project</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* YOUTUBE VIDEO SECTION */}
-      {/* ============================================================ */}
+      {/* ========== YOUTUBE VIDEO SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-black text-[#2B1A0D]">
-              Project <span className="text-[#A1268D]">Video Tour</span>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-[#241F24]">
+              Project <span className="text-[#8E4585]">Video Tour</span>
             </h2>
-            <p className="mt-2 text-[#5C4A3B]">Experience the grandeur of Indradhanu Township</p>
+            <p className="mt-2 text-[#5F5660] text-base">Experience the grandeur of Indradhanu Township instantly</p>
           </div>
           <YouTubeVideo videoId="vt_pS7tyJbI" />
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* ABOUT SECTION */}
-      {/* ============================================================ */}
+      {/* ========== ABOUT SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+              <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
                 About Indradhanu
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
                 The Quest for Utopia Ends Here
               </h2>
-              <p className="mt-6 text-[#5C4A3B] leading-relaxed text-lg">
+              <p className="mt-6 text-[#5F5660] leading-relaxed text-lg">
                 All in all, this township makes good on the promise of dream housing, abundantly full of 
                 ultramodern amenities that are equally balanced by the premise of sustainability and ambient 
                 greenery. Unparalleled connectivity is something INDRADHANU ensures, given that it is situated 
                 right next to the Solapur railway station, is a few minutes' drive to the bus station and lies 
                 at a minimal distance to the airport.
               </p>
-              <p className="mt-4 text-[#5C4A3B] leading-relaxed text-lg">
+              <p className="mt-4 text-[#5F5660] leading-relaxed text-lg">
                 All kinds of amenities are within a stone's throw: from the well-stocked market, high-quality 
                 schooling, medical aid and yet other service providers.
               </p>
-              <p className="mt-4 text-[#5C4A3B] leading-relaxed text-lg font-semibold">
+              <p className="mt-4 text-[#5F5660] leading-relaxed text-lg font-semibold">
                 Ultimately, INDRADHANU reflects the promise of a new, vibrant, bustling Solapur for its residents.
               </p>
             </div>
 
             {/* Key Distances */}
-            <div className="bg-[#FCFBF7] rounded-3xl p-8 border border-[#EFE2C4]">
-              <h3 className="text-2xl font-bold text-[#2B1A0D] mb-6 flex items-center gap-2">
-                <MapPin className="w-6 h-6 text-[#A1268D]" />
+            <div className="bg-white rounded-3xl p-8 border border-[#C8A2C8]/30 h-max shadow-md">
+              <h3 className="text-2xl font-bold text-[#241F24] mb-6 flex items-center gap-2">
+                <MapPin className="w-6 h-6 text-[#8E4585]" />
                 Key Distances
               </h3>
               <div className="space-y-4">
                 {keyDistances.map((item, idx) => (
-                  <div key={idx} className="flex justify-between items-center border-b border-[#EFE2C4] pb-3">
+                  <div key={idx} className="flex justify-between items-center border-b border-[#C8A2C8]/20 pb-3 last:border-0 last:pb-0">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#F3C12F]/20 flex items-center justify-center text-[#A1268D]">
+                      <div className="w-10 h-10 rounded-full bg-[#C8A2C8]/18 flex items-center justify-center text-[#8E4585]">
                         {item.icon}
                       </div>
-                      <span className="font-semibold text-[#2B1A0D]">{item.place}</span>
+                      <span className="font-semibold text-[#241F24] text-sm md:text-base">{item.place}</span>
                     </div>
-                    <span className="text-[#A1268D] font-bold">{item.distance}</span>
+                    <span className="text-[#8E4585] font-bold text-sm md:text-base">{item.distance}</span>
                   </div>
                 ))}
               </div>
@@ -276,19 +293,17 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* AMENITIES SECTION */}
-      {/* ============================================================ */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#F9F2D8]">
+      {/* ========== AMENITIES SECTION ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               World-Class Features
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
-              Shop, Dine, <span className="text-[#A1268D]">Enjoy!</span>
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
+              Shop, Dine, <span className="text-[#8E4585]">Enjoy!</span>
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Experience a lifestyle of convenience and luxury with our premium amenities
             </p>
           </div>
@@ -297,29 +312,27 @@ export default function BrochurePage() {
             {amenities.map((amenity, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#EFE2C4] hover:-translate-y-2 transition duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#C8A2C8]/30 hover:-translate-y-2 transition duration-300"
               >
-                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-[#F3C12F]/20 to-[#A1268D]/20 flex items-center justify-center text-[#A1268D] mb-4">
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#8E4585]/20 flex items-center justify-center text-[#8E4585] mb-4">
                   {amenity.icon}
                 </div>
-                <h3 className="font-bold text-[#2B1A0D]">{amenity.title}</h3>
+                <h3 className="font-bold text-[#241F24] text-sm md:text-base">{amenity.title}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* GALLERY SECTION */}
-      {/* ============================================================ */}
+      {/* ========== GALLERY SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Visual Tour
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
-              Project <span className="text-[#A1268D]">Gallery</span>
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
+              Project <span className="text-[#8E4585]">Gallery</span>
             </h2>
           </div>
 
@@ -336,17 +349,16 @@ export default function BrochurePage() {
                   className="object-cover group-hover:scale-110 transition duration-500"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.style.display = "none";
                     const parent = target.parentElement;
                     if (parent) {
                       const fallback = document.createElement("div");
-                      fallback.className = "w-full h-full bg-gradient-to-br from-[#422565] to-[#A1268D] flex items-center justify-center";
+                      fallback.className = "w-full h-full bg-gradient-to-br from-[#C8A2C8] to-[#8E4585] flex items-center justify-center";
                       fallback.innerHTML = `<div class="text-center text-white p-4"><Building2 class="w-12 h-12 mx-auto mb-2 opacity-50" /><p class="font-semibold">${image.title}</p></div>`;
                       parent.appendChild(fallback);
                     }
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2B1A0D]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#241F24]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                   <div className="absolute bottom-4 left-4">
                     <p className="text-white font-semibold">{image.title}</p>
                   </div>
@@ -357,76 +369,78 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* LOCATION ADVANTAGE */}
-      {/* ============================================================ */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#F9F2D8]">
+      {/* ========== LOCATION ADVANTAGE ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-black text-[#2B1A0D]">
-                Prime Location in <span className="text-[#A1268D]">Solapur</span>
+            <div className="flex flex-col justify-center">
+              <h2 className="text-3xl md:text-4xl font-black text-[#241F24]">
+                Prime Location in <span className="text-[#8E4585]">Solapur</span>
               </h2>
-              <p className="mt-4 text-[#5C4A3B] leading-relaxed">
+              <p className="mt-4 text-[#5F5660] leading-relaxed">
                 Strategically located with excellent connectivity to all major landmarks of Solapur.
                 Whether you need to catch a train, board a bus, or access daily essentials, everything
                 is just minutes away.
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#A1268D]" />
-                  <span>650 meters from Solapur Railway Station</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <span className="text-black font-medium">650 meters from Solapur Railway Station</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#A1268D]" />
-                  <span>2.3 km from Central Bus Stand</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <span className="text-black font-medium">2.3 km from Central Bus Stand</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#A1268D]" />
-                  <span>Excellent rail & road connectivity</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <span className="text-black font-medium">Excellent rail & road connectivity</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#A1268D]" />
-                  <span>Adjacent to residential hub of 3000+ people</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
+                  <span className="text-black font-medium">Adjacent to residential hub of 3000+ people</span>
                 </div>
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[300px] bg-gradient-to-br from-[#422565] to-[#A1268D]">
-              <div className="absolute inset-0 flex items-center justify-center text-white text-center p-6">
-                <div className="py-10">
-  <MapPin className="w-20 h-20 mx-auto mb-6 opacity-60" />
+            {/* REAL INTERACTIVE MAP INTEGRATION CARD */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[400px] group">
+              <iframe
+                title="Vishnu Mill Compound Solapur Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.8152179836173!2d75.91404179999999!3d17.6590278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5da79c13bdf2d%3A0x6b107e3870857321!2sSolapur!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[10%] contrast-[105%] group-hover:grayscale-0 transition-all duration-500"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
 
-  <p className="text-2xl font-bold mb-3">
-    Vishnu Mill Compound
-  </p>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
+                <div className="absolute bottom-1 w-8 h-2 bg-[#8E4585]/30 rounded-full blur-[2px] animate-ping" />
+                <MapPin className="w-10 h-10 text-[#8E4585] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
+              </div>
 
-  <p className="text-lg opacity-80">
-    Near Railway Station, Solapur
-  </p>
-
-  <p className="text-sm opacity-50 mt-6 tracking-wide">
-    Interactive map view available in brochure
-  </p>
-</div>
+              <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/95 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
+                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585]">
+                  <Building2 className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="font-bold text-[#241F24] text-sm">Vishnu Mill Compound</p>
+                  <p className="text-xs text-[#5F5660] font-medium mt-0.5">Near Railway Station, Solapur, Maharashtra</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* CREDITS & TEAM SECTION */}
-      {/* ============================================================ */}
+      {/* ========== CREDITS & TEAM SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Team
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
-              Project <span className="text-[#A1268D]">Credits</span>
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
+              Project <span className="text-[#8E4585]">Credits</span>
             </h2>
           </div>
 
@@ -434,22 +448,20 @@ export default function BrochurePage() {
             {credits.map((credit, idx) => (
               <div
                 key={idx}
-                className="bg-[#FCFBF7] rounded-2xl p-6 border border-[#EFE2C4] hover:shadow-lg transition"
+                className="bg-[#C8A2C8]/10 rounded-2xl p-6 border border-[#C8A2C8]/30 hover:shadow-lg transition"
               >
-                <h3 className="font-bold text-[#A1268D] text-lg">{credit.role}</h3>
-                <p className="mt-2 text-[#5C4A3B] text-sm leading-relaxed">{credit.name}</p>
+                <h3 className="font-bold text-[#8E4585] text-lg">{credit.role}</h3>
+                <p className="mt-2 text-[#5F5660] text-sm leading-relaxed">{credit.name}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* DISCLAIMER */}
-      {/* ============================================================ */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-8 bg-[#F9F2D8]">
+      {/* ========== DISCLAIMER ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-8 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
-          <div className="text-xs text-[#666] leading-relaxed bg-white p-6 rounded-2xl border border-[#EFE2C4]">
+          <div className="text-xs text-[#5F5660] leading-relaxed bg-white p-6 rounded-2xl border border-[#C8A2C8]/30">
             <p className="font-semibold mb-2">Disclaimer:</p>
             <p>
               The intent of this advertising collateral is to provide only preliminary information about the project. 
@@ -462,7 +474,7 @@ export default function BrochurePage() {
               discretion of the company. A copy of detailed sanction plans and other documents are available for 
               reference in our corporate office.
             </p>
-            <p className="mt-2">MRN: P52600053600</p>
+            <p className="mt-2 font-medium text-[#241F24]">MRN: P52600053600</p>
           </div>
         </div>
       </section>

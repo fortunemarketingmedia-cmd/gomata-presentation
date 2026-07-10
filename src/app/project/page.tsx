@@ -225,86 +225,41 @@ const faqs = [
   },
   {
     q: "What is the expected market value at handover?",
-    a: "The estimated market value is expected to appreciate by approx 30% by the time of handover, with potential for 2-3x returns as the airport and surrounding infrastructure becomes fully operational by 2031.",
+    a: "The estimated market value is expected to appreciate by approx 30% by the time of handover, with potential for 2-3x returns as the airport and surrounding infrastructure become fully operational by 2031.",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#F9F2D8] overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* ========== HERO SECTION with Mission/Vision ========== */}
-      <section className="relative pt-28 pb-16 md:pt-32 md:pb-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#422565]/5 via-[#F9F2D8] to-[#F9F2D8]" />
+      {/* ========== HERO SECTION WITH MISSION/VISION BACKGROUND IMAGE ========== */}
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-36 pb-28 md:pt-44 md:pb-36 overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1920&auto=format&fit=crop" 
+            alt="Gomata Vision Corporate Growth Background"
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+          />
+          {/* Clean, Reduced Translucent Mask Matrix */}
+          <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white to-95%" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center">
           {/* Gomata Vision LLP Title */}
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-black text-[#2B1A0D] tracking-tight">
-              <span className="text-[#A1268D]">Gomata</span> Vision LLP
+          <div className="mb-4">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+              <span className="text-[#C8A2C8]">Gomata</span> Vision LLP
             </h1>
-            <p className="text-xl md:text-2xl text-[#5C4A3B] mt-4 font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl text-[#C8A2C8] mt-8 max-w-4xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
               Your Boarding Pass to Wealth Creation through Land Pooling
             </p>
-          </div>
-
-          {/* Mission & Vision Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
-            {/* Mission */}
-            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#EFE2C4] relative overflow-hidden group hover:shadow-2xl transition-all">
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#F3C12F]/10 rounded-full blur-2xl" />
-              <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-[#A1268D]/10 flex items-center justify-center mb-6">
-                  <TrendingUp className="w-8 h-8 text-[#A1268D]" />
-                </div>
-                <h2 className="text-3xl font-bold text-[#2B1A0D]">Mission</h2>
-                <p className="mt-4 text-xl leading-relaxed text-[#5C4A3B]">
-                  Inclusive, sustainable, and profitable real estate development.
-                </p>
-              </div>
-            </div>
-
-            {/* Vision */}
-            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#EFE2C4] relative overflow-hidden group hover:shadow-2xl transition-all">
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#F3C12F]/10 rounded-full blur-2xl" />
-              <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-[#F3C12F]/20 flex items-center justify-center mb-6">
-                  <Globe className="w-8 h-8 text-[#A1268D]" />
-                </div>
-                <h2 className="text-3xl font-bold text-[#2B1A0D]">Vision</h2>
-                <p className="mt-4 text-xl leading-relaxed text-[#5C4A3B]">
-                  Balancing farmer rights, urban growth, and investor returns.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Values Row */}
-          <div className="text-center mb-12">
-            <span className="inline-block px-5 py-2 rounded-full bg-[#422565] text-white text-sm tracking-widest uppercase">
-              Our Core Values
-            </span>
-            <p className="text-lg text-[#5C4A3B] mt-4">
-              Trust • Transparency • Transformation
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreValues.map((value, idx) => (
-              <div
-                key={idx}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#EFE2C4] text-center hover:shadow-lg transition"
-              >
-                <div className="flex justify-center mb-4 text-[#A1268D]">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#2B1A0D]">{value.title}</h3>
-                <p className="mt-2 text-[#666666] text-sm leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -313,9 +268,9 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">Watch & Learn</span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">Why Invest in TPS-11, NAINA?</h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">Watch & Learn</span>
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Invest in TPS-11, NAINA?</h2>
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Hear directly from our leadership about this transformative opportunity
             </p>
           </div>
@@ -353,16 +308,16 @@ export default function AboutPage() {
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-[#F9F2D8] flex items-center justify-center p-6">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30">
               <div className="text-center">
-                <Globe className="w-12 h-12 text-[#A1268D] mx-auto mb-4" />
-                <p className="font-bold text-[#2B1A0D] mb-2">Facebook Post</p>
-                <p className="text-sm text-[#5C4A3B] mb-4">Transforming Maharashtra's Healthcare and Education Landscape</p>
+                <Globe className="w-12 h-12 text-[#8E4585] mx-auto mb-4" />
+                <p className="font-bold text-[#241F24] mb-2">Facebook Post</p>
+                <p className="text-sm text-[#5F5660] mb-4">Transforming Maharashtra's Healthcare and Education Landscape</p>
                 <a 
                   href="https://www.facebook.com/devendra.fadnavis/posts/transforming-maharashtras-healthcare-and-education-landscapechaired-a-review-mee/1561692341980657/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 bg-[#A1268D] text-white font-semibold rounded-full hover:bg-[#8a1f78] transition"
+                  className="inline-block px-6 py-2 bg-[#8E4585] text-white font-semibold rounded-full hover:bg-[#75386E] transition"
                 >
                   View on Facebook →
                 </a>
@@ -371,35 +326,61 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* ========== WHY NAINA SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
               Strategic Advantage
             </span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">Why NAINA?</h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why NAINA?</h2>
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               The Navi Mumbai Airport Influence Notified Area (NAINA) - A planned smart city for the future
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
+            <div className="space-y-6 flex flex-col justify-center">
               {nainaAdvantages.map((adv, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
-                  <div className="w-6 h-6 rounded-full bg-[#F3C12F] flex-shrink-0 mt-1" />
-                  <p className="text-[#333333] text-lg">{adv}</p>
+                  <div className="w-6 h-6 rounded-full bg-[#C8A2C8] flex-shrink-0 mt-1" />
+                  <p className="text-[#241F24]/90 text-lg">{adv}</p>
                 </div>
               ))}
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-[#422565]/10 flex items-center justify-center p-8">
-              <div className="text-center">
-                <Plane className="w-24 h-24 text-[#A1268D] mx-auto mb-4" />
-                <p className="font-bold text-[#2B1A0D]">NMIA - Operational Now</p>
-                <p className="text-sm text-[#666]">9 crore passengers per year capacity</p>
+            
+            {/* PREMIUM MAP INTEGRATION CARD */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[450px] group">
+              
+              {/* Live Interactive Embed Iframe Layer */}
+              <iframe
+                title="NAINA Navi Mumbai Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15091.954751336496!2d73.0763884!3d18.9760773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c39fd5035f6d%3A0xcb1b593eb42323ef!2sNavi+Mumbai+International+Airport!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+
+              {/* FIXED CENTRAL LOCATION PIN WITH GLOW EFFECT */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
+                {/* Pulsing Base Ring */}
+                <div className="absolute bottom-1 w-8 h-2 bg-[#8E4585]/30 rounded-full blur-[2px] animate-ping" />
+                {/* MapPin / MapPinned Icon */}
+                <MapPinned className="w-10 h-10 text-[#8E4585] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
               </div>
+
+              {/* Floating Premium Airport Stat Overlay Pill at Bottom */}
+              <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/90 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
+                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585]">
+                  <Plane className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="font-bold text-[#241F24] text-sm md:text-base">NMIA - Operational Area Nearby</p>
+                  <p className="text-xs text-[#5F5660] font-medium mt-0.5">9 crore passengers per year structural capacity</p>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -409,11 +390,11 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
               Prime Location
             </span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">Why Only TPS-11?</h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Only TPS-11?</h2>
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               The crown jewel of all 12 Town Planning Schemes in NAINA
             </p>
           </div>
@@ -422,16 +403,16 @@ export default function AboutPage() {
             {tps11Advantages.map((adv, idx) => (
               <div
                 key={idx}
-                className="bg-[#F9F2D8] rounded-2xl p-6 shadow-md border border-[#EFE2C4] flex gap-4"
+                className="bg-[#C8A2C8]/15 rounded-2xl p-6 shadow-md border border-[#C8A2C8]/30 flex gap-4"
               >
-                <LocateFixed className="w-6 h-6 text-[#A1268D] flex-shrink-0 mt-1" />
-                <p className="text-[#333333]">{adv}</p>
+                <LocateFixed className="w-6 h-6 text-[#8E4585] flex-shrink-0 mt-1" />
+                <p className="text-[#241F24]">{adv}</p>
               </div>
             ))}
           </div>
 
           {/* Current Plot Card */}
-          <div className="mt-12 bg-gradient-to-r from-[#422565] to-[#A1268D] rounded-3xl p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-[#C8A2C8] to-[#8E4585] rounded-3xl p-8 text-white">
             <h3 className="text-2xl font-bold">Current Investment Plot (TPS-11)</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div>
@@ -460,222 +441,93 @@ export default function AboutPage() {
       </section>
 
       {/* ========== INVESTMENT STRUCTURE ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">
               Wealth Creation
             </span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">
               Developer-Level Profit Participation
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Land Pooling Concept by Gomata Vision LLP – Invest at the land acquisition stage
               where maximum value creation begins.
             </p>
           </div>
 
           {/* Investment Card */}
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#F3C12F] p-8 md:p-10 shadow-xl">
-            <h3 className="text-3xl font-bold text-center text-[#2B1A0D]">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#8E4585] p-8 md:p-10 shadow-xl">
+            <h3 className="text-3xl font-bold text-center text-[#241F24]">
               Total Investment: ₹39,70,000*
             </h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div className="space-y-4">
                 <div className="border-b pb-3">
-                  <p className="font-bold text-[#A1268D]">To Landowner</p>
-                  <p className="text-2xl font-bold">₹20,00,000</p>
-                  <p className="text-sm text-[#666]">+ ₹2,00,000 (SD + Reg + Legal)</p>
+                  <p className="font-bold text-[#8E4585]">To Landowner</p>
+                  <p className="text-2xl font-bold text-black">₹20,00,000</p>
+                  <p className="text-sm text-[#5F5660]">+ ₹2,00,000 (SD + Reg + Legal)</p>
                 </div>
                 <div>
-                  <p className="font-bold text-[#A1268D]">To Gomata Vision LLP</p>
-                  <p className="text-2xl font-bold">₹15,00,000</p>
-                  <p className="text-sm text-[#666]">+ ₹2,70,000 (18% GST)</p>
+                  <p className="font-bold text-[#8E4585]">To Gomata Vision LLP</p>
+                  <p className="text-2xl font-bold text-black">₹15,00,000</p>
+                  <p className="text-sm text-[#5F5660]">+ ₹2,70,000 (18% GST)</p>
                 </div>
               </div>
-              <div className="bg-[#FFF7E7] p-5 rounded-xl">
-                <p className="font-semibold">Payment Schedule (100% Cheque):</p>
-                <ul className="mt-3 space-y-2 text-sm">
+              <div className="bg-[#8E4585] p-5 rounded-xl text-white">
+                <p className="font-semibold text-white">Payment Schedule (100% Cheque):</p>
+                <ul className="mt-3 space-y-2 text-sm text-white/90">
                   <li>1️⃣ Booking (Immediate): ₹1,18,000 (incl. GST)</li>
                   <li>2️⃣ 7 days later: ₹5,90,000 (incl. GST)</li>
                   <li>3️⃣ Balance at Registration: ₹32,62,000</li>
                 </ul>
-                <div className="mt-4 p-3 bg-[#A1268D]/10 rounded-lg">
-                  <p className="text-xs font-semibold">Bank Details:</p>
-                  <p className="text-xs">GOMATA VISION LLP, HDFC Bank, Sec 15 Belapur</p>
-                  <p className="text-xs">A/c: 50200106979590 | IFSC: HDFC0002860</p>
+                <div className="mt-4 p-3 bg-white/10 rounded-lg">
+                  <p className="text-xs font-semibold text-white">Bank Details:</p>
+                  <p className="text-xs text-white/90">GOMATA VISION LLP, HDFC Bank, Sec 15 Belapur</p>
+                  <p className="text-xs text-white/90">A/c: 50200106979590 | IFSC: HDFC0002860</p>
                 </div>
               </div>
             </div>
-            <div className="mt-8 text-center text-sm text-[#666] border-t pt-6">
+            <div className="mt-8 text-center text-sm text-[#5F5660] border-t border-[#C8A2C8]/20 pt-6">
               ✅ Your name appears on the 7/12 ownership document – most secure investment module
             </div>
           </div>
         </div>
       </section>
 
-      {/* ========== TIMELINE SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-[#2B1A0D]">Project Timeline</h2>
-            <p className="text-[#5C4A3B]">Total duration: Approx. 5-6 years to completion</p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="bg-[#F9F2D8] p-6 rounded-2xl text-center">
-              <div className="w-12 h-12 rounded-full bg-[#A1268D] text-white flex items-center justify-center mx-auto mb-3 font-bold">1</div>
-              <h3 className="font-bold">Land Registration</h3>
-              <p className="text-sm text-[#666]">~60 Days</p>
-              <p className="text-xs mt-2">Joint Sale Deed + Common 7/12</p>
-            </div>
-            <div className="bg-[#F9F2D8] p-6 rounded-2xl text-center">
-              <div className="w-12 h-12 rounded-full bg-[#A1268D] text-white flex items-center justify-center mx-auto mb-3 font-bold">2</div>
-              <h3 className="font-bold">Development Agreement</h3>
-              <p className="text-sm text-[#666]">~30 Days after Stage 1</p>
-              <p className="text-xs mt-2">Gomata Estates LLP or Reputed Developer</p>
-            </div>
-            <div className="bg-[#F9F2D8] p-6 rounded-2xl text-center">
-              <div className="w-12 h-12 rounded-full bg-[#A1268D] text-white flex items-center justify-center mx-auto mb-3 font-bold">3</div>
-              <h3 className="font-bold">Approvals & Permissions</h3>
-              <p className="text-sm text-[#666]">12-18 Months</p>
-              <p className="text-xs mt-2">CC, EC, RERA, CIDCO, Property Card</p>
-            </div>
-            <div className="bg-[#F9F2D8] p-6 rounded-2xl text-center">
-              <div className="w-12 h-12 rounded-full bg-[#A1268D] text-white flex items-center justify-center mx-auto mb-3 font-bold">4</div>
-              <h3 className="font-bold">Construction & Possession</h3>
-              <p className="text-sm text-[#666]">~3 Years 9 Months</p>
-              <p className="text-xs mt-2">Upto 15 Storey Building</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ========== INVESTMENT MODELS & BENEFITS ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-black text-[#2B1A0D]">Unique Investment Models</h2>
+              <h2 className="text-3xl font-black text-[#241F24]">Unique Investment Models</h2>
               <div className="mt-8 space-y-4">
                 {investmentModels.map((model, idx) => (
-                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md">
-                    <h3 className="font-bold text-[#A1268D]">{model.title}</h3>
-                    <p className="text-[#666]">{model.description}</p>
+                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30">
+                    <h3 className="font-bold text-[#8E4585]">{model.title}</h3>
+                    <p className="text-[#5F5660]">{model.description}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-black text-[#2B1A0D]">Investor Benefits</h2>
-              <div className="mt-8 bg-white rounded-3xl p-8 shadow-xl">
+              <h2 className="text-3xl font-black text-[#241F24]">Investor Benefits</h2>
+              <div className="mt-8 bg-[#8E4585] rounded-3xl p-8 shadow-xl text-white">
                 <ul className="space-y-4">
                   {investorBenefits.map((benefit, idx) => (
                     <li key={idx} className="flex gap-3 items-center">
-                      <LucideBadgeCheck className="w-6 h-6 text-[#F3C12F]" />
+                      <LucideBadgeCheck className="w-6 h-6 text-[#C8A2C8]" />
                       <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 pt-6 border-t text-center">
-                  <p className="font-bold text-[#A1268D]">Planned Exit Strategy</p>
+                <div className="mt-8 pt-6 border-t border-white/20 text-center">
+                  <p className="font-bold text-[#FFFFFF]">Planned Exit Strategy</p>
                   <p className="text-sm">Resale • Rental • JV Models</p>
-                  <p className="text-xs text-[#666] mt-2">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
+                  <p className="text-xs text-[#FFFFFF] mt-2">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== INCLUSIVE DEVELOPMENT APPROACH ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-[#2B1A0D]">Inclusive Development Approach</h2>
-            <p className="text-[#5C4A3B] mt-2">Benefiting all stakeholders in the ecosystem</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-[#F9F2D8] rounded-2xl">
-              <Users className="w-12 h-12 mx-auto text-[#A1268D]" />
-              <h3 className="text-xl font-bold mt-4">For Farmers</h3>
-              <ul className="mt-3 text-[#666] space-y-1">
-                <li>Secure land rights</li>
-                <li>Better compensation</li>
-                <li>Joint ventures</li>
-                <li>Social infrastructure</li>
-              </ul>
-            </div>
-            <div className="text-center p-6 bg-[#F9F2D8] rounded-2xl">
-              <BarChart3 className="w-12 h-12 mx-auto text-[#A1268D]" />
-              <h3 className="text-xl font-bold mt-4">For Investors</h3>
-              <ul className="mt-3 text-[#666] space-y-1">
-                <li>Clear titles on 7/12</li>
-                <li>Professional approvals</li>
-                <li>Phased exits with 12% interest</li>
-                <li>High appreciation potential</li>
-              </ul>
-            </div>
-            <div className="text-center p-6 bg-[#F9F2D8] rounded-2xl">
-              <Landmark className="w-12 h-12 mx-auto text-[#A1268D]" />
-              <h3 className="text-xl font-bold mt-4">For Government</h3>
-              <ul className="mt-3 text-[#666] space-y-1">
-                <li>Smooth execution</li>
-                <li>Community support</li>
-                <li>Planned urban growth</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== TRACK RECORD & CREDENTIALS ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#FCFBF7]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
-              Track Record
-            </span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">Credentials That Matter</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {trackRecord.map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl shadow-md border border-[#EFE2C4]">
-                <h3 className="font-bold text-xl text-[#2B1A0D]">{item.title}</h3>
-                <p className="mt-2 text-[#666] text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== LEADERSHIP SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#F9F2D8]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">
-              Leadership
-            </span>
-            <h2 className="mt-4 text-5xl font-black text-[#2B1A0D]">
-              Led by Mr. Vikas Koli
-            </h2>
-            <p className="max-w-3xl mx-auto mt-6 text-lg text-[#5C4A3B]">
-              Civil Engineer • Former NHAI Project Director • Former AAI Official • Real Estate Visionary • Wealth Creation Mentor
-            </p>
-            <p className="text-[#A1268D] font-semibold mt-2">28+ Years of National-Level Experience</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {leadershipCards.map((card, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-8 shadow-lg border border-[#EFE2C4] hover:-translate-y-1 transition"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FDD91D] to-[#DBAB26] flex items-center justify-center text-[#422565]">
-                  {card.icon}
-                </div>
-                <h3 className="mt-6 text-xl font-bold text-[#2B1A0D]">{card.title}</h3>
-                <p className="mt-2 text-[#666]">{card.subtitle}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -684,36 +536,37 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em]">FAQs</span>
-            <h2 className="mt-4 text-4xl font-black text-[#2B1A0D]">Frequently Asked Questions</h2>
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em]">FAQs</span>
+            <h2 className="mt-4 text-4xl font-black text-[#241F24]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <details key={idx} className="group bg-[#F9F2D8] rounded-2xl p-6 open:bg-white transition-all border border-[#EFE2C4]">
+              <details key={idx} className="group bg-[#C8A2C8]/15 rounded-2xl p-6 open:bg-white transition-all border border-[#C8A2C8]/30">
                 <summary className="flex justify-between items-center cursor-pointer list-none">
-                  <h3 className="font-bold text-[#2B1A0D] text-lg pr-4">{faq.q}</h3>
-                  <span className="text-[#A1268D] group-open:rotate-180 transition-transform">▼</span>
+                  <h3 className="font-bold text-[#241F24] text-lg pr-4">{faq.q}</h3>
+                  <span className="text-[#8E4585] group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="mt-4 text-[#5C4A3B] leading-relaxed pl-2 border-l-4 border-[#F3C12F]">{faq.a}</p>
+                <p className="mt-4 text-[#5F5660] leading-relaxed pl-2 border-l-4 border-[#8E4585]">{faq.a}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-<section className="branding-banner-section flex justify-center py-10">
-  <Image
-    src="/images/banner/banner.png"
-    alt="Branding Banner"
-    width={1200}
-    height={250}
-    className="branding-banner-image w-[85%] h-auto rounded-2xl object-contain"
-  />
-</section>
+      <section className="branding-banner-section flex justify-center py-10">
+        <Image
+          src="/images/banner/banner.webp"
+          alt="Branding Banner"
+          width={1200}
+          height={250}
+          className="branding-banner-image w-[85%] h-auto rounded-2xl object-contain"
+        />
+      </section>
+      
       {/* ========== QUOTE + CTA ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#422565] via-[#5B2B7A] to-[#A1268D] px-10 md:px-20 py-20 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#8E4585] px-10 md:px-20 py-20 shadow-2xl">
             <div className="relative text-center">
               <p className="text-3xl md:text-4xl font-bold text-white italic">
                 "Even a correct decision is wrong when it is too late."
@@ -721,15 +574,15 @@ export default function AboutPage() {
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
                 <a
                   href="tel:+91 9892784379"
-                  className="inline-block px-8 py-3 bg-[#F3C12F] text-[#2B1A0D] font-bold rounded-full hover:bg-[#E0A800] transition"
+                  className="inline-block px-8 py-3 bg-[#8E4585] text-white font-bold rounded-full hover:bg-[#75386E] transition shadow-lg"
                 >
                   📞 Contact - +91 9892784379
                 </a>
               </div>
-              <p className="mt-8 text-[#F9F2D8] text-sm">
+              <p className="mt-8 text-white/80 text-sm">
                 Submit PAN, Aadhaar + ₹1.18L Booking Fee to lock your deal.
               </p>
-              <p className="mt-2 text-[#F9F2D8] text-xs">
+              <p className="mt-2 text-white/70 text-xs">
                 *Terms and conditions apply. Investment subject to risk. 100% Cheque Payments only.
               </p>
             </div>
@@ -738,7 +591,7 @@ export default function AboutPage() {
       </section>
          
       {/* Footer */}
-      <footer className="text-center py-8 text-[#666] text-sm border-t border-[#EFE2C4] bg-[#F9F2D8]">
+      <footer className="text-center py-8 text-[#5F5660] text-sm border-t border-[#C8A2C8]/30 bg-[#C8A2C8]/15">
         <p>Gomata Vision LLP • 707 B-Wing The Great Eastern Summit, Plot No. 66, Sector 15, CBD Belapur, Navi Mumbai - 400614</p>
         <p className="mt-2">www.gomatavision.com | CIN: ABC-1234 | RERA Registered</p>
         <p className="mt-4 text-xs">Disclaimer: The information provided here is for educational and illustrative purposes only. Investments are subject to risk. Terms & Conditions apply.*</p>

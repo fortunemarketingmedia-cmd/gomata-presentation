@@ -116,7 +116,7 @@ export default function Sidebar({
           display: "flex",
           flexDirection: "column",
           boxShadow: "0 30px 80px rgba(0,0,0,0.25)",
-          border: "1px solid rgba(255,255,255,0.15)",
+          border: "1px solid rgba(142, 69, 133, 0.22)",
         }}
       >
         {/* HEADER */}
@@ -156,7 +156,7 @@ export default function Sidebar({
               height: "54px",
               borderRadius: "50%",
               border: "none",
-              background: "#4A2567",
+              background: "#8E4585",
               color: "#ffffff",
               fontSize: "22px",
               cursor: "pointer",
@@ -168,13 +168,15 @@ export default function Sidebar({
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "scale(1.08)";
+              e.currentTarget.style.background = "#75386E";
               e.currentTarget.style.boxShadow =
-                "0 14px 35px rgba(74,37,103,0.28)";
+                "0 14px 35px rgba(142,69,133,0.28)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.background = "#8E4585";
               e.currentTarget.style.boxShadow =
-                "0 10px 25px rgba(74,37,103,0.22)";
+                "0 10px 25px rgba(142,69,133,0.22)";
             }}
           >
             ✕
@@ -263,7 +265,7 @@ export default function Sidebar({
           key={index}
           style={{
             background: "#ffffff",
-            border: "1px solid rgba(124,58,237,0.12)",
+            border: "1px solid rgba(142, 69, 133, 0.22)",
             borderRadius: "24px",
             padding: "24px",
             boxShadow: "0 10px 25px rgba(0,0,0,0.06)",
@@ -274,8 +276,8 @@ export default function Sidebar({
               display: "inline-block",
               padding: "8px 14px",
               borderRadius: "999px",
-              background: "#4A2567",
-              color: "#ffffff",
+              background: "#C8A2C8",
+              color: "#241F24",
               fontSize: "14px",
               fontWeight: 600,
               marginBottom: "18px",
@@ -324,7 +326,7 @@ export default function Sidebar({
               style={{
                 fontSize: "22px",
                 fontWeight: 700,
-                color: "#4A2567",
+                color: "#8E4585",
                 margin: 0,
               }}
             >
@@ -383,7 +385,7 @@ export default function Sidebar({
                       display: "inline-block",
                       width: "8px",
                       height: "8px",
-                      background: "#4A2567",
+                      background: "#8E4585",
                       borderRadius: "50%",
                       marginTop: "10px",
                       flexShrink: 0,

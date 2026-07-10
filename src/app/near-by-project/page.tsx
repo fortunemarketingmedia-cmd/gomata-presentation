@@ -1,4 +1,3 @@
-// app/plan/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -7,11 +6,8 @@ import {
   Building2,
   MapPin,
   IndianRupee,
-  Download,
-  ArrowRight,
   CheckCircle2,
   Sparkles,
-  Phone,
   Shield,
   Clock,
   Car,
@@ -106,7 +102,6 @@ const commonFeatures = [
   { icon: <CheckCircle2 className="w-5 h-5" />, text: "Bank Loan Approved" },
 ];
 
-// Image Component with fallback (Client Component safe)
 function ProjectImage({ src, alt, title }: { src: string; alt: string; title: string }) {
   const [imgSrc, setImgSrc] = useState(src);
   const [error, setError] = useState(false);
@@ -124,7 +119,7 @@ function ProjectImage({ src, alt, title }: { src: string; alt: string; title: st
           }}
         />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-[#422565] to-[#A1268D] flex items-center justify-center">
+        <div className="w-full h-full bg-gradient-to-br from-[#C8A2C8] to-[#AD5691] flex items-center justify-center">
           <div className="text-center text-white p-6">
             <Building2 className="w-16 h-16 mx-auto mb-4 opacity-50" />
             <p className="text-xl font-semibold">{title}</p>
@@ -142,21 +137,31 @@ function ProjectImage({ src, alt, title }: { src: string; alt: string; title: st
 
 export default function PlanPage() {
   return (
-    <main className="min-h-screen bg-[#F9F2D8] overflow-x-hidden">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative pt-28 md:pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#422565]/10 via-[#F9F2D8] to-[#F9F2D8]" />
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#F3C12F]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#A1268D]/10 rounded-full blur-3xl" />
+      {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920&auto=format&fit=crop" 
+            alt="Premium Residential Architectural Projects Landscape"
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+          />
+          {/* Translucent Dark Mask to isolate text contrast safely */}
+          <div className="absolute inset-0 bg-[#241F24]/40 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight">
-            <span className="text-[#2B1A0D]">Near by</span>
-            <span className="text-[#A1268D]"> Projects</span>
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+            Nearby <span className="text-[#C8A2C8]">Projects</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#5C4A3B] mt-6 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#C8A2C8] mt-6 max-w-3xl mx-auto tracking-wide font-semibold drop-shadow-sm leading-relaxed">
             Discover luxury living at its finest with our curated collection of
             premium residential projects in Panvel and Navi Mumbai region.
           </p>
@@ -168,44 +173,44 @@ export default function PlanPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-2">
+              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-2">
                 Sai World City
               </h2>
               <div className="flex items-center gap-2 mt-2">
-                <MapPin className="w-4 h-4 text-[#A1268D]" />
-                <p className="text-[#5C4A3B]">Panvel, Navi Mumbai</p>
+                <MapPin className="w-4 h-4 text-[#8E4585]" />
+                <p className="text-[#5F5660]">Panvel, Navi Mumbai</p>
               </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
             <ProjectImage
-              src="/images/saiworld/saiworld2.png"
+              src="/images/saiworld/saiworld2.webp"
               alt="Sai World City Panvel"
               title="Sai World City | Panvel"
             />
 
             <div>
-              <p className="text-[#5C4A3B] leading-relaxed text-lg">
+              <p className="text-[#5F5660] leading-relaxed text-lg">
                 Amid the lush foliage and natural landscapes of Panvel lies{" "}
-                <strong className="text-[#A1268D]">Sai World City</strong> - a
+                <strong className="text-[#8E4585]">Sai World City</strong> - a
                 majestic township set in lush surroundings. It is a hub of green
                 and luxury amenities ensuring that every convenience is at your
                 doorstep.
               </p>
 
               <div className="mt-6">
-                <h3 className="font-bold text-xl text-[#2B1A0D] mb-4 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-[#A1268D]" />
+                <h3 className="font-bold text-xl text-[#241F24] mb-4 flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-[#8E4585]" />
                   World-Class Amenities
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {saiWorldCityAmenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-[#F3C12F]/20 flex items-center justify-center">
-                        <CheckCircle2 className="w-3 h-3 text-[#A1268D]" />
+                      <div className="w-6 h-6 rounded-full bg-[#C8A2C8]/20 flex items-center justify-center">
+                        <CheckCircle2 className="w-3 h-3 text-[#8E4585]" />
                       </div>
-                      <span className="text-[#5C4A3B] text-sm">{amenity}</span>
+                      <span className="text-[#5F5660] text-sm">{amenity}</span>
                     </div>
                   ))}
                 </div>
@@ -215,41 +220,30 @@ export default function PlanPage() {
 
           {/* Pricing Table */}
           <div className="mt-10">
-            <h3 className="font-bold text-xl text-[#2B1A0D] mb-4 flex items-center gap-2">
-              <IndianRupee className="w-5 h-5 text-[#A1268D]" />
+            <h3 className="font-bold text-xl text-[#241F24] mb-4 flex items-center gap-2">
+              <IndianRupee className="w-5 h-5 text-[#8E4585]" />
               Pricing & Carpet Area
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full bg-[#FCFBF7] rounded-2xl overflow-hidden shadow-lg">
-                <thead className="bg-gradient-to-r from-[#422565] to-[#A1268D]">
+              <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
+                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#8E4585]">
                   <tr>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Type
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Carpet Area
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Price
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold"></th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Price</th>
                   </tr>
                 </thead>
                 <tbody>
                   {saiWorldCityPrices.map((item, idx) => (
                     <tr
                       key={idx}
-                      className={`border-b border-[#EFE2C4] ${
-                        idx % 2 === 0 ? "bg-white" : "bg-[#FCFBF7]"
+                      className={`border-b border-[#C8A2C8]/20 ${
+                        idx % 2 === 0 ? "bg-white" : "bg-[#C8A2C8]/5"
                       }`}
                     >
-                      <td className="px-6 py-3 font-semibold text-[#2B1A0D]">
-                        {item.type}
-                      </td>
-                      <td className="px-6 py-3 text-[#5C4A3B]">{item.area}</td>
-                      <td className="px-6 py-3 text-[#A1268D] font-bold">
-                        {item.price}
-                      </td>
+                      <td className="px-6 py-3 font-semibold text-[#241F24]">{item.type}</td>
+                      <td className="px-6 py-3 text-[#5F5660]">{item.area}</td>
+                      <td className="px-6 py-3 text-[#8E4585] font-bold">{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -261,10 +255,10 @@ export default function PlanPage() {
             {commonFeatures.map((feature, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 px-3 py-1.5 bg-[#F9F2D8] rounded-full"
+                className="flex items-center gap-2 px-3 py-1.5 bg-[#C8A2C8]/18 rounded-full"
               >
-                <div className="text-[#A1268D]">{feature.icon}</div>
-                <span className="text-sm text-[#2B1A0D]">{feature.text}</span>
+                <div className="text-[#8E4585]">{feature.icon}</div>
+                <span className="text-sm text-[#241F24] font-medium">{feature.text}</span>
               </div>
             ))}
           </div>
@@ -272,55 +266,49 @@ export default function PlanPage() {
       </section>
 
       {/* PROJECT 2: MARATHON NEXZONE */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-2">
+              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-2">
                 Marathon Nexzone
               </h2>
               <div className="flex items-center gap-2 mt-2">
-                <MapPin className="w-4 h-4 text-[#A1268D]" />
-                <p className="text-[#5C4A3B]">Panvel, Navi Mumbai</p>
+                <MapPin className="w-4 h-4 text-[#8E4585]" />
+                <p className="text-[#5F5660]">Panvel, Navi Mumbai</p>
               </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
             <div className="order-2 lg:order-1">
-              <p className="text-[#5C4A3B] leading-relaxed text-lg">
-                <strong className="text-[#A1268D]">Marathon Nexzone</strong>{" "}
-                offers thoughtfully designed homes that blend comfort with
-                contemporary living. Located in the heart of Panvel, this
-                project provides excellent connectivity and world-class
-                amenities for a modern lifestyle.
+              <p className="text-[#5F5660] leading-relaxed text-lg">
+                <strong className="text-[#8E4585]">Marathon Nexzone</strong> offers thoughtfully designed homes that blend comfort with contemporary living. Located in the heart of Panvel, this project provides excellent connectivity and world-class amenities for a modern lifestyle.
               </p>
               <div className="mt-6">
-                <h3 className="font-bold text-xl text-[#2B1A0D] mb-4">
-                  Key Highlights
-                </h3>
+                <h3 className="font-bold text-xl text-[#241F24] mb-4">Key Highlights</h3>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#A1268D]" />
-                    <span className="text-sm">Prime Location</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#8E4585]" />
+                    <span className="text-sm text-[#5F5660]">Prime Location</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#A1268D]" />
-                    <span className="text-sm">Excellent Connectivity</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#8E4585]" />
+                    <span className="text-sm text-[#5F5660]">Excellent Connectivity</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#A1268D]" />
-                    <span className="text-sm">Modern Amenities</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#8E4585]" />
+                    <span className="text-sm text-[#5F5660]">Modern Amenities</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#A1268D]" />
-                    <span className="text-sm">Vaastu Compliant</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#8E4585]" />
+                    <span className="text-sm text-[#5F5660]">Vaastu Compliant</span>
                   </div>
                 </div>
               </div>
             </div>
             <ProjectImage
-              src="/images/marathon/marathon1.png"
+              src="/images/marathon/marathon1.webp"
               alt="Marathon Nexzone Panvel"
               title="Marathon Nexzone | Panvel"
             />
@@ -328,38 +316,28 @@ export default function PlanPage() {
 
           {/* Pricing Table */}
           <div className="mt-10">
-            <h3 className="font-bold text-xl text-[#2B1A0D] mb-4 flex items-center gap-2">
-              <IndianRupee className="w-5 h-5 text-[#A1268D]" />
+            <h3 className="font-bold text-xl text-[#241F24] mb-4 flex items-center gap-2">
+              <IndianRupee className="w-5 h-5 text-[#8E4585]" />
               Pricing & Carpet Area
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg">
-                <thead className="bg-gradient-to-r from-[#422565] to-[#A1268D]">
+              <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
+                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#8E4585]">
                   <tr>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Type
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Carpet Area
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Price
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold"></th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
                   </tr>
                 </thead>
                 <tbody>
                   {marathonNexzonePrices.map((item, idx) => (
                     <tr
                       key={idx}
-                      className={`border-b border-[#EFE2C4] ${
-                        idx % 2 === 0 ? "bg-white" : "bg-[#FCFBF7]"
+                      className={`border-b border-[#C8A2C8]/20 ${
+                        idx % 2 === 0 ? "bg-white" : "bg-[#C8A2C8]/5"
                       }`}
                     >
-                      <td className="px-6 py-3 font-semibold text-[#2B1A0D]">
-                        {item.type}
-                      </td>
-                      <td className="px-6 py-3 text-[#5C4A3B]">{item.area}</td>
+                      <td className="px-6 py-3 font-semibold text-[#241F24]">{item.type}</td>
+                      <td className="px-6 py-3 text-[#5F5660]">{item.area}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -373,8 +351,8 @@ export default function PlanPage() {
                 key={idx}
                 className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm"
               >
-                <div className="text-[#A1268D]">{feature.icon}</div>
-                <span className="text-sm text-[#2B1A0D]">{feature.text}</span>
+                <div className="text-[#8E4585]">{feature.icon}</div>
+                <span className="text-sm text-[#241F24] font-medium">{feature.text}</span>
               </div>
             ))}
           </div>
@@ -386,54 +364,46 @@ export default function PlanPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-2">
+              <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-2">
                 Arihant Aspire
               </h2>
-              <p className="text-xl font-bold text-[#A1268D]">
+              <p className="text-xl font-bold text-[#8E4585]">
                 ACE OF PANVEL | Palaspe - Panvel
               </p>
               <div className="flex items-center gap-2 mt-1">
-                <MapPin className="w-4 h-4 text-[#A1268D]" />
-                <p className="text-[#5C4A3B]">Palaspe, Panvel, Navi Mumbai</p>
+                <MapPin className="w-4 h-4 text-[#8E4585]" />
+                <p className="text-[#5F5660]">Palaspe, Panvel, Navi Mumbai</p>
               </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
             <ProjectImage
-              src="/images/arihant/arihant1.png"
+              src="/images/arihant/arihant1.webp"
               alt="Arihant Aspire Panvel"
               title="Arihant Aspire | Panvel"
             />
 
             <div>
-              <p className="text-[#5C4A3B] leading-relaxed text-lg">
-                <strong className="text-[#A1268D]">
-                  Arihant Aspire Codename Ace of Panvel
-                </strong>{" "}
-                is a newly launched tower of this premium township at Palaspe.
-                Offering BHK lavish homes with wide decks and office spaces. The
-                apartments are designed with functional fittings and overlook
-                astonishing views of lush surroundings.
+              <p className="text-[#5F5660] leading-relaxed text-lg">
+                <strong className="text-[#8E4585]">Arihant Aspire Codename Ace of Panvel</strong> is a newly launched tower of this premium township at Palaspe. Offering BHK lavish homes with wide decks and office spaces. The apartments are designed with functional fittings and overlook astonishing views of lush surroundings.
               </p>
-              <p className="text-[#5C4A3B] leading-relaxed mt-4">
-                This gated community comes with premium amenities including mini
-                theatre, clubhouse, gymnasium, maze garden, banquet hall,
-                organic spa, pet zones, water fountains, and more.
+              <p className="text-[#5F5660] leading-relaxed mt-4">
+                This gated community comes with premium amenities including mini theatre, clubhouse, gymnasium, maze garden, banquet hall, organic spa, pet zones, water fountains, and more.
               </p>
 
               <div className="mt-6">
-                <h3 className="font-bold text-xl text-[#2B1A0D] mb-4 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-[#A1268D]" />
+                <h3 className="font-bold text-xl text-[#241F24] mb-4 flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-[#8E4585]" />
                   Premium Amenities
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {arihantAspireAmenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-[#F3C12F]/20 flex items-center justify-center">
-                        <CheckCircle2 className="w-3 h-3 text-[#A1268D]" />
+                      <div className="w-6 h-6 rounded-full bg-[#C8A2C8]/20 flex items-center justify-center">
+                        <CheckCircle2 className="w-3 h-3 text-[#8E4585]" />
                       </div>
-                      <span className="text-[#5C4A3B] text-sm">{amenity}</span>
+                      <span className="text-[#5F5660] text-sm">{amenity}</span>
                     </div>
                   ))}
                 </div>
@@ -443,38 +413,28 @@ export default function PlanPage() {
 
           {/* Pricing Table */}
           <div className="mt-10">
-            <h3 className="font-bold text-xl text-[#2B1A0D] mb-4 flex items-center gap-2">
-              <IndianRupee className="w-5 h-5 text-[#A1268D]" />
+            <h3 className="font-bold text-xl text-[#241F24] mb-4 flex items-center gap-2">
+              <IndianRupee className="w-5 h-5 text-[#8E4585]" />
               Pricing & Carpet Area
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full bg-[#FCFBF7] rounded-2xl overflow-hidden shadow-lg">
-                <thead className="bg-gradient-to-r from-[#422565] to-[#A1268D]">
+              <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border border-[#C8A2C8]/30">
+                <thead className="bg-gradient-to-r from-[#C8A2C8] to-[#8E4585]">
                   <tr>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Type
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Carpet Area
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">
-                      Price
-                    </th>
-                    <th className="px-6 py-4 text-left text-white font-semibold"></th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Type</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Carpet Area</th>
                   </tr>
                 </thead>
                 <tbody>
                   {arihantAspirePrices.map((item, idx) => (
                     <tr
                       key={idx}
-                      className={`border-b border-[#EFE2C4] ${
-                        idx % 2 === 0 ? "bg-white" : "bg-[#FCFBF7]"
+                      className={`border-b border-[#C8A2C8]/20 ${
+                        idx % 2 === 0 ? "bg-white" : "bg-[#C8A2C8]/5"
                       }`}
                     >
-                      <td className="px-6 py-3 font-semibold text-[#2B1A0D]">
-                        {item.type}
-                      </td>
-                      <td className="px-6 py-3 text-[#5C4A3B]">{item.area}</td>
+                      <td className="px-6 py-3 font-semibold text-[#241F24]">{item.type}</td>
+                      <td className="px-6 py-3 text-[#5F5660]">{item.area}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -486,109 +446,12 @@ export default function PlanPage() {
             {commonFeatures.map((feature, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 px-3 py-1.5 bg-[#F9F2D8] rounded-full"
+                className="flex items-center gap-2 px-3 py-1.5 bg-[#C8A2C8]/18 rounded-full"
               >
-                <div className="text-[#A1268D]">{feature.icon}</div>
-                <span className="text-sm text-[#2B1A0D]">{feature.text}</span>
+                <div className="text-[#8E4585]">{feature.icon}</div>
+                <span className="text-sm text-[#241F24] font-medium">{feature.text}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMPARISON SECTION */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#F9F2D8]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
-              Quick Overview
-            </span>
-            <h2 className="mt-4 text-4xl md:text-5xl font-black text-[#2B1A0D]">
-              Project Comparison
-            </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
-              Compare our premium projects and find the perfect home for you
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-3xl p-6 shadow-xl border border-[#EFE2C4] hover:-translate-y-2 transition duration-300">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F3C12F]/20 to-[#A1268D]/20 flex items-center justify-center mb-4">
-                <Building2 className="w-8 h-8 text-[#A1268D]" />
-              </div>
-              <h3 className="text-2xl font-bold text-[#2B1A0D]">Sai World City</h3>
-              <p className="text-[#A1268D] text-sm mt-1">Luxury Township</p>
-              <div className="mt-4 space-y-2">
-                <p className="text-sm">
-                  <span className="font-semibold">Configurations:</span> 2BHK -
-                  4BHK
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Price Range:</span> ₹1.32 Cr -
-                  ₹3.29 Cr
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Area:</span> 710 - 1860 SqFt
-                </p>
-              </div>
-              <button className="mt-6 w-full py-2 rounded-full bg-[#422565] text-white font-semibold hover:bg-[#A1268D] transition">
-                View Details
-              </button>
-            </div>
-
-            <div className="bg-white rounded-3xl p-6 shadow-xl border border-[#EFE2C4] hover:-translate-y-2 transition duration-300 transform md:-translate-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F3C12F]/20 to-[#A1268D]/20 flex items-center justify-center mb-4">
-                <Building2 className="w-8 h-8 text-[#A1268D]" />
-              </div>
-              <h3 className="text-2xl font-bold text-[#2B1A0D]">
-                Marathon Nexzone
-              </h3>
-              <p className="text-[#A1268D] text-sm mt-1">Premium Residences</p>
-              <div className="mt-4 space-y-2">
-                <p className="text-sm">
-                  <span className="font-semibold">Configurations:</span> 1BHK -
-                  5BHK
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Price Range:</span> ₹59.50
-                  Lacs - ₹2.16 Cr
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Area:</span> 459 - 1431 SqFt
-                </p>
-              </div>
-              <button className="mt-6 w-full py-2 rounded-full bg-[#422565] text-white font-semibold hover:bg-[#A1268D] transition">
-                View Details
-              </button>
-            </div>
-
-            <div className="bg-white rounded-3xl p-6 shadow-xl border border-[#EFE2C4] hover:-translate-y-2 transition duration-300">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F3C12F]/20 to-[#A1268D]/20 flex items-center justify-center mb-4">
-                <Building2 className="w-8 h-8 text-[#A1268D]" />
-              </div>
-              <h3 className="text-2xl font-bold text-[#2B1A0D]">
-                Arihant Aspire
-              </h3>
-              <p className="text-[#A1268D] text-sm mt-1">
-                New Launch | ACE of Panvel
-              </p>
-              <div className="mt-4 space-y-2">
-                <p className="text-sm">
-                  <span className="font-semibold">Configurations:</span> 1BHK -
-                  3BHK
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Price Range:</span> ₹54 Lacs -
-                  ₹1.21 Cr
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold">Area:</span> 403 - 1000 SqFt
-                </p>
-              </div>
-              <button className="mt-6 w-full py-2 rounded-full bg-[#422565] text-white font-semibold hover:bg-[#A1268D] transition">
-                View Details
-              </button>
-            </div>
           </div>
         </div>
       </section>

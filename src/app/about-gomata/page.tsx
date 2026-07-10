@@ -1,52 +1,22 @@
-// app/about-gomata/page.tsx
 "use client";
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import {
   Building2,
-  Landmark,
   ShieldCheck,
   TrendingUp,
   Users,
-  Globe,
   HandshakeIcon,
-  BarChart3,
-  Clock,
-  FileCheck,
-  LucideIcon,
-  IndianRupee,
-  MapPinned,
-  LucideBadgeCheck,
-  LucideHandCoins,
-  LucideScale,
-  Award,
   CheckCircle2,
-  LocateFixed,
-  TrainFront,
-  Bike,
-  Plane,
-  History,
-  FileText,
-  Timer,
-  Share2,
-  Hotel,
-  School,
-  Factory,
-  Trees,
   Eye,
   Target,
   Rocket,
-  HeartHandshake,
-  Lightbulb,
-  Briefcase,
-  GraduationCap,
-  User,
-  UsersRound,
-  Star,
+  FileCheck,
   Quote,
-  Phone,
-  Mail,
+  Layers,
+  Map,
+  BadgeCheck
 } from "lucide-react";
 
 // Company Values Data
@@ -99,33 +69,33 @@ const whyChooseUs = [
   },
 ];
 
-// Leadership Team Data (Updated with correct image paths - no full Mac paths)
+// Leadership Team Data
 const leadershipTeam = [
   {
     name: "Vikas Koli",
     role: "Founder & Visionary",
-    image: "/images/team/vikas.png",
+    image: "/images/team/vikas.webp",
     description:
       "Distinguished civil engineer and real estate strategist with 28+ years' experience. Expertise in infrastructure, urban development, hospitality, education, and real estate. Former Director at National Highways Authority of India (Maharashtra & Goa). Experience with Airports Authority of India and Municipal Corporation of Thane City.",
   },
   {
     name: "Nitin Shahasane",
     role: "Co-Founder & Land Acquisition",
-    image: "/images/team/nitin.png",
+    image: "/images/team/nitin.webp",
     description:
       "25+ years in land acquisition across Maharashtra. Specialist in Pen, Raigad, Navi Mumbai regions. Worked closely with Government of Maharashtra. Skilled in navigating complex acquisition processes.",
   },
   {
     name: "Mithun Shitkande",
     role: "Co-Founder & Liaison",
-    image: "/images/team/mithun.png",
+    image: "/images/team/mithun.webp",
     description:
       "16 years in liaison and land coordination. Region expertise: Panvel, Raigad, Alibaug, Pen. Proven track record in timely government approvals. Skilled in handling objections & legal frameworks.",
   },
   {
     name: "Yash Manohar Bhoir",
     role: "Co-Founder & Finance",
-    image: "/images/team/yash.png",
+    image: "/images/team/yash.webp",
     description:
       "BMS graduate with a specialization in Finance. Strategic business & finance planning, investment structure optimization, risk assessment & management, financial modeling & projections.",
   },
@@ -155,24 +125,24 @@ const offerings = [
   },
 ];
 
-// Gallery Images (Placeholder data - Replace with actual image paths)
+// Gallery Images
 const galleryImages = [
-  { id: 1, src: "/images/gomata/office-1.jpg", alt: "Gomata Vision Office Front View", size: "large" },
-  { id: 2, src: "/images/gomata/office-2.jpg", alt: "Conference Room", size: "medium" },
-  { id: 3, src: "/images/gomata/cabin.jpg", alt: "Cabin", size: "medium" },
-  { id: 4, src: "/images/gomata/office-3.jpg", alt: "Office Interior", size: "small" },
-  { id: 5, src: "/images/gomata/sitting-area.jpg", alt: "Sitting Area", size: "small" },
-  { id: 6, src: "/images/gomata/event.jpg", alt: "Company Event", size: "large" },
-  { id: 7, src: "/images/gomata/office-4.jpg", alt: "Reception Area", size: "medium" },
-  { id: 8, src: "/images/gomata/office-5.jpg", alt: "Work Space", size: "small" },
+  { id: 1, src: "/images/gomata/office-1.webp", alt: "Gomata Vision Office Front View", size: "large" },
+  { id: 2, src: "/images/gomata/office-2.webp", alt: "Conference Room", size: "medium" },
+  { id: 3, src: "/images/gomata/cabin.webp", alt: "Cabin", size: "medium" },
+  { id: 4, src: "/images/gomata/office-3.webp", alt: "Office Interior", size: "small" },
+  { id: 5, src: "/images/gomata/sitting-area.webp", alt: "Sitting Area", size: "small" },
+  { id: 6, src: "/images/gomata/event.webp", alt: "Company Event", size: "large" },
+  { id: 7, src: "/images/gomata/office-4.webp", alt: "Reception Area", size: "medium" },
+  { id: 8, src: "/images/gomata/office-5.webp", alt: "Work Space", size: "small" },
 ];
 
-// Stats
+// Enhanced KPI Schema Array
 const stats = [
-  { value: "28+", label: "Years of Combined Leadership Experience" },
-  { value: "15+", label: "Lakh Sq. Ft. Township Delivered" },
-  { value: "100%", label: "Cheque Payments & Transparent Dealings" },
-  { value: "23+", label: "Villages Covered in NAINA Region" },
+  { value: "28+", label: "Years Experience", detail: "Combined leadership in elite infrastructure developments", icon: TrendingUp },
+  { value: "15+", label: "Lakh Sq. Ft.", detail: "Premium high-value township spaces delivered seamlessly", icon: Layers },
+  { value: "100%", label: "Transparent Execution", detail: "Verified via clear cheque records & instant 7/12 land data", icon: BadgeCheck },
+  { value: "23+", label: "Villages Covered", detail: "Strategic premium presence across active NAINA regions", icon: Map },
 ];
 
 // Testimonials / Quotes
@@ -199,46 +169,86 @@ const testimonials = [
 
 export default function AboutGomataPage() {
   return (
-    <main className="min-h-screen bg-[#F9F2D8] overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-      {/* ========== HERO SECTION ========== */}
-      <section className="relative pt-28 pb-16 md:pt-32 md:pb-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#422565]/10 via-[#F9F2D8] to-[#F9F2D8]" />
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#F3C12F]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#A1268D]/10 rounded-full blur-3xl" />
+      {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
+      <section className="relative w-full min-h-[75vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1920&auto=format&fit=crop" 
+            alt="Gomata Vision Infrastructure Development Landscape"
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+          />
+          {/* CLEAN, REDUCED BLEND OVERLAY Matrix: Keeps image crisp while ensuring high text contrast */}
+          <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#241F24]/20 via-transparent to-white" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#422565]/10 backdrop-blur mb-6">
-            <Building2 className="w-4 h-4 text-[#A1268D]" />
-            <span className="text-sm font-semibold text-[#A1268D] uppercase tracking-wide">
-              Your Trusted Partner
+        {/* Hero Content Grid */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
+            <Building2 className="w-4 h-4 text-[#C8A2C8]" />
+            <span className="text-xs font-bold text-white uppercase tracking-widest">
+              Your Trusted Real Estate Partner
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight">
-            <span className="text-[#A1268D]">Gomata</span>
-            <span className="text-[#2B1A0D]"> Vision</span>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+            <span className="text-[#C8A2C8]">Gomata</span> Vision
           </h1>
-          <p className="text-xl md:text-2xl text-[#5C4A3B] mt-6 max-w-3xl mx-auto">
+          
+          <p className="text-xl md:text-2xl text-[#C8A2C8] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
             Vision to Build Dreams — Transforming Land into Legacy
           </p>
-          <p className="text-lg text-[#5C4A3B] mt-4 max-w-2xl mx-auto">
-            Founded by Mr. Vikas Koli, Gomata Vision is a forward-thinking real estate company
+          
+          <p className="text-sm md:text-base text-white/90 mt-4 max-w-2xl mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
+            Founded by Mr. Vikas Koli, Gomata Vision is a forward-thinking real estate enterprise 
             focused on high-return land development projects within CIDCO's ambitious NAINA plan.
           </p>
         </div>
       </section>
 
-      {/* ========== STATS BAR ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-8">
+      {/* ========== HIGH-END PREMIUM KPI CARDS SECTION ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 -mt-12 md:-mt-16 z-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 bg-white rounded-2xl shadow-xl p-6 border border-[#EFE2C4]">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="text-center p-4 border-r last:border-r-0 border-[#EFE2C4]">
-                <p className="text-3xl md:text-4xl font-bold text-[#A1268D]">{stat.value}</p>
-                <p className="text-[#5C4A3B] text-sm mt-1">{stat.label}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {stats.map((stat, idx) => {
+              const IconComponent = stat.icon;
+              return (
+                <div 
+                  key={idx} 
+                  className="relative group overflow-hidden bg-white rounded-2xl p-6 border border-[#C8A2C8]/30 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  {/* Subtle Interactive Card Accent Glow */}
+                  <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#8E4585] to-[#C8A2C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <span className="block text-4xl md:text-5xl font-black text-[#8E4585] tracking-tight group-hover:text-[#8E4585]/80 transition-colors duration-300">
+                        {stat.value}
+                      </span>
+                      <span className="block text-base font-bold text-[#241F24] mt-1 tracking-wide">
+                        {stat.label}
+                      </span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-[#C8A2C8]/18 text-[#8E4585] group-hover:bg-[#8E4585] group-hover:text-white transition-all duration-300">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 pt-3 border-t border-[#C8A2C8]/20">
+                    <p className="text-xs text-[#5F5660] leading-relaxed font-medium">
+                      {stat.detail}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -248,14 +258,14 @@ export default function AboutGomataPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Vision */}
-            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#EFE2C4] relative overflow-hidden group hover:shadow-2xl transition-all">
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#F3C12F]/10 rounded-full blur-2xl" />
+            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#C8A2C8]/30 relative overflow-hidden group hover:shadow-2xl transition-all">
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#C8A2C8]/10 rounded-full blur-2xl" />
               <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-[#A1268D]/10 flex items-center justify-center mb-6">
-                  <Eye className="w-8 h-8 text-[#A1268D]" />
+                <div className="w-16 h-16 rounded-full bg-[#8E4585]/10 flex items-center justify-center mb-6">
+                  <Eye className="w-8 h-8 text-[#8E4585]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#2B1A0D]">Our Vision</h2>
-                <p className="mt-4 text-xl leading-relaxed text-[#5C4A3B]">
+                <h2 className="text-3xl font-bold text-[#241F24]">Our Vision</h2>
+                <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
                   To be India's leading real estate partner, turning dreams into sustainable developments
                   built on trust, innovation, and lasting relationships.
                 </p>
@@ -263,14 +273,14 @@ export default function AboutGomataPage() {
             </div>
 
             {/* Mission */}
-            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#EFE2C4] relative overflow-hidden group hover:shadow-2xl transition-all">
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#F3C12F]/10 rounded-full blur-2xl" />
+            <div className="bg-white rounded-[32px] p-10 shadow-xl border border-[#C8A2C8]/30 relative overflow-hidden group hover:shadow-2xl transition-all">
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#C8A2C8]/10 rounded-full blur-2xl" />
               <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-[#F3C12F]/20 flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-[#A1268D]" />
+                <div className="w-16 h-16 rounded-full bg-[#C8A2C8]/20 flex items-center justify-center mb-6">
+                  <Target className="w-8 h-8 text-[#8E4585]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#2B1A0D]">Our Mission</h2>
-                <p className="mt-4 text-xl leading-relaxed text-[#5C4A3B]">
+                <h2 className="text-3xl font-bold text-[#241F24]">Our Mission</h2>
+                <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
                   To offer transparent, tailored real estate solutions that empower informed investment
                   decisions and long-term value creation.
                 </p>
@@ -284,13 +294,13 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Foundation
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Core Values
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               The pillars that guide every decision and every development we undertake
             </p>
           </div>
@@ -299,13 +309,13 @@ export default function AboutGomataPage() {
             {companyValues.map((value, idx) => (
               <div
                 key={idx}
-                className="bg-[#F9F2D8] rounded-2xl p-6 border border-[#EFE2C4] text-center hover:shadow-lg transition"
+                className="bg-[#C8A2C8]/15 rounded-2xl p-6 border border-[#C8A2C8]/30 text-center hover:shadow-lg transition"
               >
-                <div className="flex justify-center mb-4 text-[#A1268D]">
+                <div className="flex justify-center mb-4 text-[#8E4585]">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#2B1A0D]">{value.title}</h3>
-                <p className="mt-2 text-[#5C4A3B] text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-[#241F24]">{value.title}</h3>
+                <p className="mt-2 text-[#5F5660] text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -315,16 +325,16 @@ export default function AboutGomataPage() {
       </section>
 
       {/* ========== WHY CHOOSE US ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Why Gomata Vision
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Your Trusted Partner in Growth
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Discover what makes us the preferred choice for land investments in NAINA region
             </p>
           </div>
@@ -333,13 +343,13 @@ export default function AboutGomataPage() {
             {whyChooseUs.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-[#EFE2C4] hover:-translate-y-2 transition duration-300"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-[#C8A2C8]/30 hover:-translate-y-2 transition duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F3C12F]/20 to-[#A1268D]/20 flex items-center justify-center text-[#A1268D] mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#8E4585]/20 flex items-center justify-center text-[#8E4585] mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#2B1A0D]">{item.title}</h3>
-                <p className="mt-3 text-[#5C4A3B] text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-[#241F24]">{item.title}</h3>
+                <p className="mt-3 text-[#5F5660] text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -352,10 +362,10 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Services
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               What We Offer
             </h2>
           </div>
@@ -364,14 +374,14 @@ export default function AboutGomataPage() {
             {offerings.map((offer, idx) => (
               <div
                 key={idx}
-                className="bg-[#F9F2D8] rounded-2xl p-6 border border-[#EFE2C4] flex gap-4 items-start hover:shadow-md transition"
+                className="bg-[#C8A2C8]/15 rounded-2xl p-6 border border-[#C8A2C8]/30 flex gap-4 items-start hover:shadow-md transition"
               >
-                <div className="w-10 h-10 rounded-full bg-[#A1268D]/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-[#A1268D]" />
+                <div className="w-10 h-10 rounded-full bg-[#8E4585]/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[#8E4585]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#2B1A0D]">{offer.title}</h3>
-                  <p className="mt-1 text-[#5C4A3B]">{offer.description}</p>
+                  <h3 className="text-xl font-bold text-[#241F24]">{offer.title}</h3>
+                  <p className="mt-1 text-[#5F5660]">{offer.description}</p>
                 </div>
               </div>
             ))}
@@ -380,23 +390,21 @@ export default function AboutGomataPage() {
       </section>
 
       {/* ========== GALLERY / COLLAGE SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#F9F2D8]">
+      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Our Space
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               A Glimpse Into Gomata Vision
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               Step inside our workspace where vision meets action, and relationships are built on trust.
             </p>
           </div>
 
-          {/* Dynamic Masonry Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[200px] gap-4">
-            {/* Large Image */}
             <div className="sm:col-span-2 row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
               <Image
                 src={galleryImages[0].src}
@@ -409,9 +417,7 @@ export default function AboutGomataPage() {
               </div>
             </div>
 
-            {/* Medium & Small Images - This is a simplified layout. 
-                For production, implement a proper masonry library or use CSS Grid with dynamic row spans */}
-            {galleryImages.slice(1, 5).map((img, idx) => (
+            {galleryImages.slice(1, 5).map((img) => (
               <div key={img.id} className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]">
                 <Image
                   src={img.src}
@@ -425,7 +431,6 @@ export default function AboutGomataPage() {
               </div>
             ))}
 
-            {/* Second Large Image */}
             <div className="sm:col-span-2 row-span-1 relative overflow-hidden rounded-2xl shadow-lg group">
               <Image
                 src={galleryImages[5].src}
@@ -438,7 +443,6 @@ export default function AboutGomataPage() {
               </div>
             </div>
 
-            {/* More small/medium images */}
             {galleryImages.slice(6, 8).map((img) => (
               <div key={img.id} className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]">
                 <Image
@@ -456,17 +460,17 @@ export default function AboutGomataPage() {
         </div>
       </section>
 
-      {/* ========== LEADERSHIP SECTION - PREMIUM FULL COVER CARDS ========== */}
+      {/* ========== LEADERSHIP SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#8E4585] font-semibold uppercase tracking-[0.3em] text-sm">
               Meet Our Team
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Led by Visionaries. Built on Experience.
             </h2>
-            <p className="mt-4 text-lg text-[#5C4A3B] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
               A team with decades of combined expertise in infrastructure, land acquisition, finance, and government liaison
             </p>
           </div>
@@ -475,9 +479,8 @@ export default function AboutGomataPage() {
             {leadershipTeam.map((leader, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-3xl bg-[#14091f] border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500"
+                className="group relative overflow-hidden rounded-3xl bg-white border border-[#C8A2C8]/30 hover:border-[#8E4585] shadow-lg transition-all duration-500"
               >
-                {/* IMAGE - Full Cover, Taller */}
                 <div className="relative h-[520px] overflow-hidden">
                   <Image
                     src={leader.image}
@@ -485,19 +488,16 @@ export default function AboutGomataPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  {/* Minimal bottom gradient for name readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0113]/90 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#241F24]/90 via-transparent to-transparent" />
                 </div>
 
-                {/* CONTENT - Compact name/role at bottom, description on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-purple-300 font-medium mb-3">
+                  <p className="text-[#C8A2C8] font-medium mb-3">
                     {leader.role}
                   </p>
-                  {/* Description slides up on hover */}
                   <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-all duration-500 ease-out">
                     <p className="text-white/80 text-sm leading-relaxed pt-2 border-t border-white/10">
                       {leader.description}
@@ -510,47 +510,17 @@ export default function AboutGomataPage() {
         </div>
       </section>
 
-      {/* ========== TESTIMONIALS ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#A1268D] font-semibold uppercase tracking-[0.3em] text-sm">
-              Investor Speak
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#2B1A0D] mt-4">
-              What Our Investors Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, idx) => (
-              <div
-                key={idx}
-                className="bg-[#F9F2D8] rounded-2xl p-6 shadow-lg border border-[#EFE2C4] hover:-translate-y-2 transition duration-300"
-              >
-                <Quote className="w-8 h-8 text-[#F3C12F] mb-4" />
-                <p className="text-[#5C4A3B] italic leading-relaxed">"{testimonial.quote}"</p>
-                <div className="mt-4 pt-4 border-t border-[#EFE2C4]">
-                  <p className="font-bold text-[#2B1A0D]">{testimonial.author}</p>
-                  <p className="text-sm text-[#A1268D]">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ========== FOUNDER'S NOTE / QUOTE ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#422565] via-[#5B2B7A] to-[#A1268D] px-10 md:px-20 py-16 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#C8A2C8] via-[#C8A2C8]/80 to-[#8E4585] px-10 md:px-20 py-16 shadow-2xl">
             <div className="relative text-center">
-              <Quote className="w-14 h-14 text-[#F3C12F] mx-auto mb-6 opacity-80" />
+              <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
                 "Even a correct decision is wrong when it is too late.<br />
                 At Gomata Vision, we help you make the right decision at the right time."
               </p>
-              <p className="mt-6 text-[#F9F2D8] text-xl">— Vikas Koli, Founder</p>
+              <p className="mt-6 text-white/90 text-xl">— Vikas Koli, Founder</p>
             </div>
           </div>
         </div>
