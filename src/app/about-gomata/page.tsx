@@ -41,7 +41,7 @@ const companyValues = [
   },
 ];
 
-// Why Choose Gomata Vision
+// Why Choose Gomata Vision LLP
 const whyChooseUs = [
   {
     icon: <Rocket className="w-8 h-8" />,
@@ -80,7 +80,7 @@ const leadershipTeam = [
   },
   {
     name: "Nitin Shahasane",
-    role: "Co-Founder & Land Acquisition",
+    role: "Founder & Land Acquisition",
     image: "/images/team/nitin.webp",
     description:
       "25+ years in land acquisition across Maharashtra. Specialist in Pen, Raigad, Navi Mumbai regions. Worked closely with Government of Maharashtra. Skilled in navigating complex acquisition processes.",
@@ -127,7 +127,7 @@ const offerings = [
 
 // Gallery Images
 const galleryImages = [
-  { id: 1, src: "/images/gomata/office-1.webp", alt: "Gomata Vision Office Front View", size: "large" },
+  { id: 1, src: "/images/gomata/office-1.webp", alt: "Gomata Vision LLP Office Front View", size: "large" },
   { id: 2, src: "/images/gomata/office-2.webp", alt: "Conference Room", size: "medium" },
   { id: 3, src: "/images/gomata/cabin.webp", alt: "Cabin", size: "medium" },
   { id: 4, src: "/images/gomata/office-3.webp", alt: "Office Interior", size: "small" },
@@ -149,7 +149,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Gomata Vision's transparency and expertise gave me the confidence to invest in NAINA. The team's guidance throughout the process was exceptional.",
+      "Gomata Vision LLP's transparency and expertise gave me the confidence to invest in NAINA. The team's guidance throughout the process was exceptional.",
     author: "Rajesh Sharma",
     role: "Investor, TPS-11",
   },
@@ -161,7 +161,7 @@ const testimonials = [
   },
   {
     quote:
-      "Professional, knowledgeable, and genuinely committed to investor success. Highly recommend Gomata Vision for NAINA land investments.",
+      "Professional, knowledgeable, and genuinely committed to investor success. Highly recommend Gomata Vision LLP for NAINA land investments.",
     author: "Amit Patil",
     role: "HNI Investor",
   },
@@ -178,7 +178,7 @@ export default function AboutGomataPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1920&auto=format&fit=crop" 
-            alt="Gomata Vision Infrastructure Development Landscape"
+            alt="Gomata Vision LLP Infrastructure Development Landscape"
             fill
             priority
             unoptimized
@@ -205,8 +205,8 @@ export default function AboutGomataPage() {
             Vision to Build Dreams — Transforming Land into Legacy
           </p>
           
-          <p className="text-sm md:text-base text-white/90 mt-4 max-w-2xl mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
-            Founded by Mr. Vikas Koli, Gomata Vision is a forward-thinking real estate enterprise 
+          <p className="text-sm md:text-base text-white/90 mt-4  mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
+            Mr. Vikas Koli, Founder of Gomata Vision LLP, is a forward-thinking real estate enterprise 
             focused on high-return land development projects within CIDCO's ambitious NAINA plan.
           </p>
         </div>
@@ -281,7 +281,7 @@ export default function AboutGomataPage() {
                 <h2 className="text-3xl font-bold text-[#241F24]">Our Mission</h2>
                 <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
                   To offer transparent, tailored real estate solutions that empower informed investment
-                  decisions and long-term value creation.
+                  decisions and long-term wealth creation.
                 </p>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function AboutGomataPage() {
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Core Values
             </h2>
-            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               The pillars that guide every decision and every development we undertake
             </p>
           </div>
@@ -328,12 +328,12 @@ export default function AboutGomataPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
-              Why Gomata Vision
+              Why Gomata Vision LLP
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Your Trusted Partner in Growth
             </h2>
-            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               Discover what makes us the preferred choice for land investments in NAINA region
             </p>
           </div>
@@ -396,9 +396,9 @@ export default function AboutGomataPage() {
               Our Space
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
-              A Glimpse Into Gomata Vision
+              A Glimpse Into Gomata Vision LLP
             </h2>
-            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               Step inside our workspace where vision meets action, and relationships are built on trust.
             </p>
           </div>
@@ -469,7 +469,7 @@ export default function AboutGomataPage() {
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Led by Visionaries. Built on Experience.
             </h2>
-            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               A team with decades of combined expertise in infrastructure, land acquisition, finance, and government liaison
             </p>
           </div>
@@ -497,11 +497,6 @@ export default function AboutGomataPage() {
                   <p className="text-[#C8A2C8] font-medium mb-3">
                     {leader.role}
                   </p>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-all duration-500 ease-out">
-                    <p className="text-white/80 text-sm leading-relaxed pt-2 border-t border-white/10">
-                      {leader.description}
-                    </p>
-                  </div>
                 </div>
               </div>
             ))}
@@ -517,7 +512,7 @@ export default function AboutGomataPage() {
               <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
                 "Even a correct decision is wrong when it is too late.<br />
-                At Gomata Vision, we help you make the right decision at the right time."
+                At Gomata Vision LLP, we help you make the right decision at the right time."
               </p>
               <p className="mt-6 text-white/90 text-xl">— Vikas Koli, Founder</p>
             </div>

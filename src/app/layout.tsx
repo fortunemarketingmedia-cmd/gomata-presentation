@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gomata Vision LLP",
+  title: "Gomata Vision LLP LLP",
   description:
-    "Real estate investment opportunities by Gomata Vision LLP.",
+    "Real estate investment opportunities by Gomata Vision LLP LLP.",
 };
 
 export default function RootLayout({

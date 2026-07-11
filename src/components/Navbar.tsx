@@ -106,7 +106,7 @@ export default function Navbar() {
           className={`relative isolate hidden items-center rounded-full border p-1.5 transition-all duration-300 md:flex ${
             scrolled
               ? "border-[#C8A2C8]/30 bg-white shadow-[0_10px_40px_rgba(142,69,133,0.08)]"
-              : "border-white/20 bg-white/80 backdrop-blur-md"
+              : "border-[#C8A2C8] bg-white backdrop-blur-md"
           }`}
         >
           {navLinks.map((link) => {

@@ -84,10 +84,10 @@ export default function JourneyPage() {
 
             <p className="mt-8 text-lg leading-9 text-[#5F5660]">
               From engineering excellence to entrepreneurial leadership,
-              Vikas Koli Sir’s journey is a story of resilience, innovation,
-              and nation-building. With decades of experience across
-              infrastructure, hospitality, education, and community
-              development, he continues to inspire future generations
+              Vikas Koli Sir’s journey is a story of Resilience, Innovation,
+              and Nation-building. With decades of experience across
+              Infrastructure, Hospitality, Education, and Community
+              Development. He continues to inspire future generations
               through leadership rooted in purpose.
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function JourneyPage() {
                     </div>
 
                     {/* AXIS DURATION TRACK LABEL */}
-                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[11px] font-mono font-bold text-[#5F5660] group-hover:text-[#6105A3] tracking-wider transition-all duration-300 z-20`}>
+                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[14px] font-mono font-bold text-[#5F5660] group-hover:text-[#6105A3] tracking-wider transition-all duration-300 z-20`}>
                       {item.year}
                     </div>
 
@@ -194,13 +194,13 @@ export default function JourneyPage() {
                         >
                           <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-r border-b border-[#C8A2C8]/40" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
+                            <span className="text-[12px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
                               {item.year}
                             </span>
                             <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
                               {item.title}
                             </h5>
-                            <p className="text-[11px] text-[#5F5660] leading-relaxed font-sans">
+                            <p className="text-[14px] text-[#5F5660] leading-relaxed font-sans">
                               {item.description}
                             </p>
                           </div>
@@ -225,13 +225,13 @@ export default function JourneyPage() {
                         >
                           <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[#C8A2C8]/40" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[9px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
+                            <span className="text-[12px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
                               {item.year}
                             </span>
                             <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
                               {item.title}
                             </h5>
-                            <p className="text-[11px] text-[#5F5660] leading-relaxed font-sans">
+                            <p className="text-[14px] text-[#5F5660] leading-relaxed font-sans">
                               {item.description}
                             </p>
                           </div>
@@ -259,7 +259,7 @@ export default function JourneyPage() {
             <div className="relative text-center">
               <MapPinned className="w-14 h-14 text-[#FFFFFF] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
-              <h2 className="text-4xl md:text-5xl font-black text-[#FFD700] leading-tight tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-[#FFFFFF] leading-tight tracking-tight">
                 “Jo kaam 25 saal mei nhi hua,
                 <br />
                 <span className="text-[#FFFFFF]">voh ab hoga”</span>

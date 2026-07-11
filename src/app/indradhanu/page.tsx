@@ -23,6 +23,7 @@ import {
   Award,
   ArrowRight,
   Play,
+  Book
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -96,7 +97,7 @@ const keyDistances = [
 // Amenities
 const amenities = [
   { icon: <ShoppingBag className="w-6 h-6" />, title: "Retail Space" },
-  { icon: <Utensils className="w-6 h-6" />, title: "Multi-Cuisine Food Court" },
+  { icon: <Book className="w-6 h-6" />, title: "Library" },
   { icon: <Sparkles className="w-6 h-6" />, title: "Luxurious Ambience" },
   { icon: <Car className="w-6 h-6" />, title: "Adequate Vehicle Parking" },
   { icon: <Users className="w-6 h-6" />, title: "Kids Zone" },
@@ -302,7 +303,7 @@ export default function BrochurePage() {
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
               Shop, Dine, <span className="text-[#6105A3]">Enjoy!</span>
             </h2>
-            <p className="mt-4 text-lg text-[#5F5660] max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               Experience a lifestyle of convenience and luxury with our premium amenities
             </p>
           </div>

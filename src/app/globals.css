@@ -42,18 +42,25 @@
   --color-focus-ring: var(--color-focus-ring);
 }
 
-body {
-  background: var(--color-background);
-  color: var(--color-text-primary);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 html {
+  font-size: 19px; /* Base 16px + 3px to increase all page fonts proportionally */
   scrollbar-gutter: stable;
 }
 
 body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+/* Force Leaflet map container and popups to remain at default font sizes */
+.leaflet-container {
+  font-size: 12px !important;
+}
+
+.leaflet-tooltip.location-tooltip > div {
+  font-size: 13px !important;
 }
 /* Force Leaflet tooltip container to be fully opaque and transparent */
 .leaflet-tooltip.location-tooltip {
