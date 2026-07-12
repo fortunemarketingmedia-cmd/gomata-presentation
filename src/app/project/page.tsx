@@ -386,8 +386,13 @@ export default function AboutPage() {
       </section>
 
       {/* ========== WHY TPS-11 SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 pointer-events-none"
+          style={{ backgroundImage: "url('/images/tps11.webp')" }}
+        />
+        <div className="relative max-w-7xl mx-auto z-10">
           <div className="text-center mb-12">
             <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
               Prime Location
@@ -402,7 +407,7 @@ export default function AboutPage() {
             {tps11Advantages.map((adv, idx) => (
               <div
                 key={idx}
-                className="bg-[#C8A2C8]/15 rounded-2xl p-6 shadow-md border border-[#C8A2C8]/30 flex gap-4"
+                className="bg-[#FFFFFF] rounded-2xl p-6 shadow-md border border-[#C8A2C8] flex gap-4"
               >
                 <LocateFixed className="w-6 h-6 text-[#6105A3] flex-shrink-0 mt-1" />
                 <p className="text-[#241F24]">{adv}</p>
@@ -545,7 +550,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#6105A3] via-[#6105A3]/60 to-[#6105A3] px-10 md:px-20 py-20 shadow-2xl">
             <div className="relative text-center">
-              <p className="text-3xl md:text-4xl font-bold text-[#FFFFFF] italic">
+              <p className="text-3xl md:text-4xl font-bold text-[#FFFFFF]">
                 "Take your first step to wealth creation, book your boarding pass now."
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">

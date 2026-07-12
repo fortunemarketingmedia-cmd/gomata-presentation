@@ -123,12 +123,12 @@ export default function JourneyPage() {
       </section>
 
       {/* ============================================================ */}
-      {/* TIMELINE SECTION */}
+      {/* TIMELINE SECTION (Horizontal PPT Slide Presentation Style) */}
       {/* ============================================================ */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-32 bg-[#C8A2C8]/20">
+      <section className="relative px-6 md:px-16 lg:px-24 py-36 bg-[#C8A2C8]/10 overflow-visible">
         {/* COSMIC NEBULA GLOWS */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-[#6105A3]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C8A2C8]/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-10 left-10 w-96 h-96 bg-[#6105A3]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#C8A2C8]/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto">
           {/* HEADING */}
@@ -146,61 +146,61 @@ export default function JourneyPage() {
             </p>
           </div>
 
-          {/* SINGLE SECTION STATIC GRID LAYOUT */}
-          <div className="relative px-4 pb-12 pt-12">
+          {/* HORIZONTAL TIMELINE LAYOUT */}
+          <div className="relative px-4 pb-24 pt-24 overflow-x-auto lg:overflow-x-visible">
             
-            {/* HORIZONTAL TIMELINE LINE RUNNING THROUGHOUT */}
-            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[4px] w-full pointer-events-none z-0">
-              <div className="h-[1px] bg-[#6105A3]/20 w-full" />
-              <div className="h-[1px] bg-[#6105A3]/20 w-full" />
+            {/* Thicker, glowing horizontal timeline axis */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[3px] w-full pointer-events-none z-0">
+              <div className="h-[2px] bg-[#6105A3]/30 w-full" />
+              <div className="h-[1px] bg-[#C8A2C8]/50 w-full" />
             </div>
 
-            {/* Grid container with 6 columns for desktop, dropping to grid columns on mobile natively */}
-            <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-36 lg:gap-y-0 gap-x-4 z-10">
+            {/* Grid container with 6 columns for milestones */}
+            <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-40 lg:gap-y-0 gap-x-6 z-10 min-w-[1000px] lg:min-w-0">
               {milestones.map((item, index) => {
                 const isAbove = index % 2 === 0;
 
                 return (
                   <div 
                     key={index} 
-                    className="relative flex flex-col items-center justify-center h-16 group"
+                    className="relative flex flex-col items-center justify-center h-20 group cursor-pointer z-10 hover:z-50"
                   >
-                    {/* HUB TRACK POINT PIN */}
-                    <div className="relative z-20 w-5 h-5 rounded-full bg-white border border-[#6105A3]/40 group-hover:border-[#6105A3] flex items-center justify-center shadow-md transition-all duration-300">
-                      <div className="w-2 h-2 rounded-full bg-[#6105A3] shadow-[0_0_8px_#6105A3]" />
+                    {/* ENLARGED HUB TRACK POINT PIN */}
+                    <div className="relative z-20 w-7 h-7 rounded-full bg-white border-2 border-[#6105A3] group-hover:border-[#C8A2C8] flex items-center justify-center shadow-lg transition-all duration-300 transform group-hover:scale-125">
+                      <div className="w-3.5 h-3.5 rounded-full bg-[#6105A3] shadow-[0_0_10px_#6105A3] group-hover:bg-[#6105A3]" />
                     </div>
 
-                    {/* AXIS DURATION TRACK LABEL */}
-                    <div className={`absolute ${isAbove ? 'top-[calc(50%+16px)]' : 'bottom-[calc(50%+16px)]'} text-[14px] font-mono font-bold text-[#5F5660] group-hover:text-[#6105A3] tracking-wider transition-all duration-300 z-20`}>
+                    {/* AXIS DURATION TRACK LABEL (Larger Year) */}
+                    <div className={`absolute ${isAbove ? 'top-[calc(50%+20px)]' : 'bottom-[calc(50%+20px)]'} text-base font-mono font-black text-[#5F5660] group-hover:text-[#6105A3] tracking-widest transition-all duration-300 z-20`}>
                       {item.year}
                     </div>
 
                     {isAbove ? (
                       <>
                         {/* STEM LINE UP */}
-                        <div className="absolute bottom-1/2 w-[1px] h-14 bg-gradient-to-t from-[#6105A3]/30 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/50 transition-all duration-500 z-10" />
+                        <div className="absolute bottom-1/2 w-[2px] h-20 bg-gradient-to-t from-[#6105A3]/40 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/80 transition-all duration-500 z-10" />
                         
-                        {/* STATIC HEADING ABOVE TRACK */}
-                        <div className="absolute bottom-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
-                          <h4 className="text-[#6105A3] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                        {/* BOLDER STATIC HEADING ABOVE TRACK */}
+                        <div className="absolute bottom-[calc(50%+68px)] w-full text-center select-none z-20 px-1 transition-all duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
+                          <h4 className="text-[#6105A3] text-base md:text-lg font-extrabold font-serif tracking-wide leading-tight transform">
                             {item.title}
                           </h4>
                         </div>
 
-                        {/* HOVER HOVER TOOLTIP POPUP */}
+                        {/* HOVER TOOLTIP POPUP (Enlarged and optimized for presentations) */}
                         <div 
-                          className="absolute bottom-[calc(50%+104px)] z-40 w-64 p-4 bg-white border border-[#C8A2C8]/40 rounded-xl shadow-xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                          className="absolute bottom-[calc(50%+115px)] z-40 w-80 p-6 bg-white border border-[#C8A2C8] rounded-2xl shadow-2xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
                           style={{ transformOrigin: "bottom center" }}
                         >
-                          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-r border-b border-[#C8A2C8]/40" />
+                          <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white border-r border-b border-[#C8A2C8]" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[12px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
+                            <span className="text-xs font-mono font-black uppercase tracking-widest text-[#6105A3] mb-1.5 block">
                               {item.year}
                             </span>
-                            <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
+                            <h5 className="text-base font-black text-[#241F24] leading-tight mb-3 font-serif">
                               {item.title}
                             </h5>
-                            <p className="text-[14px] text-[#5F5660] leading-relaxed font-sans">
+                            <p className="text-sm md:text-[15px] text-[#5F5660] leading-relaxed font-sans text-justify">
                               {item.description}
                             </p>
                           </div>
@@ -209,29 +209,29 @@ export default function JourneyPage() {
                     ) : (
                       <>
                         {/* STEM LINE DOWN */}
-                        <div className="absolute top-1/2 w-[1px] h-14 bg-gradient-to-b from-[#6105A3]/30 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/50 transition-all duration-500 z-10" />
+                        <div className="absolute top-1/2 w-[2px] h-20 bg-gradient-to-b from-[#6105A3]/40 via-[#6105A3]/10 to-transparent group-hover:from-[#6105A3]/80 transition-all duration-500 z-10" />
                         
-                        {/* STATIC HEADING BELOW TRACK */}
-                        <div className="absolute top-[calc(50%+58px)] w-full text-center select-none z-20 px-1">
-                          <h4 className="text-[#6105A3] text-xs md:text-sm font-bold font-serif tracking-wide leading-tight transition-all duration-300 group-hover:text-[#241F24]">
+                        {/* BOLDER STATIC HEADING BELOW TRACK */}
+                        <div className="absolute top-[calc(50%+68px)] w-full text-center select-none z-20 px-1 transition-all duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
+                          <h4 className="text-[#6105A3] text-base md:text-lg font-extrabold font-serif tracking-wide leading-tight transform">
                             {item.title}
                           </h4>
                         </div>
 
-                        {/* HOVER HOVER TOOLTIP POPUP */}
+                        {/* HOVER TOOLTIP POPUP (Enlarged and optimized for presentations) */}
                         <div 
-                          className="absolute top-[calc(50%+104px)] z-40 w-64 p-4 bg-white border border-[#C8A2C8]/40 rounded-xl shadow-xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                          className="absolute top-[calc(50%+115px)] z-40 w-80 p-6 bg-white border border-[#C8A2C8] rounded-2xl shadow-2xl transition-all duration-300 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
                           style={{ transformOrigin: "top center" }}
                         >
-                          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[#C8A2C8]/40" />
+                          <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white border-l border-t border-[#C8A2C8]" />
                           <div className="relative z-10 text-left">
-                            <span className="text-[12px] font-bold uppercase tracking-widest text-[#6105A3] mb-1 block">
+                            <span className="text-xs font-mono font-black uppercase tracking-widest text-[#6105A3] mb-1.5 block">
                               {item.year}
                             </span>
-                            <h5 className="text-xs font-bold text-[#241F24] leading-tight mb-2 font-serif">
+                            <h5 className="text-base font-black text-[#241F24] leading-tight mb-3 font-serif">
                               {item.title}
                             </h5>
-                            <p className="text-[14px] text-[#5F5660] leading-relaxed font-sans">
+                            <p className="text-sm md:text-[15px] text-[#5F5660] leading-relaxed font-sans text-justify">
                               {item.description}
                             </p>
                           </div>
@@ -242,7 +242,6 @@ export default function JourneyPage() {
                 );
               })}
             </div>
-
           </div>
         </div>
       </section>

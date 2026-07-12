@@ -343,14 +343,14 @@ export default function Sidebar({
 {selectedLocation.description && (
           <div
             style={{
-              maxWidth: "950px",
+              width: "100%",
             }}
           >
             <h3
               style={{
                 fontSize: "30px",
                 fontWeight: 700,
-                marginBottom: "20px",
+                marginBottom: "24px",
                 color: "#111827",
                 letterSpacing: "-0.5px",
               }}
@@ -358,46 +358,79 @@ export default function Sidebar({
               Project Overview
             </h3>
 
-            {/* Bullet Points List */}
-            <ul
-              style={{
-                margin: 0,
-                paddingLeft: "24px",
-                listStyle: "none",
-              }}
-            >
-              {bulletPoints.map((point, index) => (
-                <li
-                  key={index}
-                  style={{
-                    fontSize: "18px",
-                    lineHeight: 1.7,
-                    color: "#4b5563",
-                    marginBottom: "14px",
-                    fontWeight: 400,
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "12px",
-                  }}
-                >
-                  <span
-                    style={{
-                      display: "inline-block",
-                      width: "8px",
-                      height: "8px",
-                      background: "#6105A3",
-                      borderRadius: "50%",
-                      marginTop: "10px",
-                      flexShrink: 0,
-                    }}
-                  />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* If no bullet points were parsed, show as paragraph */}
-            {bulletPoints.length === 1 && bulletPoints[0] === selectedLocation.description && (
+            {bulletPoints.length > 1 ? (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))",
+                  gap: "20px 48px",
+                  width: "100%",
+                }}
+              >
+                <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+                  {bulletPoints.slice(0, Math.ceil(bulletPoints.length / 2)).map((point, index) => (
+                    <li
+                      key={index}
+                      style={{
+                        fontSize: "18px",
+                        lineHeight: 1.7,
+                        color: "#4b5563",
+                        marginBottom: "16px",
+                        fontWeight: 400,
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "12px",
+                        textAlign: "justify",
+                      }}
+                    >
+                      <span
+                        style={{
+                          display: "inline-block",
+                          width: "8px",
+                          height: "8px",
+                          background: "#6105A3",
+                          borderRadius: "50%",
+                          marginTop: "10px",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+                  {bulletPoints.slice(Math.ceil(bulletPoints.length / 2)).map((point, index) => (
+                    <li
+                      key={index}
+                      style={{
+                        fontSize: "18px",
+                        lineHeight: 1.7,
+                        color: "#4b5563",
+                        marginBottom: "16px",
+                        fontWeight: 400,
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "12px",
+                        textAlign: "justify",
+                      }}
+                    >
+                      <span
+                        style={{
+                          display: "inline-block",
+                          width: "8px",
+                          height: "8px",
+                          background: "#6105A3",
+                          borderRadius: "50%",
+                          marginTop: "10px",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
               <p
                 style={{
                   fontSize: "18px",
@@ -405,6 +438,7 @@ export default function Sidebar({
                   color: "#4b5563",
                   margin: 0,
                   fontWeight: 400,
+                  textAlign: "justify",
                 }}
               >
                 {selectedLocation.description}
