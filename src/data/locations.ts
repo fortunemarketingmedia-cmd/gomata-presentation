@@ -40,7 +40,7 @@ export const locations = [
   {
     id: 3,
     name: "Medi City",
-    position: [18.973836, 73.098686],
+    position: [18.973154, 73.048807],
     description:
       "• Upcoming Navi Mumbai International Medicity (NMIMC) project spread over a massive 250-acre wellness zone.\n" +
       "• Super-specialty health hubs specializing in cardiology, oncology, organ transplants, pediatrics, and robotic surgery.\n" +
@@ -376,6 +376,21 @@ export const locations = [
       "• Handles over 1 million tonnes of international air cargo annually, driving trade across Maharashtra.\n" +
       "• The load from CSIA is slated to be shared with the upcoming NMIA airport, boosting NAINA's growth.",
     images: ["/images/mumbai_airport.webp"],
+  },
+  {
+    id: 23,
+    name: "Karnala Bird Sanctuary",
+    position: [18.896, 73.12],
+    description:
+      "• Spans a lush, protected forest reserve along the Mumbai-Goa Highway (NH 66) south of Panvel.\n" +
+      "• Centered around the historic 12th-century Karnala Fort (Funnel Hill), a popular trekking destination.\n" +
+      "• Sanctuary hosts over 222 species of resident and migratory birds, including rare vultures and eagles.\n" +
+      "• Located approximately 12 kilometers from the TPS-11 project boundary, serving as a primary nature getaway.\n" +
+      "• Offers scenic nature trails, a walk-through aviary, and government-managed environment briefing centers.\n" +
+      "• A critical biodiversity hotspot and eco-tourism driver for the Navi Mumbai and NAINA development zones.\n" +
+      "• Surrounded by pristine deciduous forests, natural water springs, and rich wildlife habitats.\n" +
+      "• Easily accessible by road transit, making it a favorite weekend destination for MMR residents.",
+    images: ["/images/karnala_sanctuary.webp"],
   },
 ];
 

@@ -163,8 +163,8 @@ const tps11Cards = [
       },
       {
         icon: <Users className="w-5 h-5" />,
-        label: "Proposed Medi City Wellness Hub",
-        value: "3.0 km / 4 mins",
+        label: "Local Administrative & CIDCO Coordination",
+        value: "4.5 km / 6 mins",
       },
     ],
   },

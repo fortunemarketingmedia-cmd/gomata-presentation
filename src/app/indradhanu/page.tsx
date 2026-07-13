@@ -406,7 +406,7 @@ export default function BrochurePage() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[400px] group">
               <iframe
                 title="Vishnu Mill Compound Solapur Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.8152179836173!2d75.91404179999999!3d17.6590278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5da79c13bdf2d%3A0x6b107e3870857321!2sSolapur!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.675765793466!2d75.90310237583689!3d17.98188178711467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5d96a77d24263%3A0x633519c2ef36192!2sVishnu%20Mill%20Compound%2C%20Solapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1720875000000!5m2!1sen!2sin"
                 className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[10%] contrast-[105%] group-hover:grayscale-0 transition-all duration-500"
                 allowFullScreen
                 loading="lazy"
