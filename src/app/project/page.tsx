@@ -123,22 +123,22 @@ const tps11Cards = [
       {
         icon: <Plane className="w-5 h-5" />,
         label: "Navi Mumbai International Airport (NMIA)",
-        value: "Closest Zone",
+        value: "5.0 km / 7 mins",
       },
       {
         icon: <Building2 className="w-5 h-5" />,
-        label: "6-Lane Highway to Atal Setu (MTHL)",
-        value: "Direct Touch",
+        label: "Atal Setu (MTHL) via 6-Lane Highway",
+        value: "12.0 km / 10 mins",
       },
       {
         icon: <TrainFront className="w-5 h-5" />,
-        label: "16-Lane Virar-Alibaug Multimodal Corridor",
-        value: "Metro Station",
+        label: "Proposed MMC Metro Station",
+        value: "500 m / 1 min (Walk)",
       },
       {
         icon: <LocateFixed className="w-5 h-5" />,
         label: "Palaspe Phata Tri-Junction",
-        value: "3.5 km",
+        value: "3.5 km / 4 mins",
       },
     ],
   },
@@ -149,22 +149,22 @@ const tps11Cards = [
       {
         icon: <School className="w-5 h-5" />,
         label: "Proposed Edu City Campus",
-        value: "Nearby",
+        value: "2.5 km / 3 mins",
       },
       {
         icon: <Hotel className="w-5 h-5" />,
         label: "Proposed Aero City & Commercial Hub",
-        value: "Nearby",
+        value: "4.0 km / 5 mins",
       },
       {
         icon: <Factory className="w-5 h-5" />,
         label: "JNPT Logistics & Port Corridor",
-        value: "Direct Access",
+        value: "15.0 km / 12 mins",
       },
       {
         icon: <Users className="w-5 h-5" />,
-        label: "Local Administrative & CIDCO Coordination",
-        value: "Active",
+        label: "Proposed Medi City Wellness Hub",
+        value: "3.0 km / 4 mins",
       },
     ],
   },
@@ -405,12 +405,13 @@ export default function AboutPage() {
             </div>
             
             {/* WHY NAINA INFRASTRUCTURE IMAGE CARD */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[450px]">
+            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white flex items-center justify-center">
               <Image
-                src="/whynaina.webp"
+                src="/images/whynaina.webp"
                 alt="Why NAINA Infrastructure Development Plan"
-                fill
-                className="object-cover"
+                width={500}
+                height={800}
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>

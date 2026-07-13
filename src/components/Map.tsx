@@ -233,10 +233,17 @@ export default function Map({
               name: "Gomata Project Boundary",
 
               description:
-                "Infrastructure project boundary visualization across the Navi Mumbai development corridor.",
+                "• Spans a highly strategic layout sector in the heart of NAINA's Town Planning Scheme 11 (TPS-11).\n" +
+                "• Located less than 5 kilometers from the upcoming Navi Mumbai International Airport (NMIA) terminals.\n" +
+                "• Positioned directly adjacent to the 16-Lane Virar-Alibaug Multimodal Corridor and the proposed Metro Line.\n" +
+                "• Connects seamlessly to the 6-Lane highway leading directly to the Atal Setu (MTHL) Sea Bridge.\n" +
+                "• Sits within the high-value commercial influence zone of the proposed Aero City and Edu City hubs.\n" +
+                "• Aggregated under the transparent land pooling scheme led by CIDCO and the Government of Maharashtra.\n" +
+                "• Assures direct ownership with investor names printed on official 7/12 land records.\n" +
+                "• Facilitated and managed by Gomata Vision LLP, led by former NHAI Project Director Vikas Koli.",
 
               images: [
-                "/images/project.webp"
+                "/images/gomataboundary.webp"
               ]
 
             });

@@ -257,6 +257,126 @@ export const locations = [
       "• Equipped with modern smart highway toll systems, safety barriers, and roadside service plazas.",
     images: ["/images/highway.webp"],
   },
+  {
+    id: 15,
+    name: "Panvel Bus Stand",
+    position: [18.9912, 73.1168],
+    description:
+      "• Panvel Central Bus Stand is the primary state transport (MSRDC) bus terminal in the Panvel region.\n" +
+      "• Located approximately 4.5 km from the TPS-11 boundary, offering direct regional commuter transit.\n" +
+      "• Connects Panvel to all major districts in Maharashtra, including Pune, Thane, Solapur, and the Konkan coast.\n" +
+      "• Features high daily frequency of public and private buses, serving as a vital mobility node.\n" +
+      "• Currently slated for infrastructure redevelopment to support modern premium transit amenities.\n" +
+      "• Integrates local municipal bus shuttles (NMMT) connecting New Panvel directly to the upcoming airport.\n" +
+      "• Provides direct transit links for corporate staff, logistics workers, and commercial developers in NAINA.\n" +
+      "• Surrounded by dense retail high-streets, restaurants, commercial offices, and medical clinics.",
+    images: ["/images/panvel_bus_stand.webp"],
+  },
+  {
+    id: 16,
+    name: "Panvel Railway Station",
+    position: [18.9898, 73.1206],
+    description:
+      "• Panvel Junction is one of the busiest railway terminals in Navi Mumbai, handling both suburban and long-distance trains.\n" +
+      "• Positioned 4.2 km from the TPS-11 layout, acting as the primary rail transport backbone for the project area.\n" +
+      "• Serves as a major halt on the Central Railway line and the harbor line connecting directly to Mumbai CST.\n" +
+      "• Connects Navi Mumbai to Western India via the Konkan Railway and Central Railway corridors to Pune and Southern India.\n" +
+      "• Directly linked to the upcoming Navi Mumbai International Airport (NMIA) via a proposed high-speed metro corridor.\n" +
+      "• Part of the massive station commercial development project aimed at creating office spaces and retail complexes.\n" +
+      "• Acts as a major driver for local residential housing demand, keeping capital appreciation rates high in Panvel East.\n" +
+      "• Equipped with state-of-the-art security, multiple platforms, parking lots, and integrated auto-rickshaw hubs.",
+    images: ["/images/panvel_railway_station.webp"],
+  },
+  {
+    id: 17,
+    name: "DHL Logistics Park",
+    position: [18.948, 73.138],
+    description:
+      "• Massive DHL logistics park and fulfillment center operating directly along the industrial boundary of TPS-11.\n" +
+      "• Spans over 50 acres of state-of-the-art warehousing layout designed for maximum supply chain efficiency.\n" +
+      "• Provides express cargo, customs clearance, and cold-chain storage for global and local supply networks.\n" +
+      "• Strategically situated along NH 48, allowing fast distribution to Mumbai, Pune, and Southern India corridors.\n" +
+      "• Powered by green energy systems, smart automated sorting conveyor belts, and intelligent cargo scanning.\n" +
+      "• Directly services the growing e-commerce and retail demands generated across the Navi Mumbai NAINA zones.\n" +
+      "• Creates over 3,000 logistics and operations jobs, significantly driving residential demands nearby.\n" +
+      "• A major commercial land value driver, highlighting the industrial importance of the TPS-11 micro-market.",
+    images: ["/images/dhl_logistics.webp"],
+  },
+  {
+    id: 18,
+    name: "Amazon Fulfillment Centre",
+    position: [18.942, 73.143],
+    description:
+      "• Landmark Amazon fulfillment warehouse designed for high-density package storage and automated order sorting.\n" +
+      "• Positioned near the eastern boundary of TPS-11, utilizing the heavy transit corridors of NH 48 and NH 66.\n" +
+      "• Handles daily sorting and distribution of over 100,000 packages across the Mumbai metropolitan area.\n" +
+      "• Equipped with modern robotics, intelligent sorting grids, and climate-controlled storage zones.\n" +
+      "• Features massive docking space for fleet logistics, supporting hundreds of delivery trucks and vans.\n" +
+      "• Promotes localized employment and micro-enterprise growth in the Panvel development belt.\n" +
+      "• Boosts the regional infrastructure footprint, attracting secondary support businesses to the sector.\n" +
+      "• Underpins high commercial property valuations for surrounding land parcels in the NAINA plan.",
+    images: ["/images/amazon_fulfillment.webp"],
+  },
+  {
+    id: 19,
+    name: "L&T Engineering Yard",
+    position: [18.955, 73.136],
+    description:
+      "• Larsen & Toubro (L&T) heavy infrastructure engineering and assembly yard located near Panvel East.\n" +
+      "• Serves as the primary logistics and fabrication hub for major regional road and railway projects.\n" +
+      "• Houses advanced machinery, heavy metal fabrication units, concrete batching, and structural assembly bays.\n" +
+      "• Strategically positioned close to the NH 48 corridor, easing transit of massive pre-cast construction beams.\n" +
+      "• Plays a vital role in building the upcoming Virar-Alibaug Multimodal Corridor and regional metro lines.\n" +
+      "• Provides highly specialized job opportunities for engineers, draftsmen, technicians, and project managers.\n" +
+      "• Showcases the industrial capacity of the NAINA boundary zone, drawing institutional developer interest.\n" +
+      "• Drives capital growth for commercial plots sitting along the primary highway corridors nearby.",
+    images: ["/images/lnt_hub.webp"],
+  },
+  {
+    id: 20,
+    name: "FedEx Express Hub",
+    position: [18.938, 73.145],
+    description:
+      "• Primary FedEx sorting and express package distribution terminal in the Panvel-Navi Mumbai corridor.\n" +
+      "• Handles time-sensitive air cargo and ground express shipments from JNPT port and upcoming airport routes.\n" +
+      "• Spans a state-of-the-art layout incorporating automated packet sorting, X-ray scanning, and delivery dispatch.\n" +
+      "• Positioned on the eastern logistics corridor near NH 48, offering rapid road connectivity.\n" +
+      "• Implements smart GPS fleet dispatch systems to optimize transit times across Maharashtra and Southern India.\n" +
+      "• Generates substantial employment in logistics, route management, customer support, and warehouse operations.\n" +
+      "• Reinforces Panvel's position as a premium logistics node, drawing auxiliary transport suppliers to the zone.\n" +
+      "• Adds robust institutional value to the NAINA land pooling schemes surrounding the TPS-11 sectors.",
+    images: ["/images/fedex_hub.webp"],
+  },
+  {
+    id: 21,
+    name: "JNPT Container Freight Station",
+    position: [18.958, 73.139],
+    description:
+      "• Major JNPT-linked Container Freight Station (CFS) and import-export cargo holding depot near Palaspe.\n" +
+      "• Handles custom inspections, container stuffing, cargo consolidation, and bulk freight storage services.\n" +
+      "• Sits just off the JNPT Port road network near the TPS-11 boundary, offering direct port-highway transit.\n" +
+      "• Features massive container handling gantry cranes and heavy-duty forklift networks.\n" +
+      "• Connects the shipping networks of JNPT directly to national highways, speeding up supply line flows.\n" +
+      "• Hosts custom clearance offices, shipping agent suites, and international cargo dispatch teams.\n" +
+      "• Acts as a major driver for warehousing demand, making land adjacent to the port corridors highly lucrative.\n" +
+      "• Serves as a vital industrial anchor point for the NAINA smart city layout, driving logistics values higher.",
+    images: ["/images/jnpt_cfs.webp"],
+  },
+  {
+    id: 22,
+    name: "Mumbai International Airport (CSIA)",
+    position: [19.0896, 72.8656],
+    description:
+      "• Chhatrapati Shivaji Maharaj International Airport (CSIA) is India's second-busiest international aviation hub.\n" +
+      "• Located in Santacruz/Sahar, Mumbai, acting as the primary air gateway for the Mumbai Metropolitan Region.\n" +
+      "• Handled over 50 million (5 Crore) passengers in 2025, operating at near maximum structural capacity.\n" +
+      "• Connected directly to Navi Mumbai and TPS-11 via the Atal Setu (MTHL) Sea Bridge, cutting transit times to 40 mins.\n" +
+      "• Features the award-winning Terminal 2 (T2), celebrated for its iconic architecture and Indian cultural exhibits.\n" +
+      "• Serves as the central operations hub for Air India, IndiGo, and major international airline networks.\n" +
+      "• Handles over 1 million tonnes of international air cargo annually, driving trade across Maharashtra.\n" +
+      "• The load from CSIA is slated to be shared with the upcoming NMIA airport, boosting NAINA's growth.",
+    images: ["/images/mumbai_airport.webp"],
+  },
 ];
 
 export interface HighwayRoute {
