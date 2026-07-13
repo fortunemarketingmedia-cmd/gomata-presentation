@@ -127,9 +127,9 @@ const offerings = [
 
 // Gallery Images
 const galleryImages = [
-  { id: 1, src: "/images/gomata/office-1.webp", alt: "Gomata Vision LLP Office Front View", size: "large" },
+  { id: 1, src: "/images/gomata/cabin.webp", alt: "Cabin", size: "large" },
   { id: 2, src: "/images/gomata/office-2.webp", alt: "Conference Room", size: "medium" },
-  { id: 3, src: "/images/gomata/cabin.webp", alt: "Cabin", size: "medium" },
+  { id: 3, src: "/images/gomata/office-1.webp", alt: "Gomata Vision LLP Office Front View", size: "medium" },
   { id: 4, src: "/images/gomata/office-3.webp", alt: "Office Interior", size: "small" },
   { id: 5, src: "/images/gomata/sitting-area.webp", alt: "Sitting Area", size: "small" },
   { id: 6, src: "/images/gomata/event.webp", alt: "Company Event", size: "large" },
