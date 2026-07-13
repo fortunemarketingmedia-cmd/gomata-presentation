@@ -327,7 +327,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] text-2xl font-semibold uppercase tracking-[0.2em]">
               Why Gomata Vision LLP
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -361,7 +361,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               Our Services
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -392,7 +392,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-2xl">
               Our Space
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -463,7 +463,7 @@ export default function AboutGomataPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               Meet Our Team
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">

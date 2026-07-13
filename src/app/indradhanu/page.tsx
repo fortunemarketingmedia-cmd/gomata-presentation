@@ -247,7 +247,7 @@ export default function BrochurePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+              <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
                 About Indradhanu
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -297,7 +297,7 @@ export default function BrochurePage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               World-Class Features
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
@@ -328,7 +328,7 @@ export default function BrochurePage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em] text-sm">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               Visual Tour
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">

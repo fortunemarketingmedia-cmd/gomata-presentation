@@ -31,7 +31,7 @@ export const highwayRoutes: HighwayRoute[] = [
       [18.920235, 73.125192],
       [18.918289, 73.123568]
     ],
-    color: "#D4AF37",
+    color: "#9f00de",
     weight: 7,
     description:
       "• Major coast-hugging national highway linking Mumbai and Panvel to Konkan, Goa, and Southern India.\n" +
@@ -55,7 +55,7 @@ export const highwayRoutes: HighwayRoute[] = [
       [18.959333, 73.149744],
       [18.953686, 73.170566]
     ],
-    color: "#D4AF37",
+    color: "#061af1",
     weight: 7,
     description:
       "• Starts from Palaspe Phata and curves southeast along the orange road corridor east of the project boundary.\n" +
@@ -76,7 +76,7 @@ export const highwayRoutes: HighwayRoute[] = [
       [18.950578, 73.154698],
       [18.935760, 73.158639]
     ],
-    color: "#D4AF37",
+    color: "#00ef14",
     weight: 7,
     description:
       "• India's first six-lane concrete, high-speed, access-controlled toll expressway spanning 93 km.\n" +

@@ -114,6 +114,62 @@ const tps11Advantages = [
   "Proposed Aero City and Edu City are located nearby",
 ];
 
+// TPS-11 Premium Card Layout Data
+const tps11Cards = [
+  {
+    title: "Transit & Connectivity",
+    icon: <MapPinned className="w-7 h-7" />,
+    items: [
+      {
+        icon: <Plane className="w-5 h-5" />,
+        label: "Navi Mumbai International Airport (NMIA)",
+        value: "Closest Zone",
+      },
+      {
+        icon: <Building2 className="w-5 h-5" />,
+        label: "6-Lane Highway to Atal Setu (MTHL)",
+        value: "Direct Touch",
+      },
+      {
+        icon: <TrainFront className="w-5 h-5" />,
+        label: "16-Lane Virar-Alibaug Multimodal Corridor",
+        value: "Metro Station",
+      },
+      {
+        icon: <LocateFixed className="w-5 h-5" />,
+        label: "Palaspe Phata Tri-Junction",
+        value: "3.5 km",
+      },
+    ],
+  },
+  {
+    title: "Regional Growth Anchors",
+    icon: <Building2 className="w-7 h-7" />,
+    items: [
+      {
+        icon: <School className="w-5 h-5" />,
+        label: "Proposed Edu City Campus",
+        value: "Nearby",
+      },
+      {
+        icon: <Hotel className="w-5 h-5" />,
+        label: "Proposed Aero City & Commercial Hub",
+        value: "Nearby",
+      },
+      {
+        icon: <Factory className="w-5 h-5" />,
+        label: "JNPT Logistics & Port Corridor",
+        value: "Direct Access",
+      },
+      {
+        icon: <Users className="w-5 h-5" />,
+        label: "Local Administrative & CIDCO Coordination",
+        value: "Active",
+      },
+    ],
+  },
+];
+
 // Leadership Cards (integrated from your journey page)
 const leadershipCards = [
   {
@@ -267,7 +323,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">Watch & Learn</span>
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">Watch & Learn</span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Invest in TPS-11, NAINA?</h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               Hear directly from our leadership about this transformative opportunity
@@ -329,7 +385,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               Strategic Advantage
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why NAINA?</h2>
@@ -348,38 +404,14 @@ export default function AboutPage() {
               ))}
             </div>
             
-            {/* PREMIUM MAP INTEGRATION CARD */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[450px] group">
-              
-              {/* Live Interactive Embed Iframe Layer */}
-              <iframe
-                title="NAINA Navi Mumbai Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15091.954751336496!2d73.0763884!3d18.9760773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c39fd5035f6d%3A0xcb1b593eb42323ef!2sNavi+Mumbai+International+Airport!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-                className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+            {/* WHY NAINA INFRASTRUCTURE IMAGE CARD */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[450px]">
+              <Image
+                src="/whynaina.webp"
+                alt="Why NAINA Infrastructure Development Plan"
+                fill
+                className="object-cover"
               />
-
-              {/* FIXED CENTRAL LOCATION PIN WITH GLOW EFFECT */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
-                {/* Pulsing Base Ring */}
-                <div className="absolute bottom-1 w-8 h-2 bg-[#6105A3]/30 rounded-full blur-[2px] animate-ping" />
-                {/* MapPin / MapPinned Icon */}
-                <MapPinned className="w-10 h-10 text-[#6105A3] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
-              </div>
-
-              {/* Floating Premium Airport Stat Overlay Pill at Bottom */}
-              <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/90 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
-                <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#6105A3]">
-                  <Plane className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-bold text-[#241F24] text-sm md:text-base">NMIA - Operational Area Nearby</p>
-                  <p className="text-xs text-[#5F5660] font-medium mt-0.5">9 crore passengers per year structural capacity</p>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
@@ -394,7 +426,7 @@ export default function AboutPage() {
         />
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl ">
               Prime Location
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why TPS-11?</h2>
@@ -403,14 +435,45 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {tps11Advantages.map((adv, idx) => (
+          <div className="grid lg:grid-cols-2 gap-10">
+            {tps11Cards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-[#FFFFFF] rounded-2xl p-6 shadow-md border border-[#C8A2C8] flex gap-4"
+                className="bg-white rounded-[32px] p-8 shadow-xl border border-[#C8A2C8]/30 flex flex-col justify-between"
               >
-                <LocateFixed className="w-6 h-6 text-[#6105A3] flex-shrink-0 mt-1" />
-                <p className="text-[#241F24]">{adv}</p>
+                <div>
+                  {/* Card Header */}
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="p-3.5 rounded-2xl bg-[#C8A2C8]/18 text-[#6105A3] flex items-center justify-center">
+                      {card.icon}
+                    </div>
+                    <h3 className="text-2xl font-black text-[#241F24] tracking-tight">
+                      {card.title}
+                    </h3>
+                  </div>
+
+                  {/* Card Items */}
+                  <div className="flex flex-col">
+                    {card.items.map((item, itemIdx) => (
+                      <div
+                        key={itemIdx}
+                        className="flex items-center justify-between py-4 border-b border-[#C8A2C8]/20 last:border-b-0"
+                      >
+                        <div className="flex items-center gap-4 mr-4">
+                          <div className="w-12 h-12 rounded-full bg-[#C8A2C8]/18 flex items-center justify-center text-[#6105A3] flex-shrink-0">
+                            {item.icon}
+                          </div>
+                          <span className="font-semibold text-[17px] text-[#241F24] leading-snug">
+                            {item.label}
+                          </span>
+                        </div>
+                        <span className="font-bold text-[17px] text-[#6105A3] whitespace-nowrap">
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -448,7 +511,7 @@ export default function AboutPage() {
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.3em]">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
               Wealth Creation
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">

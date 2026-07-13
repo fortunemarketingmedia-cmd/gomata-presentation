@@ -133,7 +133,7 @@ export default function JourneyPage() {
         <div className="relative max-w-7xl mx-auto">
           {/* HEADING */}
           <div className="text-center mb-24">
-            <span className="uppercase tracking-[0.4em] text-[#6105A3] font-bold text-sm">
+            <span className="uppercase tracking-[0.3em] text-2xl text-[#6105A3] font-bold texts">
               Journey Timeline
             </span>
 
