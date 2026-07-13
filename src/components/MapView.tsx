@@ -12,17 +12,11 @@ export default function MapView() {
   const [selectedLocation, setSelectedLocation] = useState<any>(null);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-white">
-      
-      {/* FIXED FULLSCREEN MAP CONTAINER */}
+    <section className="relative h-screen w-full overflow-hidden bg-white">
       <div className="absolute inset-0">
-        
-        <div className="relative w-full h-full overflow-hidden">
-          
-          {/* MAP */}
+        <div className="relative h-full w-full overflow-hidden">
           <Map setSelectedLocation={setSelectedLocation} />
 
-          {/* SIDEBAR */}
           <Sidebar
             selectedLocation={selectedLocation}
             onClose={() => setSelectedLocation(null)}
