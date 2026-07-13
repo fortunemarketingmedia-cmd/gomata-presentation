@@ -402,21 +402,17 @@ export default function BrochurePage() {
               </div>
             </div>
 
-            {/* REAL INTERACTIVE MAP INTEGRATION CARD */}
+            {/* REAL STATIC MAP INTEGRATION CARD */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white h-[400px] group">
               <iframe
                 title="Vishnu Mill Compound Solapur Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.675765793466!2d75.90310237583689!3d17.98188178711467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5d96a77d24263%3A0x633519c2ef36192!2sVishnu%20Mill%20Compound%2C%20Solapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1720875000000!5m2!1sen!2sin"
-                className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[10%] contrast-[105%] group-hover:grayscale-0 transition-all duration-500"
-                allowFullScreen
+                src="https://maps.google.com/maps?q=17.667460,75.889260&z=16&output=embed"
+                className="absolute inset-0 w-full h-full border-0 z-0 grayscale-[10%] contrast-[105%] group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
 
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
-                <div className="absolute bottom-1 w-8 h-2 bg-[#6105A3]/30 rounded-full blur-[2px] animate-ping" />
-                <MapPin className="w-10 h-10 text-[#6105A3] drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] filter transition-transform duration-300 group-hover:scale-110" />
-              </div>
+
 
               <div className="absolute bottom-4 left-4 right-4 z-10 bg-white/95 backdrop-blur-md border border-[#C8A2C8]/30 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
                 <div className="p-2.5 rounded-xl bg-[#C8A2C8]/18 text-[#6105A3]">

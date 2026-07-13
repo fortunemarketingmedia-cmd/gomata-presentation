@@ -57,7 +57,6 @@ export default function JourneyPage() {
           <video
             autoPlay
             muted
-            loop
             playsInline
             preload="auto"
             className="w-full h-auto object-contain"
