@@ -55,8 +55,8 @@ export default function PlanPage() {
 
       {/* ========== HERO SECTION WITH THEME GRADIENT BACKGROUND ========== */}
       <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
-        {/* Subtle decorative grid overlay */}
-        <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')] mix-blend-overlay pointer-events-none" />
+        {/* Subtle decorative grid overlay (CSS-driven to prevent 404) */}
+        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay pointer-events-none" />
         
         {/* Cosmic Nebula glows */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#C8A2C8]/20 rounded-full blur-[120px] pointer-events-none" />
@@ -73,7 +73,39 @@ export default function PlanPage() {
         </div>
       </section>
 
-      
+      {/* ========== PROJECTS PRESENTATION IMAGES ========== */}
+      <section className="py-16 bg-[#FDFBFD] flex flex-col items-center gap-16 px-6 md:px-12">
+        <div className="max-w-6xl w-full relative shadow-2xl rounded-[32px] overflow-hidden border border-[#C8A2C8]/30 bg-white">
+          <Image
+            src="/images/arihant_pricing.webp"
+            alt="Arihant Aspire Presentation Pricing"
+            width={1600}
+            height={1200}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+        
+        <div className="max-w-6xl w-full relative shadow-2xl rounded-[32px] overflow-hidden border border-[#C8A2C8]/30 bg-white">
+          <Image
+            src="/images/marathon_pricing.webp"
+            alt="Marathon Nexzone Presentation Pricing"
+            width={1600}
+            height={1200}
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="max-w-6xl w-full relative shadow-2xl rounded-[32px] overflow-hidden border border-[#C8A2C8]/30 bg-white">
+          <Image
+            src="/images/sai_world_pricing.webp"
+            alt="Sai World City Presentation Pricing"
+            width={1600}
+            height={1200}
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
     </main>
   );
 }

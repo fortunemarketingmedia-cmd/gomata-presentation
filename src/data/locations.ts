@@ -289,81 +289,6 @@ export const locations = [
   },
   {
     id: 17,
-    name: "DHL Logistics Park",
-    position: [18.948, 73.138],
-    description:
-      "• Massive DHL logistics park and fulfillment center operating directly along the industrial boundary of TPS-11.\n" +
-      "• Spans over 50 acres of state-of-the-art warehousing layout designed for maximum supply chain efficiency.\n" +
-      "• Provides express cargo, customs clearance, and cold-chain storage for global and local supply networks.\n" +
-      "• Strategically situated along NH 48, allowing fast distribution to Mumbai, Pune, and Southern India corridors.\n" +
-      "• Powered by green energy systems, smart automated sorting conveyor belts, and intelligent cargo scanning.\n" +
-      "• Directly services the growing e-commerce and retail demands generated across the Navi Mumbai NAINA zones.\n" +
-      "• Creates over 3,000 logistics and operations jobs, significantly driving residential demands nearby.\n" +
-      "• A major commercial land value driver, highlighting the industrial importance of the TPS-11 micro-market.",
-    images: ["/images/dhl_logistics.webp"],
-  },
-  {
-    id: 18,
-    name: "Amazon Fulfillment Centre",
-    position: [18.942, 73.143],
-    description:
-      "• Landmark Amazon fulfillment warehouse designed for high-density package storage and automated order sorting.\n" +
-      "• Positioned near the eastern boundary of TPS-11, utilizing the heavy transit corridors of NH 48 and NH 66.\n" +
-      "• Handles daily sorting and distribution of over 100,000 packages across the Mumbai metropolitan area.\n" +
-      "• Equipped with modern robotics, intelligent sorting grids, and climate-controlled storage zones.\n" +
-      "• Features massive docking space for fleet logistics, supporting hundreds of delivery trucks and vans.\n" +
-      "• Promotes localized employment and micro-enterprise growth in the Panvel development belt.\n" +
-      "• Boosts the regional infrastructure footprint, attracting secondary support businesses to the sector.\n" +
-      "• Underpins high commercial property valuations for surrounding land parcels in the NAINA plan.",
-    images: ["/images/amazon_fulfillment.webp"],
-  },
-  {
-    id: 19,
-    name: "L&T Engineering Yard",
-    position: [18.955, 73.136],
-    description:
-      "• Larsen & Toubro (L&T) heavy infrastructure engineering and assembly yard located near Panvel East.\n" +
-      "• Serves as the primary logistics and fabrication hub for major regional road and railway projects.\n" +
-      "• Houses advanced machinery, heavy metal fabrication units, concrete batching, and structural assembly bays.\n" +
-      "• Strategically positioned close to the NH 48 corridor, easing transit of massive pre-cast construction beams.\n" +
-      "• Plays a vital role in building the upcoming Virar-Alibaug Multimodal Corridor and regional metro lines.\n" +
-      "• Provides highly specialized job opportunities for engineers, draftsmen, technicians, and project managers.\n" +
-      "• Showcases the industrial capacity of the NAINA boundary zone, drawing institutional developer interest.\n" +
-      "• Drives capital growth for commercial plots sitting along the primary highway corridors nearby.",
-    images: ["/images/lnt_hub.webp"],
-  },
-  {
-    id: 20,
-    name: "FedEx Express Hub",
-    position: [18.938, 73.145],
-    description:
-      "• Primary FedEx sorting and express package distribution terminal in the Panvel-Navi Mumbai corridor.\n" +
-      "• Handles time-sensitive air cargo and ground express shipments from JNPT port and upcoming airport routes.\n" +
-      "• Spans a state-of-the-art layout incorporating automated packet sorting, X-ray scanning, and delivery dispatch.\n" +
-      "• Positioned on the eastern logistics corridor near NH 48, offering rapid road connectivity.\n" +
-      "• Implements smart GPS fleet dispatch systems to optimize transit times across Maharashtra and Southern India.\n" +
-      "• Generates substantial employment in logistics, route management, customer support, and warehouse operations.\n" +
-      "• Reinforces Panvel's position as a premium logistics node, drawing auxiliary transport suppliers to the zone.\n" +
-      "• Adds robust institutional value to the NAINA land pooling schemes surrounding the TPS-11 sectors.",
-    images: ["/images/fedex_hub.webp"],
-  },
-  {
-    id: 21,
-    name: "JNPT Container Freight Station",
-    position: [18.958, 73.139],
-    description:
-      "• Major JNPT-linked Container Freight Station (CFS) and import-export cargo holding depot near Palaspe.\n" +
-      "• Handles custom inspections, container stuffing, cargo consolidation, and bulk freight storage services.\n" +
-      "• Sits just off the JNPT Port road network near the TPS-11 boundary, offering direct port-highway transit.\n" +
-      "• Features massive container handling gantry cranes and heavy-duty forklift networks.\n" +
-      "• Connects the shipping networks of JNPT directly to national highways, speeding up supply line flows.\n" +
-      "• Hosts custom clearance offices, shipping agent suites, and international cargo dispatch teams.\n" +
-      "• Acts as a major driver for warehousing demand, making land adjacent to the port corridors highly lucrative.\n" +
-      "• Serves as a vital industrial anchor point for the NAINA smart city layout, driving logistics values higher.",
-    images: ["/images/jnpt_cfs.webp"],
-  },
-  {
-    id: 22,
     name: "Mumbai International Airport (CSIA)",
     position: [19.0896, 72.8656],
     description:
@@ -378,7 +303,7 @@ export const locations = [
     images: ["/images/mumbai_airport.webp"],
   },
   {
-    id: 23,
+    id: 18,
     name: "Karnala Bird Sanctuary",
     position: [18.896, 73.12],
     description:
