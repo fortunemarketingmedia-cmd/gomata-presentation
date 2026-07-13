@@ -40,7 +40,7 @@ export const locations = [
   {
     id: 3,
     name: "Medi City",
-    position: [18.973154, 73.048807],
+    position: [18.973836, 73.098686],
     description:
       "• Upcoming Navi Mumbai International Medicity (NMIMC) project spread over a massive 250-acre wellness zone.\n" +
       "• Super-specialty health hubs specializing in cardiology, oncology, organ transplants, pediatrics, and robotic surgery.\n" +
@@ -89,15 +89,6 @@ export const locations = [
         price: "₹ 2.04 Cr - ₹ 2.43 Cr",
       },
     ],
-    description:
-      "• A landmark mega-township project developed by Paradise Group in the rapidly growing Panvel region.\n" +
-      "• Spans across 32 acres of premium land, featuring high-rise towers with iconic modern architecture.\n" +
-      "• Offers luxury 2, 3, and 4 BHK residential apartments with premium fittings, ventilation, and skyline views.\n" +
-      "• Features world-class lifestyle amenities including a grand clubhouse, thematic gardens, and replica global landmarks.\n" +
-      "• Positioned close to the upcoming Navi Mumbai International Airport and the Mumbai-Pune Expressway.\n" +
-      "• Integrates premium high-street retail, fine-dining restaurants, shopping gallerias, and community spaces.\n" +
-      "• Employs smart green technologies including solar power lighting, rainwater harvesting, and waste management.\n" +
-      "• Serves as a major luxury benchmark project, driving capital values higher across the surrounding TPS-11 area.",
     images: [
       "/images/saiworld/saiworld1.webp",
       "/images/saiworld/saiworld2.webp",
@@ -124,15 +115,6 @@ export const locations = [
         price: "₹ 1.25 Cr",
       },
     ],
-    description:
-      "• Premium township project developed by Marathon Group located along the Old Mumbai-Pune Highway (NH 48).\n" +
-      "• Features smart, space-optimized 1, 2, and 2.5 BHK apartments designed for excellent cross-ventilation.\n" +
-      "• Incorporates retail shopping avenues, business complexes, and extensive landscaped recreation lawns.\n" +
-      "• Located within the immediate influence zone of the upcoming airport, offering premium investment returns.\n" +
-      "• Equipped with a multi-tier security network, 24/7 water supply systems, power backup, and modern sports facilities.\n" +
-      "• Highly accessible via the Panvel railway station, local transit hubs, and the proposed multimodal corridor.\n" +
-      "• Surrounded by established educational institutions, multi-specialty hospitals, and modern retail zones.\n" +
-      "• Represents a key mid-to-high level residential hub boosting density and micro-market growth nearby.",
     images: [
       "/images/marathon/marathon1.webp",
       "/images/marathon/marathon2.webp",
@@ -159,15 +141,6 @@ export const locations = [
         price: "₹ 1.17 Cr",
       },
     ],
-    description:
-      "• Landmark high-rise residential project developed by Arihant Superstructures in Palaspe-Panvel.\n" +
-      "• Spans across 16 acres of premium land, featuring architectural towers rising 42 stories into the skyline.\n" +
-      "• Offers modern studio apartments, 1 BHK, and 2 BHK residences designed with smart space allocations.\n" +
-      "• Features a grand clubhouse, rooftop gardens, standard gymnasiums, sports courts, and wellness spas.\n" +
-      "• Located directly at the strategic highway junction of NH 48 and NH 66, offering premium road accessibility.\n" +
-      "• Positioned close to the upcoming airport, major warehousing depots, and business offices.\n" +
-      "• Features professional 24/7 security, high-speed elevators, sustainable sewage treatment, and fire safety systems.\n" +
-      "• Driven by rapid commercial development in the NAINA region, offering high capital growth potential.",
     images: [
       "/images/arihant/arihant1.webp",
       "/images/arihant/arihant2.webp",
