@@ -40,7 +40,7 @@ export const locations = [
   {
     id: 3,
     name: "Medi City",
-    position: [18.973154, 73.048807],
+    position: [18.972316, 73.101567],
     description:
       "• Upcoming Navi Mumbai International Medicity (NMIMC) project spread over a massive 250-acre wellness zone.\n" +
       "• Super-specialty health hubs specializing in cardiology, oncology, organ transplants, pediatrics, and robotic surgery.\n" +
