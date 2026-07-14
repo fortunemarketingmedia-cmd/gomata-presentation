@@ -200,38 +200,41 @@ export default function Sidebar({
               marginBottom: "52px",
             }}
           >
-            {selectedLocation.images.map((image, idx) => (
-              <div
-                key={idx}
-                style={{
-                  position: "relative",
-                  overflow: "hidden",
-                  borderRadius: "24px",
-                  background: "#f5f5f5",
-                  height: "340px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-                }}
-              >
-                <img
-                  src={image}
-                  alt={`${selectedLocation.name} ${idx + 1}`}
-                  loading="lazy"
+            {selectedLocation.images.map((image, idx) => {
+              const isBoundary = image.includes("gomataboundary");
+              return (
+                <div
+                  key={idx}
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.4s ease",
+                    position: "relative",
+                    overflow: "hidden",
+                    borderRadius: "24px",
+                    background: isBoundary ? "#fcfcfd" : "#f5f5f5",
+                    height: isBoundary ? "1020px" : "340px",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.04)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "scale(1)";
-                  }}
-                />
-              </div>
-            ))}
+                >
+                  <img
+                    src={image}
+                    alt={`${selectedLocation.name} ${idx + 1}`}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: isBoundary ? "contain" : "cover",
+                      display: "block",
+                      transition: "transform 0.4s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isBoundary) e.currentTarget.style.transform = "scale(1.04)";
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isBoundary) e.currentTarget.style.transform = "scale(1)";
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* PRICING SECTION */}

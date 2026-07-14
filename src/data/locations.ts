@@ -149,7 +149,7 @@ export const locations = [
   {
     id: 8,
     name: "Gomata Office",
-    position: [19.0184, 73.039],
+    position: [19.009983, 73.034506],
     description:
       "• Corporate office of Gomata Vision LLP, located in CBD Belapur, the financial hub of Navi Mumbai.\n" +
       "• Serves as the central administration, client relations, and project management headquarters.\n" +
