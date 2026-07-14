@@ -611,7 +611,7 @@ export default function AboutPage() {
                   href="tel:+91 9892784379"
                   className="inline-block px-8 py-3 bg-[#6105A3] text-white font-bold rounded-full hover:bg-[#75386E] transition shadow-lg"
                 >
-                  📞 Contact - +91 9892784379, +91 97024 89747
+                  📞 Contact - +91 9892784379, +91 8097843535
                 </a>
               </div>
             </div>
