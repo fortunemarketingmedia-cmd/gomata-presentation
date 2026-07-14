@@ -114,7 +114,7 @@ const offerings = [
       "Partner with us for large-scale residential and commercial developments in high-growth NAINA zones.",
   },
   {
-    title: "Investment Advisory",
+    title: "Real Development Advisory",
     description:
       "Strategic guidance for HNIs, institutions, and individuals looking to maximize returns in emerging real estate corridors.",
   },

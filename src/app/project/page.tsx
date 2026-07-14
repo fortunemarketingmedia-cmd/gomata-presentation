@@ -240,7 +240,7 @@ const investmentModels = [
   },
   {
     title: "Joint Ventures",
-    description: "For HNIs & institutional investors with Gomata Vision LLP LLP.",
+    description: "For HNIs & institutional investors with Gomata Vision LLP.",
   },
 ];
 
@@ -272,12 +272,12 @@ const faqs = [
     a: "Out of all 12 Town Planning Schemes, TPS 11 stands out as the crown jewel because it is the closest TPS from Airport (less than 5kms), has a 6 Lane Highway to Atal Setu (MTHL) touching it, high-rise projects are already present, and the 16 Lane Virar-Alibaug Multi Modal Corridor with a proposed metro station passes through it.",
   },
   {
-    q: "Why only Vikas Koli (Gomata Vision LLP LLP)?",
+    q: "Why only Vikas Koli (Gomata Vision LLP)?",
     a: "Because behind this opportunity stands a visionary leader with 28+ years of national-level experience in infrastructure and development, including former Project Director at NHAI, former Officer at Airports Authority of India, and Strategic Contributor to NAINA TPS-11 Land Pooling Module. Mr. Vikas Koli has designed and mentored several wealth-creation models around national infrastructure projects.",
   },
   {
     q: "What is the minimum ticket size of Investment?",
-    a: "Each investor participates with an investment of just ₹39.70 lakhs incl Stamp Duty, Reg, Legal Charges and GST (100% Cheque Payments). Breakup: ₹22,00,000 to Landowner (₹20L + ₹2L charges) and ₹17,70,000 to Gomata Vision LLP LLP (₹15L + ₹2.7L GST).",
+    a: "Each investor participates with an investment of just ₹39.70 lakhs incl Stamp Duty, Reg, Legal Charges and GST (100% Cheque Payments). Breakup: ₹22,00,000 to Landowner (₹20L + ₹2L charges) and ₹17,70,000 to Gomata Vision LLP (₹15L + ₹2.7L GST).",
   },
   {
     q: "What is the expected market value at handover?",
@@ -307,7 +307,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center">
-          {/* Gomata Vision LLP LLP Title */}
+          {/* Gomata Vision LLP Title */}
           <div className="mb-4">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
               <span className="text-[#FFD700]">Gomata</span> Vision LLP
@@ -344,7 +344,7 @@ export default function AboutPage() {
               <iframe 
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/zBb1cJqPCsc" 
-                title="Gomata Vision LLP LLP - Land Pooling Concept"
+                title="Gomata Vision LLP - Land Pooling Concept"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -519,7 +519,7 @@ export default function AboutPage() {
               Developer-Level Profit Participation
             </h2>
             <p className="mt-4 text-lg text-[#5F5660] mx-auto">
-              Land Pooling Concept by Gomata Vision LLP LLP – Invest at the land acquisition stage
+              Land Pooling Concept by Gomata Vision LLP – Invest at the land acquisition stage
               where maximum value creation begins.
             </p>
           </div>
@@ -537,7 +537,7 @@ export default function AboutPage() {
                   <p className="text-sm text-[#5F5660]">+ ₹2,00,000 (SD + Reg + Legal)</p>
                 </div>
                 <div>
-                  <p className="font-bold text-[#6105A3]">To Gomata Vision LLP LLP</p>
+                  <p className="font-bold text-[#6105A3]">To Gomata Vision LLP</p>
                   <p className="text-2xl font-bold text-black">₹15,00,000</p>
                   <p className="text-sm text-[#5F5660]">+ ₹2,70,000 (18% GST)</p>
                 </div>
@@ -551,7 +551,7 @@ export default function AboutPage() {
                 </ul>
                 <div className="mt-4 p-3 bg-white/10 rounded-lg">
                   <p className="text-xs font-semibold text-white">Bank Details:</p>
-                  <p className="text-xs text-white/90">Gomata Vision LLP LLP, HDFC Bank, Sec 15 Belapur</p>
+                  <p className="text-xs text-white/90">Gomata Vision LLP, HDFC Bank, Sec 15 Belapur</p>
                   <p className="text-xs text-white/90">A/c: 50200106979590 | IFSC: HDFC0002860</p>
                 </div>
               </div>
@@ -632,7 +632,7 @@ export default function AboutPage() {
          
       {/* Footer */}
       <footer className="text-center py-8 text-[#5F5660] text-sm border-t border-[#C8A2C8]/30 bg-[#C8A2C8]/15">
-        <p>Gomata Vision LLP LLP • 707 B-Wing The Great Eastern Summit, Plot No. 66, Sector 15, CBD Belapur, Navi Mumbai - 400614</p>
+        <p>Gomata Vision LLP • 707 B-Wing The Great Eastern Summit, Plot No. 66, Sector 15, CBD Belapur, Navi Mumbai - 400614</p>
         <p className="mt-2">www.gomatavision.com | CIN: ABC-1234 | RERA Registered</p>
         <p className="mt-4 text-xs">Disclaimer: The information provided here is for educational and illustrative purposes only. Investments are subject to risk. Terms & Conditions apply.*</p>
       
