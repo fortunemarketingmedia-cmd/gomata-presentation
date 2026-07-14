@@ -81,12 +81,12 @@ export const locations = [
       {
         type: "2 BHK",
         area: "878 - 931 sq.ft.",
-        price: "₹ 1.57 Cr - ₹ 1.66 Cr",
+        price: "₹1.57 Cr+ - ₹1.66 Cr onwards",
       },
       {
         type: "3 BHK",
         area: "1153 - 1373 sq.ft.",
-        price: "₹ 2.04 Cr - ₹ 2.43 Cr",
+        price: "₹2.04 Cr+ - ₹2.43 Cr onwards",
       },
     ],
     images: [
@@ -102,17 +102,17 @@ export const locations = [
       {
         type: "1 BHK",
         area: "459 sq.ft.",
-        price: "₹ 62.88 Lac",
+        price: "₹62.88 Lac onwards",
       },
       {
         type: "2 BHK",
         area: "577 - 913 sq.ft.",
-        price: "₹ 79 Lac - ₹ 1.24 Cr",
+        price: "₹79 Lac+ - ₹1.24 Cr onwards",
       },
       {
         type: "3 BHK",
         area: "922 sq.ft.",
-        price: "₹ 1.25 Cr",
+        price: "₹1.25 Cr+ - ₹1.50 Cr onwards",
       },
     ],
     images: [
@@ -128,17 +128,17 @@ export const locations = [
       {
         type: "1 BHK",
         area: "332 - 365 sq.ft.",
-        price: "₹ 40.92 Lac - ₹ 44.93 Lac",
+        price: "₹40.92 Lac+ - ₹44.93 Lac onwards",
       },
       {
         type: "2 BHK",
         area: "482 - 732 sq.ft.",
-        price: "₹ 50.32 Lac - ₹ 86.38 Lac",
+        price: "₹50.32 Lac+ - ₹86.38 Lac onwards",
       },
       {
         type: "3 BHK",
         area: "950 sq.ft.",
-        price: "₹ 1.17 Cr",
+        price: "₹1.17 Cr+ - ₹1.50 Cr onwards",
       },
     ],
     images: [

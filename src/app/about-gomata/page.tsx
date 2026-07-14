@@ -511,8 +511,15 @@ export default function AboutGomataPage() {
             <div className="relative text-center">
               <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
-                "Even a correct decision is wrong when it is too late.<br />
-                At Gomata Vision LLP, we help you make the right decision at the right time."
+                "Even a correct decision is 
+                <span className="text-[#FFD700] text-style-Italic"><i> 'wrong' </i></span>  
+                 when it is 
+                <span className="text-[#FFD700] text-style-Italic"><i> 'too late'</i></span>.
+                <br />
+                At Gomata Vision LLP, we help you make the 
+                <span className="text-[#FFD700] text-style-Italic"><i> 'right decision' </i></span>
+                  at the 
+                 <span className="text-[#FFD700] text-style-Italic"><i> 'right time'</i></span>."
               </p>
               <p className="mt-6 text-white/90 text-xl">— Vikas Koli, Founder</p>
             </div>

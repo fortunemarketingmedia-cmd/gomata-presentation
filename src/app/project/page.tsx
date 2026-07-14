@@ -291,20 +291,9 @@ export default function AboutPage() {
       <Navbar />
 
       {/* ========== HERO SECTION WITH MISSION/VISION BACKGROUND IMAGE ========== */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-36 pb-28 md:pt-44 md:pb-36 overflow-hidden">
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
         {/* Background Image Layer */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1920&auto=format&fit=crop" 
-            alt="Gomata Vision LLP Corporate Growth Background"
-            fill
-            priority
-            unoptimized
-            className="object-cover"
-          />
-          {/* Clean, Reduced Translucent Mask Matrix */}
-          <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
-        </div>
+        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center">
           {/* Gomata Vision LLP Title */}
@@ -622,7 +611,7 @@ export default function AboutPage() {
                   href="tel:+91 9892784379"
                   className="inline-block px-8 py-3 bg-[#6105A3] text-white font-bold rounded-full hover:bg-[#75386E] transition shadow-lg"
                 >
-                  📞 Contact - +91 9892784379
+                  📞 Contact - +91 9892784379, +91 97024 89747
                 </a>
               </div>
             </div>

@@ -258,9 +258,9 @@ export default function JourneyPage() {
               <MapPinned className="w-14 h-14 text-[#FFFFFF] mx-auto mb-8 drop-shadow-[0_2px_4px_rgba(142,69,133,0.15)]" />
 
               <h2 className="text-4xl md:text-5xl font-black text-[#FFFFFF] leading-tight tracking-tight">
-                “Jo kaam 25 saal mei nhi hua,
+                “Jo kaam 25 saal main nahi huwa,
                 <br />
-                <span className="text-[#FFFFFF]">voh ab hoga”</span>
+                <span className="text-[#FFFFFF]">VOH AB HOGA”</span>
               </h2>
 
               <p className="mt-8 text-[#FFFFFF] text-xl font-black tracking-wide">

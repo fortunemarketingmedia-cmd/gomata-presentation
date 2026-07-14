@@ -54,7 +54,7 @@ export default function PlanPage() {
       <Navbar />
 
       {/* ========== HERO SECTION WITH THEME GRADIENT BACKGROUND ========== */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#89CFF0] to-[#89CFF0]">
         {/* Subtle decorative grid overlay (CSS-driven to prevent 404) */}
         <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay pointer-events-none" />
         
@@ -66,7 +66,7 @@ export default function PlanPage() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
             <span className="text-[#FFFFFF]">Nearby</span> <span className="text-[#FFFFFF]">Projects</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#E2D5E8] mt-6 max-w-3xl mx-auto tracking-wide font-medium leading-relaxed drop-shadow-sm">
+          <p className="text-xl text-[#FFFFFF] mt-6 max-w-4xl mx-auto tracking-wide font-medium leading-relaxed drop-shadow-sm">
             Discover luxury living at its finest with our curated collection of
             premium residential projects in Panvel and Navi Mumbai region.
           </p>
