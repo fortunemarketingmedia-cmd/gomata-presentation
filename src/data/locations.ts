@@ -200,7 +200,7 @@ export const locations = [
     position: [18.968282, 73.131683],
     description:
       "• Prominent multi-highway traffic intersection located in Panvel, connecting key regions of Maharashtra.\n" +
-      "• Links the Mumbai-Pune Expressway (NH 48), Mumbai-Goa Highway (NH 66), and the JNPT Port road network.\n" +
+      "• Links the Mumbai-Pune Expressway (NH 48), Mumbai-Goa Highway (NH 66) and many more places.\n" +
       "• Located just 3.5 km northwest of the project boundary, serving as the primary regional transit gateway.\n" +
       "• Features massive commercial setups, container freight stations, logistics depots, and retail hubs.\n" +
       "• Acts as the primary collection point for passenger buses and commercial transport between Goa, Pune, and Mumbai.\n" +
