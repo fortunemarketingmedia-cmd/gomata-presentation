@@ -6,7 +6,7 @@ export const locations = [
     name: "Navi Mumbai Airport",
     position: [18.9942, 73.0745],
     description:
-      "• Navi Mumbai International Airport (NMIA) is a world-class greenfield airport slated to start operations by late 2026.\n" +
+      "• Navi Mumbai International Airport (NMIA) is a world-class greenfield airport slated to start operations by late 2025.\n" +
       "• The project spans over 1,160 hectares of high-value land in the core of the Navi Mumbai influence zone.\n" +
       "• Phase 1 is designed to handle over 20 million (2 Crore) passenger movements annually, easing major load off Mumbai's CSIA.\n" +
       "• The ultimate design capacity stands at over 90 million (9 Crore) passengers per year with parallel dual runways.\n" +
