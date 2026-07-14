@@ -81,12 +81,12 @@ export const locations = [
       {
         type: "2 BHK",
         area: "878 - 931 sq.ft.",
-        price: "₹1.5 Cr+ - ₹1.66 Cr onwards",
+        price: "₹1.5 Cr+ onwards",
       },
       {
         type: "3 BHK",
         area: "1153 - 1373 sq.ft.",
-        price: "₹2 Cr+ - ₹2.43 Cr onwards",
+        price: "₹2 Cr+ onwards",
       },
     ],
     images: [
@@ -102,17 +102,17 @@ export const locations = [
       {
         type: "1 BHK",
         area: "459 sq.ft.",
-        price: "₹62 Lac onwards",
+        price: "₹62 Lkhs+ onwards",
       },
       {
         type: "2 BHK",
         area: "577 - 913 sq.ft.",
-        price: "₹79 Lac+ - ₹1.24 Cr onwards",
+        price: "₹79 Lkhs+ onwards",
       },
       {
         type: "3 BHK",
         area: "922 sq.ft.",
-        price: "₹1.25 Cr+ - ₹1.50 Cr onwards",
+        price: "₹1.25 Cr+ onwards",
       },
     ],
     images: [
@@ -128,17 +128,17 @@ export const locations = [
       {
         type: "1 BHK",
         area: "332 - 365 sq.ft.",
-        price: "₹40 Lac+ - ₹44.93 Lac onwards",
+        price: "₹40 Lkhs+onwards",
       },
       {
         type: "2 BHK",
         area: "482 - 732 sq.ft.",
-        price: "₹50 Lac+ - ₹86.38 Lac onwards",
+        price: "₹50 Lkhs+ onwards",
       },
       {
         type: "3 BHK",
         area: "950 sq.ft.",
-        price: "₹1.2 Cr+ - ₹1.50 Cr onwards",
+        price: "₹1.2 Cr+ onwards",
       },
     ],
     images: [
@@ -312,10 +312,8 @@ export const locations = [
       "• Sanctuary hosts over 222 species of resident and migratory birds, including rare vultures and eagles.\n" +
       "• Located approximately 12 kilometers from the TPS-11 project boundary, serving as a primary nature getaway.\n" +
       "• Offers scenic nature trails, a walk-through aviary, and government-managed environment briefing centers.\n" +
-      "• A critical biodiversity hotspot and eco-tourism driver for the Navi Mumbai and NAINA development zones.\n" +
-      "• Surrounded by pristine deciduous forests, natural water springs, and rich wildlife habitats.\n" +
-      "• Easily accessible by road transit, making it a favorite weekend destination for MMR residents.",
-    images: ["/images/karnala_sanctuary.webp"],
+      "• Surrounded by pristine deciduous forests, natural water springs, and rich wildlife habitats.",
+    images: ["/images/karnala_sanctuary.png"],
   },
 ];
 
