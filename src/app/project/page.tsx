@@ -301,7 +301,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
               <span className="text-[#FFD700]">Gomata</span> Vision LLP
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-[#FFFFFF] mt-8 max-w-4xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
+            <p className="lg:text-3xl text-[#FFFFFF] mt-8 max-w-5xl mx-auto tracking-wide font-semibold drop-shadow-md leading-relaxed">
               Your Boarding Pass to Wealth Creation through Land Pooling
             </p>
           </div>
@@ -375,7 +375,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
-              Strategic Advantage
+              Strategic Advantages
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why NAINA?</h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
@@ -555,33 +555,33 @@ export default function AboutPage() {
       {/* ========== INVESTMENT MODELS & BENEFITS ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            <div className="flex flex-col h-full">
               <h2 className="text-3xl font-black text-[#241F24]">Unique Investment Models</h2>
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-4 flex-1 flex flex-col justify-between">
                 {investmentModels.map((model, idx) => (
-                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30">
+                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30 flex-1 flex flex-col justify-center">
                     <h3 className="font-bold text-[#6105A3]">{model.title}</h3>
-                    <p className="text-[#5F5660]">{model.description}</p>
+                    <p className="text-[#5F5660] text-sm md:text-base mt-1">{model.description}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div>
+            <div className="flex flex-col h-full">
               <h2 className="text-3xl font-black text-[#241F24]">Investor Benefits</h2>
-              <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white">
-                <ul className="space-y-4">
+              <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white flex-1 flex flex-col justify-between">
+                <ul className="space-y-5">
                   {investorBenefits.map((benefit, idx) => (
                     <li key={idx} className="flex gap-3 items-center">
-                      <LucideBadgeCheck className="w-6 h-6 text-[#C8A2C8]" />
-                      <span>{benefit}</span>
+                      <LucideBadgeCheck className="w-6 h-6 text-[#C8A2C8] flex-shrink-0" />
+                      <span className="text-sm md:text-base">{benefit}</span>
                     </li>
                   ))}
                 </ul>
                 <div className="mt-8 pt-6 border-t border-white/20 text-center">
-                  <p className="font-bold text-[#FFFFFF]">Planned Exit Strategy</p>
-                  <p className="text-sm">Resale • Rental • JV Models</p>
-                  <p className="text-xs text-[#FFFFFF] mt-2">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
+                  <p className="font-bold text-[#FFFFFF] text-lg">Planned Exit Strategy</p>
+                  <p className="text-sm opacity-90 mt-1">Resale • Rental • JV Models</p>
+                  <p className="text-xs text-[#FFFFFF] mt-3 leading-relaxed opacity-75">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
                 </div>
               </div>
             </div>
