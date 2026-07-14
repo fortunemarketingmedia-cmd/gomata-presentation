@@ -151,7 +151,7 @@ export const locations = [
     name: "Gomata Office",
     position: [19.009983, 73.034506],
     description:
-      "• Corporate office of Gomata Vision LLP, located in CBD Belapur, the financial hub of Navi Mumbai.\n" +
+      "• Corporate office of Gomata Vision LLP, located in sector CBD Belapur, the financial hub of Navi Mumbai.\n" +
       "• Serves as the central administration, client relations, and project management headquarters.\n" +
       "• Spearheads land acquisition and strategic development across the NAINA region (TPS-11).\n" +
       "• Mr. Vikas Koli Founder of Gomata Vision LLP, to be India's leading real estate partner.\n" +
