@@ -64,7 +64,7 @@ export default function PlanPage() {
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
-            <span className="text-[#D4AF37]">Nearby</span> <span className="text-[#FFFFFF]">Projects</span>
+            <span className="text-[#FFFFFF]">Nearby</span> <span className="text-[#FFFFFF]">Projects</span>
           </h1>
           <p className="text-lg md:text-xl text-[#E2D5E8] mt-6 max-w-3xl mx-auto tracking-wide font-medium leading-relaxed drop-shadow-sm">
             Discover luxury living at its finest with our curated collection of
