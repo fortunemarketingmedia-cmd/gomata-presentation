@@ -42,7 +42,7 @@ export const highwayRoutes: HighwayRoute[] = [
       "• Boosts regional tourism and industrial logistics, carrying heavy commercial cargo from JNPT port.\n" +
       "• Increases capital appreciation for layout properties sitting adjacent to the highway frontage.\n" +
       "• Equipped with modern smart highway toll systems, safety barriers, and roadside service plazas.",
-    images: ["/images/palaspe_phata.webp"]
+    images: ["/images/highway.webp"]
   },
   {
     id: "nh48",

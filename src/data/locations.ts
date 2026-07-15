@@ -327,7 +327,7 @@ export const locations = [
       "• Connects directly to Shedung junction, offering fast entry and exit to the main Expressway.\n" +
       "• Maintained by MSRDC with automated tolling, wide shoulders, and modern road safety markings.\n" +
       "• Passes through major commercial hubs in Panvel East and Somatne, driving real estate values.",
-    images: ["/images/palaspe_phata.webp"],
+    images: ["/images/oldhighway.webp"],
   },
   {
     id: 20,
@@ -341,7 +341,7 @@ export const locations = [
       "• Built using advanced mountain tunneling, safety nets, and modern surveillance systems.\n" +
       "• Features food malls, fuel stations, vehicle maintenance yards, and emergency trauma centers.\n" +
       "• Crucial commercial and passenger transport backbone driving real estate growth along the corridor.",
-    images: ["/images/palaspe_phata.webp"],
+    images: ["/images/expressway.webp"],
   },
 ];
 
