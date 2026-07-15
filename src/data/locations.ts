@@ -22,7 +22,7 @@ export const locations = [
   {
     id: 2,
     name: "Edu City",
-    position: [18.970198, 73.040171],
+    position: [18.972316, 73.101567],
     description:
       "• India's first conceptual 'EduCity' township, located near the upcoming Navi Mumbai International Airport (NMIA).\n" +
       "• Spanning approximately 100 hectares (250 acres) of dedicated zone in the Karanjade-Panvel educational corridor.\n" +
@@ -40,7 +40,7 @@ export const locations = [
   {
     id: 3,
     name: "Medi City",
-    position: [18.972316, 73.101567],
+    position: [18.970198, 73.040171],
     description:
       "• Upcoming Navi Mumbai International Medicity (NMIMC) project spread over a massive 250-acre wellness zone.\n" +
       "• Super-specialty health hubs specializing in cardiology, oncology, organ transplants, pediatrics, and robotic surgery.\n" +
@@ -161,7 +161,7 @@ export const locations = [
       "• Hosts investor consultation programs to educate clients on CIDCO land pooling and NAINA master plan progress.",
     images: [
       "/images/gomata/gomata1.webp",
-      "/images/gomata/gomata2.webp",
+      "/images/gomata/office-3.webp",
     ],
   },
   {
@@ -214,8 +214,8 @@ export const locations = [
     name: "D-Mart",
     position: [18.967779, 73.134592],
     description:
-      "• Landmark shopping hypermarket located in Sector 5, New Panvel East, serving the local population.\n" +
-      "• Positioned 4 km from the project boundary, highlighting the availability of modern retail amenities.\n" +
+      "• Landmark shopping hypermarket located in Panvel, Palaspe Phata, Kolkhe, Maharashtra, serving the local population.\n" +
+      "• Positioned 4 km and takes about 15 min to reach from the project boundary, highlighting the availability of modern retail amenities.\n" +
       "• Generates high daily footfall, reflecting the established commercial and residential ecosystem nearby.\n" +
       "• Provides groceries, daily essentials, home products, apparel, and electronics at discounted pricing.\n" +
       "• Surrounded by established high-street markets, clinics, banks, and popular dining outlets.\n" +
@@ -263,14 +263,14 @@ export const locations = [
     position: [18.9912, 73.1168],
     description:
       "• Panvel Central Bus Stand is the primary state transport (MSRDC) bus terminal in the Panvel region.\n" +
-      "• Located approximately 4.5 km from the TPS-11 boundary, offering direct regional commuter transit.\n" +
-      "• Connects Panvel to all major districts in Maharashtra, including Pune, Thane, Solapur, and the Konkan coast.\n" +
+      "• Located approximately 4.5 km takes about 15 min to reach from the TPS-11 boundary, offering direct regional commuter transit.\n" +
+      "• Connects Panvel to all major districts in Maharashtra, including Pune, Nashik, Thane, Solapur, and the Konkan coast.\n" +
       "• Features high daily frequency of public and private buses, serving as a vital mobility node.\n" +
       "• Currently slated for infrastructure redevelopment to support modern premium transit amenities.\n" +
       "• Integrates local municipal bus shuttles (NMMT) connecting New Panvel directly to the upcoming airport.\n" +
       "• Provides direct transit links for corporate staff, logistics workers, and commercial developers in NAINA.\n" +
       "• Surrounded by dense retail high-streets, restaurants, commercial offices, and medical clinics.",
-    images: ["/images/panvel_bus_stand.webp"],
+    images: ["/images/panvel_bus_stand1.webp", "/images/panvel_bus_stand2.webp"],
   },
   {
     id: 16,
@@ -278,14 +278,14 @@ export const locations = [
     position: [18.9898, 73.1206],
     description:
       "• Panvel Junction is one of the busiest railway terminals in Navi Mumbai, handling both suburban and long-distance trains.\n" +
-      "• Positioned 4.2 km from the TPS-11 layout, acting as the primary rail transport backbone for the project area.\n" +
-      "• Serves as a major halt on the Central Railway line and the harbor line connecting directly to Mumbai CST.\n" +
-      "• Connects Navi Mumbai to Western India via the Konkan Railway and Central Railway corridors to Pune and Southern India.\n" +
+      "• Positioned 4.2 km takes about 12 min to reach from the TPS-11 layout, acting as the primary rail transport backbone for the project area.\n" +
+      "• Serves as a major halt on the Central Railway line and the harbor line connecting directly to Mumbai CSMT.\n" +
+      "• Connects Navi Mumbai to Western India via the Konkan Railway, Northern India via Gorakhpur Station and Central Railway corridors to Pune and Southern India.\n" +
       "• Directly linked to the upcoming Navi Mumbai International Airport (NMIA) via a proposed high-speed metro corridor.\n" +
       "• Part of the massive station commercial development project aimed at creating office spaces and retail complexes.\n" +
       "• Acts as a major driver for local residential housing demand, keeping capital appreciation rates high in Panvel East.\n" +
       "• Equipped with state-of-the-art security, multiple platforms, parking lots, and integrated auto-rickshaw hubs.",
-    images: ["/images/panvel_railway_station.webp"],
+    images: ["/images/panvel_railway_station.webp", "/images/panvel_railway_station2.webp"],
   },
   {
     id: 17,
@@ -313,7 +313,7 @@ export const locations = [
       "• Located approximately 12 kilometers from the TPS-11 project boundary, serving as a primary nature getaway.\n" +
       "• Offers scenic nature trails, a walk-through aviary, and government-managed environment briefing centers.\n" +
       "• Surrounded by pristine deciduous forests, natural water springs, and rich wildlife habitats.",
-    images: ["/images/karnala_sanctuary.png"],
+    images: ["/images/karnala_sanctuary.webp", "/images/karnala_sanctuary2.webp"],
   },
 ];
 

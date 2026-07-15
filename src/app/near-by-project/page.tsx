@@ -66,7 +66,7 @@ export default function PlanPage() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
             <span className="text-[#FFFFFF]">Nearby</span> <span className="text-[#FFFFFF]">Projects</span>
           </h1>
-          <p className="text-xl text-[#FFFFFF] mt-6 max-w-4xl mx-auto tracking-wide font-medium leading-relaxed drop-shadow-sm">
+          <p className="text-xl md:text-2xl text-2xl text-[#FFFFFF] mt-9 max-w-3xl mx-auto tracking-wide font-medium leading-relaxed drop-shadow-sm">
             Discover luxury living at its finest with our curated collection of
             premium residential projects in Panvel and Navi Mumbai region.
           </p>

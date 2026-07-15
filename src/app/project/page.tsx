@@ -32,6 +32,7 @@ import {
   School,
   Factory,
   Trees,
+  LayoutGrid,
 } from "lucide-react";
 
 // Core Values Data
@@ -98,7 +99,7 @@ const investmentHighlights = [
 
 // NAINA Advantages
 const nainaAdvantages = [
-  "Largest planned urban zone – 600+ sq. km around Navi Mumbai International Airport",
+  "Largest planned urban zone – 600+ sq approx. km around Navi Mumbai International Airport",
   "CIDCO-led, government-backed initiative ensuring transparency & investor confidence",
   "Rapid infrastructure: Metro, Expressways, ATAL Setu, JNPT, IT & Industrial Corridors",
   "Development zones: Aerocity, Educity, Medicity, Innovation Park, MMC",
@@ -121,24 +122,24 @@ const tps11Cards = [
     icon: <MapPinned className="w-7 h-7" />,
     items: [
       {
-        icon: <Plane className="w-5 h-5" />,
-        label: "Navi Mumbai International Airport (NMIA)",
-        value: "5.0 km / 7 mins",
-      },
-      {
-        icon: <Building2 className="w-5 h-5" />,
-        label: "Atal Setu (MTHL) via 6-Lane Highway",
-        value: "12.0 km / 10 mins",
+        icon: <LocateFixed className="w-5 h-5" />,
+        label: "NH-66 Mumbai–Goa Highway",
+        value: "500 m / 2 mins",
       },
       {
         icon: <TrainFront className="w-5 h-5" />,
-        label: "Proposed MMC Metro Station",
-        value: "500 m / 1 min (Walk)",
+        label: "Panvel Railway Station",
+        value: "5 km / 15 mins",
       },
       {
-        icon: <LocateFixed className="w-5 h-5" />,
-        label: "Palaspe Phata Tri-Junction",
-        value: "3.5 km / 4 mins",
+        icon: <Plane className="w-5 h-5" />,
+        label: "Navi Mumbai International Airport",
+        value: "10 km / 25 mins",
+      },
+      {
+        icon: <Building2 className="w-5 h-5" />,
+        label: "Atal Setu via Chirle Interchange",
+        value: "25 km / 40 mins",
       },
     ],
   },
@@ -147,24 +148,76 @@ const tps11Cards = [
     icon: <Building2 className="w-7 h-7" />,
     items: [
       {
-        icon: <School className="w-5 h-5" />,
-        label: "Proposed Edu City Campus",
-        value: "2.5 km / 3 mins",
-      },
-      {
-        icon: <Hotel className="w-5 h-5" />,
-        label: "Proposed Aero City & Commercial Hub",
-        value: "4.0 km / 5 mins",
+        icon: <Landmark className="w-5 h-5" />,
+        label: "Panvel Commercial & Administrative Hub",
+        value: "5 km / 15 mins",
       },
       {
         icon: <Factory className="w-5 h-5" />,
-        label: "JNPT Logistics & Port Corridor",
-        value: "15.0 km / 12 mins",
+        label: "Taloja MIDC Industrial Cluster",
+        value: "16 km / 30 mins",
       },
       {
-        icon: <Users className="w-5 h-5" />,
-        label: "Local Administrative & CIDCO Coordination",
-        value: "4.5 km / 6 mins",
+        icon: <Building2 className="w-5 h-5" />,
+        label: "CBD Belapur Business District",
+        value: "17 km / 30 mins",
+      },
+      {
+        icon: <TrendingUp className="w-5 h-5" />,
+        label: "JNPA Port & Logistics Hub",
+        value: "25 km / 40 mins",
+      },
+    ],
+  },
+  {
+    title: "Tourist Spots",
+    icon: <Trees className="w-7 h-7" />,
+    items: [
+      {
+        icon: <Trees className="w-5 h-5" />,
+        label: "Karnala Bird Sanctuary & Fort",
+        value: "12 km / 20 mins",
+      },
+      {
+        icon: <Award className="w-5 h-5" />,
+        label: "Prabalgad & Kalavantin Durg Base",
+        value: "18 km / 35 mins",
+      },
+      {
+        icon: <Globe className="w-5 h-5" />,
+        label: "Gadeshwar Dam & Lake",
+        value: "22 km / 40 mins",
+      },
+      {
+        icon: <MapPinned className="w-5 h-5" />,
+        label: "Matheran Hill Station, Dasturi Point",
+        value: "40 km / 70 mins",
+      },
+    ],
+  },
+  {
+    title: "Proposed Developments",
+    icon: <TrendingUp className="w-7 h-7" />,
+    items: [
+      {
+        icon: <Bike className="w-5 h-5" />,
+        label: "Virar–Alibaug Corridor",
+        value: "near TPS-11 / Direct Access",
+      },
+      {
+        icon: <School className="w-5 h-5" />,
+        label: "Navi Mumbai International EduCity",
+        value: "10 km / 25 mins",
+      },
+      {
+        icon: <Plane className="w-5 h-5" />,
+        label: "Navi Mumbai Aerocity",
+        value: "10 km / 25 mins",
+      },
+      {
+        icon: <LocateFixed className="w-5 h-5" />,
+        label: "Atal Setu–Mumbai Pune Expressway Link",
+        value: "14 km / 32 mins",
       },
     ],
   },
@@ -313,46 +366,60 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">Watch & Learn</span>
-            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why Invest in TPS-11, NAINA?</h2>
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Voices That Matter • Real Experiences</h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
               Hear directly from our leadership about this transformative opportunity
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
-                title="NAINA TPS-11 Investment Opportunity"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/zBb1cJqPCsc" 
-                title="Gomata Vision LLP - Land Pooling Concept"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-          {/* NEW: Additional Video & Facebook Post */}
+          {/* 2-COLUMN GRID FOR VIDEOS & CARDS */}
           <div className="grid md:grid-cols-2 gap-8 mt-8">
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+            {/* ROW 1: VIDEOS */}
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
               <iframe 
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/AXsb1fpaWng" 
-                title="Additional Video"
+                title="World-Class EduCity in New Mumbai"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
+                title="Mr. Vaibhav Hiwale - Testimonial"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            
+
+            {/* ROW 2: VIDEOS */}
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
+                title="Navi Mumbai Smart City Infrastructure (Dummy)"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/zBb1cJqPCsc" 
+                title="Mr. Madhav Shenoy - Testimonial"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* ROW 3: CARDS */}
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
               <div className="text-center">
                 <Globe className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
                 <p className="font-bold text-[#241F24] mb-2">Facebook Post</p>
@@ -365,6 +432,38 @@ export default function AboutPage() {
                 >
                   View on Facebook →
                 </a>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
+              <div className="text-center">
+                <FileText className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
+                <p className="font-bold text-[#241F24] mb-2">Zoning Brochure (Dummy)</p>
+                <p className="text-sm text-[#5F5660] mb-4">Proposed town layouts, commercial zones, and survey reports</p>
+                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
+                  Download PDF (Dummy)
+                </button>
+              </div>
+            </div>
+
+            {/* ROW 4: CARDS */}
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
+              <div className="text-center">
+                <LayoutGrid className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
+                <p className="font-bold text-[#241F24] mb-2">Exit Strategy Guide (Dummy)</p>
+                <p className="text-sm text-[#5F5660] mb-4">Overview of resale models, partnership exit timelines, and yields</p>
+                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
+                  Access Guide (Dummy)
+                </button>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
+              <div className="text-center">
+                <Building2 className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
+                <p className="font-bold text-[#241F24] mb-2">Investor Presentation (Dummy)</p>
+                <p className="text-sm text-[#5F5660] mb-4">Comprehensive slide deck summarizing land pooling advantages</p>
+                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
+                  Download Slides (Dummy)
+                </button>
               </div>
             </div>
           </div>
@@ -420,8 +519,8 @@ export default function AboutPage() {
               Prime Location
             </span>
             <h2 className="mt-4 text-5xl font-black text-[#241F24]">Why TPS-11?</h2>
-            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              The crown jewel of all 12 Town Planning Schemes in NAINA
+            <p className="mt-4 text-2xl text-[#000000]  mx-auto">
+              <b>The crown jewel of all 12 Town Planning Schemes in NAINA</b>
             </p>
           </div>
 
