@@ -356,6 +356,19 @@ export const locations = [
       "• Backed by Reliance Industries, featuring cutting-edge labs specializing in AI, digital media, and data sciences.",
     images: ["/images/jio.webp", "/images/jio2.webp"],
   },
+  {
+    id: 22,
+    name: "Matheran",
+    position: [18.989596, 73.270874],
+    description:
+      "• Matheran is an eco-sensitive, automobile-free hill station located in the Western Ghats range of Maharashtra.\n" +
+      "• Located approximately 40 km from the TPS-11 project boundary, requiring around 70 minutes (1 hour 10 mins) of travel time via Neral.\n" +
+      "• Situated at an altitude of approximately 800m, famous for its historic Toy Train, lush red-soil forest trails, and scenic viewpoints.\n" +
+      "• One of the few places globally that completely bans private vehicles, ensuring a pristine, pollution-free, and peaceful atmosphere.\n" +
+      "• Features 38 designated lookouts (such as Panorama Point and Echo Point) offering gorgeous views of the Sahyadri mountains.\n" +
+      "• Proximity to this heritage nature resort adds massive lifestyle, weekend tourism, and residential value to the TPS-11 corridor.",
+    images: ["/images/matheran1.webp", "/images/matheran2.webp"],
+  },
 ];
 
 export interface HighwayRoute {
