@@ -29,7 +29,7 @@ export const locations = [
       "• A flagship CIDCO project designed to attract premier global institutions, research campuses, and skilling facilities.\n" +
       "• Focusing on professional higher education, global research collaborations, tech incubations, and executive training.\n" +
       "• Built to host over 50,000 students with state-of-the-art academic blocks, student hostels, libraries, and sports centers.\n" +
-      "• MoUs and collaborations signed with global leaders like the University of York, University of Aberdeen, and Illinois Institute of Tech.\n" +
+      "• MoUs and collaborations signed with global leaders like the Jio Institute (India), University of York (UK), University of Aberdeen (UK), Illinois Institute of Tech (USA), Institute Europeo di Design IED (Italy).\n" +
       "• Hosts a central R&D park specializing in Artificial Intelligence, biotechnology, sustainable logistics, and clean energy systems.\n" +
       "• Connects seamlessly to the regional expressway grid, national highways, and the proposed Metro Line M-24.",
     images: [
@@ -151,7 +151,7 @@ export const locations = [
     name: "Gomata Office",
     position: [19.009983, 73.034506],
     description:
-      "• Corporate office of Gomata Vision LLP, located in sector CBD Belapur, the financial hub of Navi Mumbai.\n" +
+      "• Corporate office of Gomata Vision LLP, located in sector 15 CBD Belapur, the financial hub of Navi Mumbai.\n" +
       "• Serves as the central administration, client relations, and project management headquarters.\n" +
       "• Spearheads land acquisition and strategic development across the NAINA region (TPS-11).\n" +
       "• Mr. Vikas Koli Founder of Gomata Vision LLP, to be India's leading real estate partner.\n" +
@@ -280,7 +280,7 @@ export const locations = [
       "• Panvel Junction is one of the busiest railway terminals in Navi Mumbai, handling both suburban and long-distance trains.\n" +
       "• Positioned 4.2 km takes about 12 min to reach from the TPS-11 layout, acting as the primary rail transport backbone for the project area.\n" +
       "• Serves as a major halt on the Central Railway line and the harbor line connecting directly to Mumbai CSMT.\n" +
-      "• Connects Navi Mumbai to Western India via the Konkan Railway, Northern India via Gorakhpur Station and Central Railway corridors to Pune and Southern India.\n" +
+      "• Connects Navi Mumbai to Western India via the Konkan Railway, Northern India via Gorakhpur express and Central Railway corridors to Pune and Southern India.\n" +
       "• Directly linked to the upcoming Navi Mumbai International Airport (NMIA) via a proposed high-speed metro corridor.\n" +
       "• Part of the massive station commercial development project aimed at creating office spaces and retail complexes.\n" +
       "• Acts as a major driver for local residential housing demand, keeping capital appreciation rates high in Panvel East.\n" +
@@ -314,6 +314,34 @@ export const locations = [
       "• Offers scenic nature trails, a walk-through aviary, and government-managed environment briefing centers.\n" +
       "• Surrounded by pristine deciduous forests, natural water springs, and rich wildlife habitats.",
     images: ["/images/karnala_sanctuary.webp", "/images/karnala_sanctuary2.webp"],
+  },
+  {
+    id: 19,
+    name: "NH 48 Old Mumbai–Pune Highway",
+    position: [18.962036, 73.144334],
+    description:
+      "• Starts from Palaspe Phata and curves southeast along the orange road corridor east of the project boundary.\n" +
+      "• Crucial regional highway connecting Panvel and Navi Mumbai to Pune, Satara, Kolhapur, and Bangalore.\n" +
+      "• Serves as the primary alternate route for two-wheelers, heavy industrial goods, and commercial tractors.\n" +
+      "• Lined with premier residential developments, educational institutions, logistics zones, and dining dhabas.\n" +
+      "• Connects directly to Shedung junction, offering fast entry and exit to the main Expressway.\n" +
+      "• Maintained by MSRDC with automated tolling, wide shoulders, and modern road safety markings.\n" +
+      "• Passes through major commercial hubs in Panvel East and Somatne, driving real estate values.",
+    images: ["/images/palaspe_phata.webp"],
+  },
+  {
+    id: 20,
+    name: "Mumbai–Pune Expressway",
+    position: [18.951850, 73.154788],
+    description:
+      "• India's first six-lane concrete, high-speed, access-controlled toll expressway spanning 93 km.\n" +
+      "• Starts at Kalamboli in Navi Mumbai and ends at Kiwale in Pune, cutting travel times to 2 hours.\n" +
+      "• Positioned on the pink expressway road running southeast, just east of the Konkan Railway line.\n" +
+      "• Connects seamlessly to the MTHL (Atal Setu) and the upcoming Navi Mumbai International Airport.\n" +
+      "• Built using advanced mountain tunneling, safety nets, and modern surveillance systems.\n" +
+      "• Features food malls, fuel stations, vehicle maintenance yards, and emergency trauma centers.\n" +
+      "• Crucial commercial and passenger transport backbone driving real estate growth along the corridor.",
+    images: ["/images/palaspe_phata.webp"],
   },
 ];
 
@@ -361,18 +389,13 @@ export const highwayRoutes: HighwayRoute[] = [
       "• Boosts regional tourism and industrial logistics, carrying heavy commercial cargo from JNPT port.\n" +
       "• Increases capital appreciation for layout properties sitting adjacent to the highway frontage.\n" +
       "• Equipped with modern smart highway toll systems, safety barriers, and roadside service plazas.",
-    images: ["/images/palaspe_phata.webp"],
+    images: ["/images/highway.webp"],
   },
   {
     id: "nh48",
     name: "NH 48 Old Mumbai–Pune Highway",
     positions: [
-      [18.967391, 73.12023],
-      [18.966693, 73.125885],
-      [18.968938, 73.134025],
-      [18.962036, 73.144334],
-      [18.959333, 73.149744],
-      [18.953686, 73.170566],
+    [18.968938, 73.134025]
     ],
     color: HIGHWAY_POINTER_COLOR,
     weight: 7,
@@ -390,10 +413,7 @@ export const highwayRoutes: HighwayRoute[] = [
     id: "mumbai-pune-expressway",
     name: "Mumbai–Pune Expressway",
     positions: [
-      [18.965887, 73.159647],
-      [18.95185, 73.154788],
-      [18.950578, 73.154698],
-      [18.93576, 73.158639],
+          [18.951850, 73.154788],
     ],
     color: HIGHWAY_POINTER_COLOR,
     weight: 7,

@@ -177,19 +177,17 @@ export default function AboutGomataPage() {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1920&auto=format&fit=crop" 
+            src="/images/gomataimg.webp" 
             alt="Gomata Vision LLP Infrastructure Development Landscape"
             fill
             priority
             unoptimized
-            className="object-cover blur-[8px] scale-105"
+            className="object-cover  scale-105"
           />
-          {/* CLEAN, REDUCED BLEND OVERLAY Matrix: Keeps image crisp while ensuring high text contrast */}
-          <div className="absolute inset-0 bg-[#241F24]/45 backdrop-blur-[4px]" />
         </div>
 
         {/* Hero Content Grid */}
-        <div className="backdrop-blur-[1px]">
+
         <div className="relative z-10 max-w-5xl  mx-auto px-6 text-center opacity-100">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
             <Building2 className="w-4 h-4 text-[#C8A2C8]" />
@@ -211,7 +209,6 @@ export default function AboutGomataPage() {
             focused on high-return land development projects within CIDCO's ambitious NAINA plan.
             </b>
           </p>
-        </div>
         </div>
       </section>
 
@@ -412,6 +409,7 @@ export default function AboutGomataPage() {
                 src={galleryImages[0].src}
                 alt={galleryImages[0].alt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
@@ -425,6 +423,7 @@ export default function AboutGomataPage() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
@@ -438,6 +437,7 @@ export default function AboutGomataPage() {
                 src={galleryImages[5].src}
                 alt={galleryImages[5].alt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
@@ -451,6 +451,7 @@ export default function AboutGomataPage() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
@@ -488,6 +489,7 @@ export default function AboutGomataPage() {
                     src={leader.image}
                     alt={leader.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#241F24]/90 via-transparent to-transparent" />
