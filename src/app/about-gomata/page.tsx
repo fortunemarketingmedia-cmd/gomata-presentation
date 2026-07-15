@@ -182,8 +182,10 @@ export default function AboutGomataPage() {
             fill
             priority
             unoptimized
-            className="object-cover  scale-105"
+            className="object-cover scale-105"
           />
+          {/* 75% Darker Blend Overlay */}
+          <div className="absolute inset-0 bg-black/70" />
         </div>
 
         {/* Hero Content Grid */}
