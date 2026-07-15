@@ -280,7 +280,7 @@ export const locations = [
       "• Panvel Junction is one of the busiest railway terminals in Navi Mumbai, handling both suburban and long-distance trains.\n" +
       "• Positioned 4.2 km takes about 12 min to reach from the TPS-11 layout, acting as the primary rail transport backbone for the project area.\n" +
       "• Serves as a major halt on the Central Railway line and the harbor line connecting directly to Mumbai CSMT.\n" +
-      "• Connects Navi Mumbai to Western India via the Konkan Railway, Northern India via Gorakhpur express and Central Railway corridors to Pune and Southern India.\n" +
+      "• Connects Navi Mumbai to western and southern India via the Konkan Railway, to Pune through Central Railway corridors, and to northern India, including Uttar Pradesh and Punjab, through direct trains such as the Panvel–Gorakhpur Express and the Thiruvananthapuram North–Amritsar Superfast Express.\n" +
       "• Directly linked to the upcoming Navi Mumbai International Airport (NMIA) via a proposed high-speed metro corridor.\n" +
       "• Part of the massive station commercial development project aimed at creating office spaces and retail complexes.\n" +
       "• Acts as a major driver for local residential housing demand, keeping capital appreciation rates high in Panvel East.\n" +
