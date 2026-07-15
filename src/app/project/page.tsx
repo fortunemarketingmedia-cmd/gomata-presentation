@@ -103,6 +103,9 @@ const nainaAdvantages = [
   "CIDCO-led, government-backed initiative ensuring transparency & investor confidence.",
   "Rapid infrastructure: Metro, Expressways, ATAL Setu, JNPT, IT & Industrial Corridors.",
   "Development zones: Aerocity, Educity, Medicity, Innovation Park, MMC.",
+  "Maharashtra's most ambitious initiative: A rare opportunity to build an entirely new planned city around the upcoming Navi Mumbai International Airport.",
+  "Massive regional scale: Conceptualized in 2013, the smart city planning zone covers approximately 240 sq. km across 92 notified villages.",
+  "Future-ready urban ecosystem: Transforming rural land into high-value residential, commercial, and industrial corridors.",
 ];
 
 // TPS-11 Specific Advantages
@@ -656,7 +659,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <div className="flex flex-col h-full">
-              <h2 className="text-3xl font-black text-[#241F24]">Unique Investment Models</h2>
+              <h2 className="text-3xl text-center font-black text-[#241F24]">Unique Investment Models</h2>
               <div className="mt-8 space-y-4 flex-1 flex flex-col justify-between">
                 {investmentModels.map((model, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30 flex-1 flex flex-col justify-center">
@@ -667,7 +670,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex flex-col h-full">
-              <h2 className="text-3xl font-black text-[#241F24]">Investor Benefits</h2>
+              <h2 className="text-3xl font-black text-center text-[#241F24]">Investor Benefits</h2>
               <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white flex-1 flex flex-col justify-between">
                 <ul className="space-y-5">
                   {investorBenefits.map((benefit, idx) => (
