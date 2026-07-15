@@ -390,8 +390,8 @@ export default function AboutPage() {
             <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
               <iframe 
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
-                title="Mr. Vaibhav Hiwale - Testimonial"
+                src="https://www.youtube.com/embed/cL4f3nYfx-8?si=iKBXR16XauGDBTUU" 
+                title="Aerocity & EduCity in Mumbai 3.0"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
