@@ -55,12 +55,6 @@ export default function PlanPage() {
 
       {/* ========== HERO SECTION WITH THEME GRADIENT BACKGROUND ========== */}
       <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#89CFF0] to-[#89CFF0]">
-        {/* Subtle decorative grid overlay (CSS-driven to prevent 404) */}
-        <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay pointer-events-none" />
-        
-        {/* Cosmic Nebula glows */}
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#C8A2C8]/20 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#6105A3]/30 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center z-10">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
