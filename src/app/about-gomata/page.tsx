@@ -182,14 +182,15 @@ export default function AboutGomataPage() {
             fill
             priority
             unoptimized
-            className="object-cover"
+            className="object-cover blur-[8px] scale-105"
           />
           {/* CLEAN, REDUCED BLEND OVERLAY Matrix: Keeps image crisp while ensuring high text contrast */}
-          <div className="absolute inset-0 bg-[#241F24]/35 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-[#241F24]/45 backdrop-blur-[4px]" />
         </div>
 
         {/* Hero Content Grid */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="backdrop-blur-[1px]">
+        <div className="relative z-10 max-w-5xl  mx-auto px-6 text-center opacity-100">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
             <Building2 className="w-4 h-4 text-[#C8A2C8]" />
             <span className="text-xs font-bold text-white uppercase tracking-widest">
@@ -201,14 +202,16 @@ export default function AboutGomataPage() {
             <span className="text-[#FFD700]">Gomata</span> Vision
           </h1>
           
-          <p className="text-xl md:text-2xl text-[#FFFFFF] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
+          <p className="text-2xl md:text-2xl text-[#FFFFFF] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
             Vision to Build Dreams — Transforming Land into Legacy
           </p>
           
-          <p className="text-sm md:text-base text-white/90 mt-4  mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
-            Mr. Vikas Koli, Founder of Gomata Vision LLP, is a forward-thinking real estate enterprise 
+          <p className="text-2xl md:text-base text-white/90 mt-4  mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
+            <b>Mr. Vikas Koli, Founder of Gomata Vision LLP, is a forward-thinking real estate enterprise 
             focused on high-return land development projects within CIDCO's ambitious NAINA plan.
+            </b>
           </p>
+        </div>
         </div>
       </section>
 
