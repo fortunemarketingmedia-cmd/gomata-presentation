@@ -354,7 +354,7 @@ export const locations = [
       "• Drives substantial demand for premium student housing, faculty residences, and research incubation hubs nearby.\n" +
       "• TPS-11 stands out as a highly strategic residential development gateway to host students and corporate researchers.\n" +
       "• Backed by Reliance Industries, featuring cutting-edge labs specializing in AI, digital media, and data sciences.",
-    images: ["/images/jio.webp"],
+    images: ["/images/jio.webp", "/images/jio2.webp"],
   },
 ];
 
