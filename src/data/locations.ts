@@ -343,6 +343,19 @@ export const locations = [
       "• Crucial commercial and passenger transport backbone driving real estate growth along the corridor.",
     images: ["/images/expressway.webp"],
   },
+  {
+    id: 21,
+    name: "Jio Institute",
+    position: [18.978723, 73.022427],
+    description:
+      "• Jio Institute is a world-class, multidisciplinary research university campus located in Ulwe, Navi Mumbai.\n" +
+      "• Positioned in close proximity to the upcoming NMIA Airport (~10 km) and the Atal Setu (MTHL) corridor.\n" +
+      "• Serves as a major high-tech academic and research anchor within the Navi Mumbai Airport Influence Notified Area (NAINA).\n" +
+      "• Drives substantial demand for premium student housing, faculty residences, and research incubation hubs nearby.\n" +
+      "• TPS-11 stands out as a highly strategic residential development gateway to host students and corporate researchers.\n" +
+      "• Backed by Reliance Industries, featuring cutting-edge labs specializing in AI, digital media, and data sciences.",
+    images: ["/images/jio.webp"],
+  },
 ];
 
 export interface HighwayRoute {

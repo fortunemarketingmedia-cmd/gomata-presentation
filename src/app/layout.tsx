@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import RouteScrollReset from "@/components/RouteScrollReset";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = { variable: "sans-serif" };
+const geistMono = { variable: "monospace" };
 
 export const metadata: Metadata = {
   title: "Gomata Vision LLP",
