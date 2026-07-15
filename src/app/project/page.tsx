@@ -420,58 +420,36 @@ export default function AboutPage() {
                 allowFullScreen
               ></iframe>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* ROW 3: CARDS */}
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
-                <p className="font-bold text-[#241F24] mb-2">Facebook Post</p>
-                <p className="text-sm text-[#5F5660] mb-4">Transforming Maharashtra's Healthcare and Education Landscape</p>
-                <a 
-                  href="https://www.facebook.com/devendra.fadnavis/posts/transforming-maharashtras-healthcare-and-education-landscapechaired-a-review-mee/1561692341980657/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition"
-                >
-                  View on Facebook →
-                </a>
-              </div>
+      {/* ========== PROJECT GALLERY IMAGES ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
+              <Image
+                src="/images/project/img1.webp"
+                alt="Gomata Vision LLP Project Development Phase 1"
+                width={900}
+                height={600}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+              />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
-              <div className="text-center">
-                <FileText className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
-                <p className="font-bold text-[#241F24] mb-2">Zoning Brochure (Dummy)</p>
-                <p className="text-sm text-[#5F5660] mb-4">Proposed town layouts, commercial zones, and survey reports</p>
-                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
-                  Download PDF (Dummy)
-                </button>
-              </div>
-            </div>
-
-            {/* ROW 4: CARDS */}
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
-              <div className="text-center">
-                <LayoutGrid className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
-                <p className="font-bold text-[#241F24] mb-2">Exit Strategy Guide (Dummy)</p>
-                <p className="text-sm text-[#5F5660] mb-4">Overview of resale models, partnership exit timelines, and yields</p>
-                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
-                  Access Guide (Dummy)
-                </button>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-[#C8A2C8]/15 flex items-center justify-center p-6 border border-[#C8A2C8]/30 min-h-[220px]">
-              <div className="text-center">
-                <Building2 className="w-12 h-12 text-[#6105A3] mx-auto mb-4" />
-                <p className="font-bold text-[#241F24] mb-2">Investor Presentation (Dummy)</p>
-                <p className="text-sm text-[#5F5660] mb-4">Comprehensive slide deck summarizing land pooling advantages</p>
-                <button className="px-6 py-2 bg-[#6105A3] text-white font-semibold rounded-full hover:bg-[#75386E] transition cursor-not-allowed opacity-75">
-                  Download Slides (Dummy)
-                </button>
-              </div>
+            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
+              <Image
+                src="/images/project/img2.webp"
+                alt="Gomata Vision LLP Project Development Phase 2"
+                width={900}
+                height={600}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
       </section>
+
       {/* ========== WHY NAINA SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">

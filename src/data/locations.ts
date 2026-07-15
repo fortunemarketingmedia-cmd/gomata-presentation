@@ -102,12 +102,12 @@ export const locations = [
       {
         type: "1 BHK",
         area: "459 sq.ft.",
-        price: "₹62 Lkhs+ onwards",
+        price: "₹62 Lakhs+ onwards",
       },
       {
         type: "2 BHK",
         area: "577 - 913 sq.ft.",
-        price: "₹79 Lkhs+ onwards",
+        price: "₹79 Lakhs+ onwards",
       },
       {
         type: "3 BHK",
@@ -128,12 +128,12 @@ export const locations = [
       {
         type: "1 BHK",
         area: "332 - 365 sq.ft.",
-        price: "₹40 Lkhs+onwards",
+        price: "₹40 Lakhs+ onwards",
       },
       {
         type: "2 BHK",
         area: "482 - 732 sq.ft.",
-        price: "₹50 Lkhs+ onwards",
+        price: "₹50 Lakhs+ onwards",
       },
       {
         type: "3 BHK",
