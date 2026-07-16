@@ -240,7 +240,7 @@ export const locations = [
       "• Highly connected to the local railway network and upcoming coastal roads for easy transport.\n" +
       "• Serves as a major educational landmark, supporting the residential family growth in the region.\n" +
       "• Equipped with modern smart classrooms, security monitoring, and bus shuttle services.",
-    images: ["/images/ims_school.webp"],
+    images: ["/images/ims1.webp", "/images/ims2.webp"],
   },
   {
     id: 14,

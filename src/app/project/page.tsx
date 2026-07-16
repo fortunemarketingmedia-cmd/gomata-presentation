@@ -99,7 +99,7 @@ const investmentHighlights = [
 
 // NAINA Advantages
 const nainaAdvantages = [
-  "Largest planned urban zone – 600+ sq approx. km around Navi Mumbai International Airport.",
+  "Largest planned urban zone – 600+ sq km approximately around Navi Mumbai International Airport.",
   "CIDCO-led, government-backed initiative ensuring transparency & investor confidence.",
   "Rapid infrastructure: Metro, Expressways, ATAL Setu, JNPT, IT & Industrial Corridors.",
   "Development zones: Aerocity, Educity, Medicity, Innovation Park, MMC.",

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import {
   Building2,
   ShieldCheck,
@@ -16,7 +17,8 @@ import {
   Quote,
   Layers,
   Map,
-  BadgeCheck
+  BadgeCheck,
+  ExternalLink,
 } from "lucide-react";
 
 // Company Values Data
@@ -101,6 +103,34 @@ const leadershipTeam = [
   },
 ];
 
+// Official Social Media Links
+const socialLinks = [
+  {
+    name: "Instagram",
+    handle: "@gomata_vision",
+    description:
+      "Follow our latest project updates, real estate insights, site visits, and investor-focused content.",
+    href: "https://www.instagram.com/gomata_vision/",
+    icon: FaInstagram,
+  },
+  {
+    name: "Facebook",
+    handle: "Gomata Vision LLP",
+    description:
+      "Stay connected for company announcements, educational posts, project highlights, and community updates.",
+    href: "https://www.facebook.com/61588854754892/",
+    icon: FaFacebookF,
+  },
+  {
+    name: "LinkedIn",
+    handle: "Gomata Vision LLP",
+    description:
+      "Explore professional updates, infrastructure insights, company milestones, and business opportunities.",
+    href: "https://in.linkedin.com/company/gomata-vision-llp",
+    icon: FaLinkedinIn,
+  },
+];
+
 // Core Services / Offerings
 const offerings = [
   {
@@ -128,21 +158,76 @@ const offerings = [
 // Gallery Images
 const galleryImages = [
   { id: 1, src: "/images/gomata/cabin.webp", alt: "Cabin", size: "large" },
-  { id: 2, src: "/images/gomata/office-2.webp", alt: "Conference Room", size: "medium" },
-  { id: 3, src: "/images/gomata/office-1.webp", alt: "Gomata Vision LLP Office Front View", size: "medium" },
-  { id: 4, src: "/images/gomata/office-3.webp", alt: "Office Interior", size: "small" },
-  { id: 5, src: "/images/gomata/sitting-area.webp", alt: "Sitting Area", size: "small" },
-  { id: 6, src: "/images/gomata/event.webp", alt: "Company Event", size: "large" },
-  { id: 7, src: "/images/gomata/office-4.webp", alt: "Reception Area", size: "medium" },
-  { id: 8, src: "/images/gomata/office-5.webp", alt: "Work Space", size: "small" },
+  {
+    id: 2,
+    src: "/images/gomata/office-2.webp",
+    alt: "Conference Room",
+    size: "medium",
+  },
+  {
+    id: 3,
+    src: "/images/gomata/office-1.webp",
+    alt: "Gomata Vision LLP Office Front View",
+    size: "medium",
+  },
+  {
+    id: 4,
+    src: "/images/gomata/office-3.webp",
+    alt: "Office Interior",
+    size: "small",
+  },
+  {
+    id: 5,
+    src: "/images/gomata/sitting-area.webp",
+    alt: "Sitting Area",
+    size: "small",
+  },
+  {
+    id: 6,
+    src: "/images/gomata/event.webp",
+    alt: "Company Event",
+    size: "large",
+  },
+  {
+    id: 7,
+    src: "/images/gomata/office-4.webp",
+    alt: "Reception Area",
+    size: "medium",
+  },
+  {
+    id: 8,
+    src: "/images/gomata/office-5.webp",
+    alt: "Work Space",
+    size: "small",
+  },
 ];
 
 // Enhanced KPI Schema Array
 const stats = [
-  { value: "28+", label: "Years Experience", detail: "Combined leadership in elite infrastructure developments", icon: TrendingUp },
-  { value: "15+", label: "Lakh Sq. Ft.", detail: "Premium high-value township spaces delivered seamlessly", icon: Layers },
-  { value: "100%", label: "Transparent Execution", detail: "Verified via clear cheque records & instant 7/12 land data", icon: BadgeCheck },
-  { value: "23+", label: "Villages Covered", detail: "Strategic premium presence across active NAINA regions", icon: Map },
+  {
+    value: "28+",
+    label: "Years Experience",
+    detail: "Combined leadership in elite infrastructure developments",
+    icon: TrendingUp,
+  },
+  {
+    value: "15+",
+    label: "Lakh Sq. Ft.",
+    detail: "Premium high-value township spaces delivered seamlessly",
+    icon: Layers,
+  },
+  {
+    value: "100%",
+    label: "Transparent Execution",
+    detail: "Verified via clear cheque records & instant 7/12 land data",
+    icon: BadgeCheck,
+  },
+  {
+    value: "23+",
+    label: "Villages Covered",
+    detail: "Strategic premium presence across active NAINA regions",
+    icon: Map,
+  },
 ];
 
 // Testimonials / Quotes
@@ -177,7 +262,7 @@ export default function AboutGomataPage() {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/gomataimg.webp" 
+            src="/images/gomataimg.webp"
             alt="Gomata Vision LLP Infrastructure Development Landscape"
             fill
             priority
@@ -197,18 +282,20 @@ export default function AboutGomataPage() {
               Your Trusted Real Estate Partner
             </span>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
             <span className="text-[#FFD700]">Gomata</span> Vision
           </h1>
-          
+
           <p className="text-2xl md:text-2xl text-[#FFFFFF] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
             Vision to Build Dreams — Transforming Land into Legacy
           </p>
-          
+
           <p className="text-2xl md:text-base text-white/90 mt-4  mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
-            <b>Mr. Vikas Koli, Founder of Gomata Vision LLP, is a forward-thinking real estate enterprise 
-            focused on high-return land development projects within CIDCO's ambitious NAINA plan.
+            <b>
+              Mr. Vikas Koli, Founder of Gomata Vision LLP, is a
+              forward-thinking real estate enterprise focused on high-return
+              land development projects within CIDCO's ambitious NAINA plan.
             </b>
           </p>
         </div>
@@ -221,13 +308,13 @@ export default function AboutGomataPage() {
             {stats.map((stat, idx) => {
               const IconComponent = stat.icon;
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="relative group overflow-hidden bg-white rounded-2xl p-6 border border-[#C8A2C8]/30 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                 >
                   {/* Subtle Interactive Card Accent Glow */}
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#6105A3] to-[#C8A2C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                  
+
                   <div className="flex items-start justify-between">
                     <div>
                       <span className="block text-4xl md:text-5xl font-black text-[#6105A3] tracking-tight group-hover:text-[#6105A3]/80 transition-colors duration-300">
@@ -241,7 +328,7 @@ export default function AboutGomataPage() {
                       <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
-                  
+
                   <div className="mt-4 pt-3 border-t border-[#C8A2C8]/20">
                     <p className="text-xs text-[#5F5660] leading-relaxed font-medium">
                       {stat.detail}
@@ -265,10 +352,13 @@ export default function AboutGomataPage() {
                 <div className="w-16 h-16 rounded-full bg-[#6105A3]/10 flex items-center justify-center mb-6">
                   <Eye className="w-8 h-8 text-[#6105A3]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#241F24]">Our Vision</h2>
+                <h2 className="text-3xl font-bold text-[#241F24]">
+                  Our Vision
+                </h2>
                 <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
-                  To be India's leading real estate partner, turning dreams into sustainable developments
-                  built on trust, innovation, and lasting relationships.
+                  To be India's leading real estate partner, turning dreams into
+                  sustainable developments built on trust, innovation, and
+                  lasting relationships.
                 </p>
               </div>
             </div>
@@ -280,10 +370,13 @@ export default function AboutGomataPage() {
                 <div className="w-16 h-16 rounded-full bg-[#C8A2C8]/20 flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-[#6105A3]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#241F24]">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-[#241F24]">
+                  Our Mission
+                </h2>
                 <p className="mt-4 text-xl leading-relaxed text-[#5F5660]">
-                  To offer transparent, tailored real estate solutions that empower informed investment
-                  decisions and long-term wealth creation.
+                  To offer transparent, tailored real estate solutions that
+                  empower informed investment decisions and long-term wealth
+                  creation.
                 </p>
               </div>
             </div>
@@ -302,7 +395,8 @@ export default function AboutGomataPage() {
               Core Values
             </h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              The pillars that guide every decision and every development we undertake
+              The pillars that guide every decision and every development we
+              undertake
             </p>
           </div>
 
@@ -315,7 +409,9 @@ export default function AboutGomataPage() {
                 <div className="flex justify-center mb-4 text-[#6105A3]">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#241F24]">{value.title}</h3>
+                <h3 className="text-xl font-bold text-[#241F24]">
+                  {value.title}
+                </h3>
                 <p className="mt-2 text-[#5F5660] text-sm leading-relaxed">
                   {value.description}
                 </p>
@@ -336,7 +432,8 @@ export default function AboutGomataPage() {
               Your Trusted Partner in Growth
             </h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              Discover what makes us the preferred choice for land investments in NAINA region
+              Discover what makes us the preferred choice for land investments
+              in NAINA region
             </p>
           </div>
 
@@ -349,7 +446,9 @@ export default function AboutGomataPage() {
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C8A2C8]/20 to-[#6105A3]/20 flex items-center justify-center text-[#6105A3] mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#241F24]">{item.title}</h3>
+                <h3 className="text-xl font-bold text-[#241F24]">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-[#5F5660] text-sm leading-relaxed">
                   {item.description}
                 </p>
@@ -381,7 +480,9 @@ export default function AboutGomataPage() {
                   <CheckCircle2 className="w-5 h-5 text-[#6105A3]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#241F24]">{offer.title}</h3>
+                  <h3 className="text-xl font-bold text-[#241F24]">
+                    {offer.title}
+                  </h3>
                   <p className="mt-1 text-[#5F5660]">{offer.description}</p>
                 </div>
               </div>
@@ -401,7 +502,8 @@ export default function AboutGomataPage() {
               A Glimpse Into Gomata Vision LLP
             </h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              Step inside our workspace where vision meets action, and relationships are built on trust.
+              Step inside our workspace where vision meets action, and
+              relationships are built on trust.
             </p>
           </div>
 
@@ -420,7 +522,10 @@ export default function AboutGomataPage() {
             </div>
 
             {galleryImages.slice(1, 5).map((img) => (
-              <div key={img.id} className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]">
+              <div
+                key={img.id}
+                className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -448,7 +553,10 @@ export default function AboutGomataPage() {
             </div>
 
             {galleryImages.slice(6, 8).map((img) => (
-              <div key={img.id} className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]">
+              <div
+                key={img.id}
+                className="relative overflow-hidden rounded-2xl shadow-lg group h-full min-h-[200px]"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -476,7 +584,8 @@ export default function AboutGomataPage() {
               Led by Visionaries. Built on Experience.
             </h2>
             <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              A team with decades of combined expertise in infrastructure, land acquisition, finance, and government liaison
+              A team with decades of combined expertise in infrastructure, land
+              acquisition, finance, and government liaison
             </p>
           </div>
 
@@ -511,6 +620,66 @@ export default function AboutGomataPage() {
         </div>
       </section>
 
+      {/* ========== SOCIAL MEDIA SECTION ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
+              Connect With Us
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-[#241F24] mt-4">
+              Follow Gomata Vision LLP
+            </h2>
+            <p className="mt-4 text-lg text-[#5F5660] max-w-3xl mx-auto">
+              Stay updated with our latest projects, real estate insights,
+              company news, and investment opportunities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {socialLinks.map((social) => {
+              const SocialIcon = social.icon;
+
+              return (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit Gomata Vision LLP on ${social.name}`}
+                  className="group relative overflow-hidden rounded-3xl bg-white border border-[#C8A2C8]/30 p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#6105A3] transition-all duration-300"
+                >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#6105A3] to-[#C8A2C8] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-[#6105A3]/10 flex items-center justify-center text-[#6105A3] group-hover:bg-[#6105A3] group-hover:text-white transition-colors duration-300">
+                      <SocialIcon className="w-8 h-8" />
+                    </div>
+
+                    <ExternalLink className="w-5 h-5 text-[#8A7F8B] group-hover:text-[#6105A3] transition-colors duration-300" />
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-bold text-[#241F24]">
+                    {social.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-[#6105A3]">
+                    {social.handle}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-[#5F5660]">
+                    {social.description}
+                  </p>
+
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#6105A3]">
+                    Visit Profile
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* ========== FOUNDER'S NOTE / QUOTE ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto">
@@ -518,17 +687,29 @@ export default function AboutGomataPage() {
             <div className="relative text-center">
               <Quote className="w-14 h-14 text-white mx-auto mb-6 opacity-80" />
               <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
-                "Even a correct decision is 
-                <span className="text-[#FFD700] text-style-Italic"><i> wrong </i></span>  
-                 when it is 
-                <span className="text-[#FFD700] text-style-Italic"><i> too late</i></span>.
+                "Even a correct decision is
+                <span className="text-[#FFD700] text-style-Italic">
+                  <i> wrong </i>
+                </span>
+                when it is
+                <span className="text-[#FFD700] text-style-Italic">
+                  <i> too late</i>
+                </span>
+                .
                 <br />
-                At Gomata Vision LLP, we help you make the 
-                <span className="text-[#FFD700] text-style-Italic"><i> right decision </i></span>
-                  at the 
-                 <span className="text-[#FFD700] text-style-Italic"><i> right time</i></span>."
+                At Gomata Vision LLP, we help you make the
+                <span className="text-[#FFD700] text-style-Italic">
+                  <i> right decision </i>
+                </span>
+                at the
+                <span className="text-[#FFD700] text-style-Italic">
+                  <i> right time</i>
+                </span>
+                ."
               </p>
-              <p className="mt-6 text-white/90 text-xl">— Vikas Koli, Founder</p>
+              <p className="mt-6 text-white/90 text-xl">
+                — Vikas Koli, Founder
+              </p>
             </div>
           </div>
         </div>
