@@ -363,17 +363,7 @@ export default function AboutPage() {
           </div>
 
 
-        <div className="z-20 pt-8 pb-4 flex items-center justify-center w-full">
-          <a
-            href="/home"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
-            <span>Explore Interactive Map</span>
-            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-        </div>
+        
 
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 flex flex-col justify-center">
@@ -480,6 +470,17 @@ export default function AboutPage() {
             </p>
           </div>
 
+<div className="z-20 pt-8 pb-4 flex items-center justify-center w-full">
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
+            <span>Explore Interactive Map</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
           <div className="grid lg:grid-cols-2 gap-10">
             {tps11Cards.map((card, idx) => (
               <div
