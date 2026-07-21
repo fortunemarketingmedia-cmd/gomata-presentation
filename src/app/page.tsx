@@ -13,67 +13,25 @@ import {
   ArrowRight,
   ExternalLink,
   Sparkles,
+  CheckCircle2,
   Award,
-  CheckCircle2
+  Building2,
+  Scale
 } from "lucide-react";
 
-const mainSections = [
-  {
-    id: "vikas-koli",
-    icon: UserCheck,
-    title: "Who is Vikas Koli",
-    category: "Founder & Visionary",
-    description:
-      "Vikas Koli is the Founder of Gomata Vision LLP, bringing decades of combined expertise in land acquisition, infrastructure planning, finance, and government liaisoning across Navi Mumbai and NAINA.",
-    points: [
-      "Pioneer in strategic land acquisitions across NAINA & TPS-11.",
-      "Dedicated to helping investors make the right decision at the right time.",
-      "Proven track record of high-value land development and transparent investor relations."
-    ],
-    gradient: "from-[#6105A3] to-[#8E4585]"
-  },
-  {
-    id: "why-naina-tps11",
-    icon: MapPin,
-    title: "Why NAINA & TPS 11",
-    category: "High-Growth Corridor",
-    description:
-      "NAINA (Navi Mumbai Airport Influence Notified Area) spans over 600+ sq. km. surrounding the upcoming Navi Mumbai International Airport, with TPS-11 as CIDCO's flagship Town Planning Scheme.",
-    points: [
-      "Direct proximity to Atal Setu (MTHL) & International Airport.",
-      "CIDCO-led planned smart city infrastructure with dedicated utility corridors.",
-      "India's highest appreciating real estate growth engine."
-    ],
-    gradient: "from-[#8E4585] to-[#AD5691]"
-  },
-  {
-    id: "why-gomata-vision",
-    icon: ShieldCheck,
-    title: "Why Gomata Vision",
-    category: "Trusted Real Estate Partner",
-    description:
-      "Gomata Vision LLP is built on 100% legal compliance, transparent advisory, and early-mover advantages in prime land parcels, ensuring risk-free and high-reward investments.",
-    points: [
-      "100% clear-title, RERA-compliant land opportunities.",
-      "Deep local network & government liaisoning expertise.",
-      "End-to-end guidance from acquisition to long-term wealth realization."
-    ],
-    gradient: "from-[#AD5691] to-[#6105A3]"
-  }
-];
-
+// What Our Investors Will Gain (3 items required by user)
 const investorGains = [
   {
     icon: TrendingUp,
     title: "A path toward financial freedom",
     description:
-      "Systematic, high-yield land and real estate investments positioned to generate long-term capital security, inflation beat, and true financial independence."
+      "Systematic, high-yield land investments positioned to generate long-term capital security, inflation resistance, and true financial independence."
   },
   {
     icon: Compass,
     title: "A deeper understanding of the power of investment",
     description:
-      "Gain strategic insights into infrastructure-driven appreciation, land entry cycles, and timing markets for maximum multiplier returns."
+      "Gain strategic insights into infrastructure-driven appreciation, land entry cycles, and market timing for maximum multiplier returns."
   },
   {
     icon: Users,
@@ -89,57 +47,56 @@ export default function ObjectivePage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#130721] text-white selection:bg-[#6105A3] selection:text-white relative overflow-hidden">
+    <main className="min-h-screen bg-white text-[#241F24] overflow-hidden">
       <Navbar />
 
-      {/* Ambient Background Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#6105A3]/30 via-[#8E4585]/15 to-transparent blur-[120px] pointer-events-none" />
-      <div className="absolute top-[800px] right-0 w-[500px] h-[500px] bg-[#6105A3]/20 blur-[140px] pointer-events-none" />
-      <div className="absolute top-[1600px] left-0 w-[600px] h-[600px] bg-[#8E4585]/15 blur-[160px] pointer-events-none" />
+      {/* ==================== HERO SECTION (PURPLE GRADIENT THEME) ==================== */}
+      <section className="relative w-full min-h-[85vh] flex flex-col items-center justify-between pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-[#3B0764] via-[#6105A3] to-[#8E4585] text-white overflow-hidden shadow-2xl">
+        {/* Subtle Ambient Pattern Layer */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/15 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#C8A2C8]/20 rounded-full blur-3xl pointer-events-none" />
 
-      {/* ==================== HERO SECTION ==================== */}
-      <section className="relative min-h-screen flex flex-col items-center justify-between pt-36 pb-16 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto">
-        {/* Top Filler Spacing */}
+        {/* Top Spacer */}
         <div />
 
-        {/* Hero Main Content */}
-        <div className="text-center max-w-4xl mx-auto flex flex-col items-center z-10 my-auto">
-          {/* Tag Badge */}
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-[#C8A2C8]/30 bg-white/5 backdrop-blur-md mb-8 shadow-lg shadow-[#6105A3]/10">
+        {/* Hero Content Grid */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center my-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 shadow-lg">
             <Sparkles className="w-4 h-4 text-[#FFD700]" />
-            <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-[#FFD700]">
-              Gomata Vision LLP
+            <span className="text-xs font-bold text-white uppercase tracking-widest">
+              Gomata Vision LLP — Strategic Vision
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.15] mb-6">
+          {/* Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.15] drop-shadow-md">
             Welcome To The Journey Of{" "}
-            <span className="bg-gradient-to-r from-[#FFD700] via-[#C8A2C8] to-[#FFFFFF] bg-clip-text text-transparent">
+            <span className="text-[#FFD700] drop-shadow-sm">
               Wealth Creation
             </span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-base md:text-xl text-white/80 max-w-2xl font-light leading-relaxed mb-10">
+          {/* Subtitle */}
+          <p className="text-lg md:text-2xl text-white/90 font-medium mt-6 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
             Partnering with Gomata Vision LLP to build generational prosperity through strategic land investments in NAINA & TPS-11.
           </p>
 
-          {/* Quick Links */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* Action Button */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={handleOpenMap}
-              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#6105A3] to-[#8E4585] text-white font-bold text-sm md:text-base uppercase tracking-wider shadow-[0_10px_30px_rgba(97,5,163,0.4)] hover:shadow-[0_15px_40px_rgba(97,5,163,0.6)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 border border-white/20 cursor-pointer"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
             >
               <span>Explore Interactive Map</span>
-              <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <Link
               href="/about-gomata"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md text-white font-bold text-sm md:text-base uppercase tracking-wider border border-white/15 hover:border-white/30 transition-all duration-300"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md text-white font-bold text-sm md:text-base uppercase tracking-wider border border-white/20 transition-all duration-300"
             >
-              <span>About Us</span>
+              <span>About Gomata</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -149,7 +106,7 @@ export default function ObjectivePage() {
         <div className="z-20 pt-12 pb-4 flex flex-col items-center justify-center w-full">
           <button
             onClick={handleOpenMap}
-            className="group relative flex items-center gap-4 px-10 py-4 rounded-full bg-[#180828] border-2 border-[#FFD700]/60 hover:border-[#FFD700] text-white shadow-[0_0_35px_rgba(255,215,0,0.25)] hover:shadow-[0_0_50px_rgba(255,215,0,0.45)] hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="group relative flex items-center gap-4 px-10 py-4 rounded-full bg-[#180828] border-2 border-[#FFD700] text-white shadow-[0_0_35px_rgba(255,215,0,0.35)] hover:shadow-[0_0_55px_rgba(255,215,0,0.6)] hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             {/* Pulse Indicator dot */}
             <span className="relative flex h-3.5 w-3.5">
@@ -161,116 +118,354 @@ export default function ObjectivePage() {
               Explore Map
             </span>
 
-            <div className="w-8 h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center text-[#FFD700] group-hover:bg-[#FFD700] group-hover:text-[#180828] transition-all">
+            <div className="w-8 h-8 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] group-hover:bg-[#FFD700] group-hover:text-[#180828] transition-all">
               <ExternalLink className="w-4 h-4" />
             </div>
           </button>
-          <p className="mt-3 text-xs text-white/50 tracking-wider uppercase">
+          <p className="mt-3 text-xs text-white/70 tracking-wider uppercase font-medium">
             Opens full interactive map in new tab
           </p>
         </div>
       </section>
 
-      {/* ==================== CORE SECTIONS (Vikas Koli, NAINA & TPS-11, Gomata Vision) ==================== */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto border-t border-white/10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-          {mainSections.map((sec, idx) => {
-            const IconComp = sec.icon;
-
-            return (
-              <div
-                key={idx}
-                className="group relative rounded-3xl p-8 lg:p-10 bg-white/5 border border-white/15 backdrop-blur-xl hover:border-[#FFD700]/50 hover:bg-white/10 transition-all duration-500 flex flex-col justify-between"
-              >
-                <div>
-                  {/* Top Header */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${sec.gradient} flex items-center justify-center text-white shadow-lg shadow-[#6105A3]/30 group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComp className="w-8 h-8" />
-                    </div>
-                    <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-[#C8A2C8] border border-white/10">
-                      {sec.category}
+      {/* ==================== SEPARATE SECTION 1: WHO IS VIKAS KOLI ==================== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#FAFAFC] border-b border-[#C8A2C8]/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Image / Profile Card */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative group rounded-[32px] overflow-hidden bg-white p-4 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full">
+                <div className="relative h-[420px] w-full rounded-[24px] overflow-hidden">
+                  <Image
+                    src="/images/team/vikas.webp"
+                    alt="Vikas Koli - Founder & Visionary"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#241F24]/85 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFD700] text-[#180828] text-xs font-black uppercase tracking-wider mb-2">
+                      Leadership
                     </span>
+                    <h3 className="text-3xl font-black text-white">Vikas Koli</h3>
+                    <p className="text-[#C8A2C8] font-semibold text-sm">Founder & Visionary</p>
                   </div>
-
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#FFD700] transition-colors">
-                    {sec.title}
-                  </h3>
-
-                  <p className="text-white/75 leading-relaxed text-sm md:text-base font-light mb-8">
-                    {sec.description}
-                  </p>
-                </div>
-
-                {/* Points list */}
-                <div className="pt-6 border-t border-white/10 flex flex-col gap-3">
-                  {sec.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2.5 text-xs md:text-sm text-white/90">
-                      <CheckCircle2 className="w-4 h-4 text-[#FFD700] shrink-0 mt-0.5" />
-                      <span>{pt}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
-            );
-          })}
+            </div>
+
+            {/* Right Details Content */}
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6105A3]/10 text-[#6105A3] w-fit mb-4">
+                <UserCheck className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-widest">
+                  Founder & Visionary
+                </span>
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-black text-[#241F24] tracking-tight leading-tight mb-6">
+                Who is Vikas Koli
+              </h2>
+
+              <p className="text-[#5F5660] text-base md:text-lg leading-relaxed font-medium mb-8">
+                Vikas Koli is the Founder of Gomata Vision LLP. A distinguished civil engineer and real estate strategist with 28+ years of combined experience in infrastructure development, land acquisition, finance, and government liaisoning across Maharashtra.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Former Director at NHAI</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Served as Director at National Highways Authority of India (Maharashtra & Goa), with additional experience at Airports Authority of India and Municipal Corporation of Thane City.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Pioneer in NAINA & TPS-11 Land Acquisition</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Leading strategic land positioning within CIDCO&apos;s NAINA planned smart city zone, securing early-mover advantages for high-value growth.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Helping Investors Make the Right Decision</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Dedicated to guiding investors with complete legal transparency, market timing insights, and robust risk management.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== SEPARATE SECTION 2: WHY NAINA & TPS 11 ==================== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white border-b border-[#C8A2C8]/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Details Content */}
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6105A3]/10 text-[#6105A3] w-fit mb-4">
+                <MapPin className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-widest">
+                  High-Growth Corridor
+                </span>
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-black text-[#241F24] tracking-tight leading-tight mb-6">
+                Why NAINA & TPS 11
+              </h2>
+
+              <p className="text-[#5F5660] text-base md:text-lg leading-relaxed font-medium mb-8">
+                NAINA (Navi Mumbai Airport Influence Notified Area) spans over 600+ sq. km. surrounding the upcoming Navi Mumbai International Airport. CIDCO&apos;s Town Planning Scheme No. 11 (TPS-11) is the central high-appreciation urban growth engine.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAFAFC] border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <Compass className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Direct Atal Setu & Airport Connectivity</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Positioned within 15 minutes of Navi Mumbai International Airport and Atal Setu (MTHL), providing instant access to South Mumbai and main transport hubs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAFAFC] border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <Building2 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">CIDCO-Led Smart Infrastructure</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Featuring planned utility corridors, smart road networks, Aerocity, Medicity, educational hubs, and modern commercial zones.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAFAFC] border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">India&apos;s Fastest Appreciating Real Estate Corridor</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Ground-floor entry in planned town planning schemes yields exponential multiplier returns as infrastructure projects materialize.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Stat Highlight Card */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative group rounded-[32px] overflow-hidden bg-gradient-to-br from-[#6105A3] to-[#8E4585] p-8 text-white shadow-2xl max-w-md w-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                
+                <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFD700] text-[#180828] text-xs font-black uppercase tracking-wider mb-6">
+                  NAINA Overview
+                </span>
+
+                <div className="space-y-6">
+                  <div className="border-b border-white/20 pb-4">
+                    <div className="text-4xl font-black text-[#FFD700]">600+ Sq. Km.</div>
+                    <div className="text-xs text-white/80 uppercase tracking-wider font-semibold mt-1">Planned NAINA Smart City</div>
+                  </div>
+
+                  <div className="border-b border-white/20 pb-4">
+                    <div className="text-4xl font-black text-white">TPS-11</div>
+                    <div className="text-xs text-white/80 uppercase tracking-wider font-semibold mt-1">Town Planning Scheme Core</div>
+                  </div>
+
+                  <div>
+                    <div className="text-4xl font-black text-[#FFD700]">&lt; 15 Mins</div>
+                    <div className="text-xs text-white/80 uppercase tracking-wider font-semibold mt-1">To International Airport</div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <button
+                    onClick={handleOpenMap}
+                    className="w-full py-3.5 rounded-xl bg-white text-[#6105A3] font-bold text-sm uppercase tracking-wider hover:bg-[#FFD700] hover:text-[#180828] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    <span>View Boundary Map</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== SEPARATE SECTION 3: WHY GOMATA VISION ==================== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/10 border-b border-[#C8A2C8]/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Card / Trust Badge */}
+            <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
+              <div className="relative group rounded-[32px] overflow-hidden bg-white p-8 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full">
+                <div className="w-16 h-16 rounded-2xl bg-[#6105A3]/10 text-[#6105A3] flex items-center justify-center mb-6">
+                  <ShieldCheck className="w-8 h-8" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#241F24] mb-4">
+                  100% Legal & Transparent Trust
+                </h3>
+
+                <p className="text-sm text-[#5F5660] leading-relaxed mb-6 font-medium">
+                  We prioritize investor safety above everything. Every plot is backed by verified legal titles and government-aligned documentation.
+                </p>
+
+                <div className="space-y-3 pt-4 border-t border-[#C8A2C8]/20">
+                  <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <span>7/12 Land Record Direct Investor Names</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <span>100% Cheque Transaction Security</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <span>Verified by 3 Independent Law Firms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Details Content */}
+            <div className="lg:col-span-7 flex flex-col justify-center order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6105A3]/10 text-[#6105A3] w-fit mb-4">
+                <ShieldCheck className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-widest">
+                  Trusted Real Estate Partner
+                </span>
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-black text-[#241F24] tracking-tight leading-tight mb-6">
+                Why Gomata Vision
+              </h2>
+
+              <p className="text-[#5F5660] text-base md:text-lg leading-relaxed font-medium mb-8">
+                Gomata Vision LLP is built on absolute legal compliance, transparent advisory, and early-mover advantages in prime land parcels for risk-free, high-reward growth.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <Scale className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Unmatched Legal Due Diligence</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Every land parcel undergoes 3-tier legal scrutiny by top independent law firms to guarantee clear titles and zero encumbrance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">Deep Local & Government Liaisoning Network</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      Our leadership has 25+ years of direct experience navigating complex acquisition and town planning processes with CIDCO and government bodies.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-[#C8A2C8]/25 shadow-sm">
+                  <div className="p-2 rounded-xl bg-[#6105A3]/10 text-[#6105A3] shrink-0 mt-0.5">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#241F24] text-base">End-to-End Investor Guidance</h4>
+                    <p className="text-xs md:text-sm text-[#5F5660] font-medium mt-0.5">
+                      From plot selection to post-purchase documentation and exit strategies, we handle the entire process seamlessly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ==================== WHAT OUR INVESTORS WILL GAIN ==================== */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto border-t border-white/10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-[#FFD700] font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
-            Investor Benefits
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight">
-            What Our Investors Will Gain?
-          </h2>
-          <p className="text-white/70 mt-4 text-base md:text-lg font-light">
-            Empowering every investor with strategic clarity, long-term wealth, and unmatched land growth opportunities.
-          </p>
-        </div>
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-xs md:text-sm">
+              Investor Value
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-[#241F24] mt-3 tracking-tight">
+              What Our Investors Will Gain?
+            </h2>
+            <p className="mt-3 text-[#5F5660] text-base md:text-lg">
+              Unlocking long-term prosperity, financial independence, and high-impact network access.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-          {investorGains.map((gain, idx) => {
-            const GIcon = gain.icon;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {investorGains.map((gain, idx) => {
+              const IconComponent = gain.icon;
+              return (
+                <div
+                  key={idx}
+                  className="relative group overflow-hidden bg-white rounded-3xl p-8 border border-[#C8A2C8]/35 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between"
+                >
+                  <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-[#FFD700] to-[#6105A3] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
-            return (
-              <div
-                key={idx}
-                className="group relative rounded-3xl p-8 lg:p-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/15 backdrop-blur-xl hover:border-[#FFD700] transition-all duration-500 flex flex-col justify-between shadow-xl"
-              >
-                <div>
-                  <div className="w-14 h-14 rounded-2xl bg-[#FFD700]/15 flex items-center justify-center text-[#FFD700] mb-8 group-hover:bg-[#FFD700] group-hover:text-[#180828] transition-colors duration-300">
-                    <GIcon className="w-7 h-7" />
+                  <div>
+                    <div className="p-4 rounded-2xl bg-[#FFD700]/15 text-[#6105A3] w-fit mb-6 group-hover:bg-[#6105A3] group-hover:text-[#FFD700] transition-all duration-300">
+                      <IconComponent className="w-8 h-8" />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-[#241F24] mb-3 leading-snug group-hover:text-[#6105A3] transition-colors">
+                      {gain.title}
+                    </h3>
+
+                    <p className="text-sm text-[#5F5660] leading-relaxed font-medium">
+                      {gain.description}
+                    </p>
                   </div>
-
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug group-hover:text-[#FFD700] transition-colors">
-                    {gain.title}
-                  </h3>
-
-                  <p className="text-white/75 leading-relaxed text-sm md:text-base font-light">
-                    {gain.description}
-                  </p>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ==================== BOTTOM FOOTER CTA ==================== */}
-      <section className="relative py-20 px-6 text-center border-t border-white/10">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Explore the Master Plan?
+      {/* ==================== BOTTOM CALL TO ACTION ==================== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15 border-t border-[#C8A2C8]/30 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-black text-[#241F24] tracking-tight mb-4">
+            Start Your Wealth Creation Journey Today
           </h2>
-          <p className="text-white/70 mb-8 text-base md:text-lg">
-            Launch our interactive GIS presentation map to inspect TPS-11 boundaries, nearby infrastructure projects, and strategic land locations.
+          <p className="text-[#5F5660] text-base md:text-lg mb-8 max-w-2xl mx-auto">
+            Explore our interactive GIS map to inspect TPS-11 boundaries, upcoming airport infrastructure, and prime land plots.
           </p>
           <button
             onClick={handleOpenMap}
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#FFD700] text-[#180828] font-black text-sm md:text-base uppercase tracking-wider shadow-[0_10px_35px_rgba(255,215,0,0.3)] hover:scale-105 hover:bg-white transition-all duration-300 cursor-pointer"
+            className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#6105A3] text-white font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#75386E] hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             <span>Explore Interactive Map</span>
             <ExternalLink className="w-5 h-5" />
