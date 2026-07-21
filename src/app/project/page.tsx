@@ -346,9 +346,8 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
-
-      
-
+      <br />
+      <br />
       {/* ========== WHY NAINA SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">
