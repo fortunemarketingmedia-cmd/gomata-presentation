@@ -347,7 +347,25 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
-     
+      ========== HERO SECTION WITH MISSION/VISION BACKGROUND IMAGE ==========
+      <section className="relative w-full min-h-[100vh] flex flex-col items-center justify-between pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
+       
+
+        {/* ==================== HERO BOTTOM CENTRE BUTTON ==================== */}
+        <div className="z-20 pt-8 pb-4 flex items-center justify-center w-full">
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
+            <span>Explore Interactive Map</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
+      </section>
+
+      
 
       {/* ========== WHY NAINA SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
