@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
   {
     href: "/",
+    label: "Objective",
+  },
+  {
+    href: "/home",
     label: "Home",
   },
   {
@@ -20,7 +24,7 @@ const navLinks = [
   },
   {
     href: "/project",
-    label: "Project",
+    label: "Why NAINA/TPS-11?",
   },
   {
     href: "/near-by-project",
@@ -34,7 +38,19 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
+
+  const handleLogout = async () => {
+    try {
+      const res = await fetch("/api/logout", { method: "POST" });
+      if (res.ok) {
+        router.push("/login");
+      }
+    } catch (err) {
+      console.error("Logout failed:", err);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +96,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-[1000] px-6 pt-5 md:px-8">
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -89,7 +105,7 @@ export default function Navbar() {
           className="group flex items-center gap-4"
           aria-label="Go to home page"
         >
-          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/20 shadow-[0_10px_35px_rgba(142,69,133,0.12)] md:h-24 md:w-24">
+          <div className="relative h-18 w-18 overflow-hidden rounded-full border border-white/20 shadow-[0_10px_35px_rgba(142,69,133,0.12)] md:h-24 md:w-24">
             <Image
               src="/logoo.webp"
               alt="Gomata Logo"
@@ -103,7 +119,7 @@ export default function Navbar() {
 
         {/* Navigation */}
         <div
-          className={`relative isolate hidden items-center rounded-full border p-1.5 transition-all duration-300 md:flex ${
+          className={`relative isolate hidden items-center rounded-full border p-1 transition-all duration-300 md:flex ${
             scrolled
               ? "border-[#C8A2C8]/30 bg-white shadow-[0_10px_40px_rgba(142,69,133,0.08)]"
               : "border-[#C8A2C8] bg-white backdrop-blur-md"
@@ -119,7 +135,7 @@ export default function Navbar() {
                 scroll
                 onClick={() => handleLinkClick(link.href)}
                 aria-current={isActive ? "page" : undefined}
-                className={`relative rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-300 ${
+                className={`relative whitespace-nowrap rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.06em] transition-colors duration-300 md:px-3.5 md:py-2 lg:px-4 lg:py-2.5 lg:text-xs xl:text-sm ${
                   isActive
                     ? "bg-[#6105A3] text-white"
                     : "text-[#241F24]/80 hover:text-[#6105A3]"
@@ -129,6 +145,13 @@ export default function Navbar() {
               </Link>
             );
           })}
+          
+          <button
+            onClick={handleLogout}
+            className="relative whitespace-nowrap rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.06em] text-[#dc2626] transition-colors duration-300 hover:bg-[#dc2626]/10 cursor-pointer md:px-3.5 md:py-2 lg:px-4 lg:py-2.5 lg:text-xs xl:text-sm"
+          >
+            Logout
+          </button>
         </div>
       </div>
     </nav>
