@@ -19,6 +19,7 @@ import {
   Map,
   BadgeCheck,
   ExternalLink,
+  TrainFront,
 } from "lucide-react";
 
 // Company Values Data
@@ -252,13 +253,41 @@ const testimonials = [
   },
 ];
 
+// Investment Models Data
+const investmentModels = [
+  {
+    title: "Land Pooling Scheme",
+    description:
+      "Invest at the land acquisition stage for 1-3 acre parcels alongside Gomata Vision LLP, capturing developer-level margins before infrastructure rollout.",
+  },
+  {
+    title: "Joint Development (JV) Model",
+    description:
+      "Co-invest in high-density commercial, residential, and township projects in CIDCO's NAINA zone with structured profit-sharing ratios.",
+  },
+  {
+    title: "Strategic Land Holding",
+    description:
+      "Acquire 100% clear-title, RERA-compliant land plots with individual 7/12 ownership entries near upcoming expressways and metro lines.",
+  },
+];
+
+// Investor Benefits Data
+const investorBenefits = [
+  "Direct 7/12 Land Ownership Record in your name",
+  "100% Cheque Transactions & Bank Escrow Security",
+  "Legal Due Diligence by 3 Independent Top Law Firms",
+  "High Multiplier Appreciation in CIDCO NAINA/TPS-11 Zone",
+  "Hassle-Free Government Approval & Title Guarantee",
+];
+
 export default function AboutGomataPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
       {/* ========== HERO SECTION WITH BACKGROUND IMAGE ========== */}
-      <section className="relative w-full min-h-[75vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+      <section className="relative w-full min-h-[115vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -269,35 +298,6 @@ export default function AboutGomataPage() {
             unoptimized
             className="object-cover scale-105"
           />
-          {/* 75% Darker Blend Overlay */}
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-
-        {/* Hero Content Grid */}
-
-        <div className="relative z-10 max-w-5xl  mx-auto px-6 text-center opacity-100">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
-            <Building2 className="w-4 h-4 text-[#C8A2C8]" />
-            <span className="text-xs font-bold text-white uppercase tracking-widest">
-              Your Trusted Real Estate Partner
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-            <span className="text-[#FFD700]">Gomata</span> Vision
-          </h1>
-
-          <p className="text-2xl md:text-2xl text-[#FFFFFF] font-semibold mt-6 max-w-3xl mx-auto tracking-wide drop-shadow-sm leading-relaxed">
-            Vision to Build Dreams — Transforming Land into Legacy
-          </p>
-
-          <p className="text-2xl md:text-base text-white/90 mt-4  mx-auto leading-relaxed font-sans font-medium drop-shadow-sm">
-            <b>
-              Mr. Vikas Koli, Founder of Gomata Vision LLP, is a
-              forward-thinking real estate enterprise focused on high-return
-              land development projects within CIDCO's ambitious NAINA plan.
-            </b>
-          </p>
         </div>
       </section>
 
@@ -619,7 +619,139 @@ export default function AboutGomataPage() {
           </div>
         </div>
       </section>
+      
+      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* Current Plot Card */}
+          <div className="mt-12 bg-gradient-to-r from-[#6105A3] to-[#6105A3] rounded-3xl p-8 text-white">
+            <h3 className="text-2xl font-bold">Current Investment Plot (TPS-11)</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <div>
+                <p className="text-sm opacity-80">Village</p>
+                <p className="font-semibold">Vadavali Turmale</p>
+              </div>
+              <div>
+                <p className="text-sm opacity-80">FP No.</p>
+                <p className="font-semibold">TPS 11 - 585</p>
+              </div>
+              <div>
+                <p className="text-sm opacity-80">Size (sq.ft.)</p>
+                <p className="font-semibold">57,522</p>
+              </div>
+              <div>
+                <p className="text-sm opacity-80">Land (Guntha)</p>
+                <p className="font-semibold">133.6</p>
+              </div>
+            </div>
+            <div className="mt-6 pt-4 border-t border-white/20 flex items-center gap-2">
+              <TrainFront className="w-5 h-5" />
+              <p className="text-sm">📍 Located less than 500 meters from the proposed MMC Metro Station</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* ========== INVESTMENT STRUCTURE ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
+              Wealth Creation
+            </span>
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">
+              Developer-Level Profit Participation
+            </h2>
+            <p className="mt-4 text-lg text-[#5F5660] mx-auto">
+              Land Pooling Concept by Gomata Vision LLP – Invest at the land acquisition stage
+              where maximum value creation begins.
+            </p>
+          </div>
+
+          {/* Investment Card */}
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#6105A3] p-8 md:p-10 shadow-xl">
+            <h3 className="text-3xl font-bold text-center text-[#241F24]">
+              Total Investment: ₹39,70,000*
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              <div className="space-y-4">
+                <div className="border-b pb-3">
+                  <p className="font-bold text-[#6105A3]">To Landowner</p>
+                  <p className="text-2xl font-bold text-black">₹20,00,000</p>
+                  <p className="text-sm text-[#5F5660]">+ ₹2,00,000 (SD + Reg + Legal)</p>
+                </div>
+                <div>
+                  <p className="font-bold text-[#6105A3]">To Gomata Vision LLP</p>
+                  <p className="text-2xl font-bold text-black">₹15,00,000</p>
+                  <p className="text-sm text-[#5F5660]">+ ₹2,70,000 (18% GST)</p>
+                </div>
+              </div>
+              <div className="bg-[#6105A3] p-5 rounded-xl text-white">
+                <p className="font-semibold text-white">Payment Schedule (100% Cheque):</p>
+                <ul className="mt-3 space-y-2 text-sm text-white/90">
+                  <li>1️⃣ Booking (Immediate): ₹1,18,000 (incl. GST)</li>
+                  <li>2️⃣ 7 days later: ₹5,90,000 (incl. GST)</li>
+                  <li>3️⃣ Balance at Registration: ₹32,62,000</li>
+                </ul>
+                <div className="mt-4 p-3 bg-white/10 rounded-lg">
+                  <p className="text-xs font-semibold text-white">Bank Details:</p>
+                  <p className="text-xs text-white/90">Gomata Vision LLP, HDFC Bank, Sec 15 Belapur</p>
+                  <p className="text-xs text-white/90">A/c: 50200106979590 | IFSC: HDFC0002860</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 text-center text-sm text-[#5F5660] border-t border-[#C8A2C8]/20 pt-6">
+              ✅ Your name appears on the 7/12 ownership document – most secure investment module
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== INVESTMENT MODELS & BENEFITS ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            <div className="flex flex-col h-full">
+              <h2 className="text-3xl text-center font-black text-[#241F24]">Unique Investment Models</h2>
+              <div className="mt-8 space-y-4 flex-1 flex flex-col justify-between">
+                {investmentModels.map((model, idx) => (
+                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30 flex-1 flex flex-col justify-center">
+                    <h3 className="font-bold text-[#6105A3]">{model.title}</h3>
+                    <p className="text-[#5F5660] text-sm md:text-base mt-1">{model.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col h-full">
+              <h2 className="text-3xl font-black text-center text-[#241F24]">Investor Benefits</h2>
+              <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white flex-1 flex flex-col justify-between">
+                <ul className="space-y-5">
+                  {investorBenefits.map((benefit, idx) => (
+                    <li key={idx} className="flex gap-3 items-center">
+                      <BadgeCheck className="w-6 h-6 text-[#C8A2C8] flex-shrink-0" />
+                      <span className="text-sm md:text-base">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8 pt-6 border-t border-white/20 text-center">
+                  <p className="font-bold text-[#FFFFFF] text-lg">Planned Exit Strategy</p>
+                  <p className="text-sm opacity-90 mt-1">Resale • Rental • JV Models</p>
+                  <p className="text-xs text-[#FFFFFF] mt-3 leading-relaxed opacity-75">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="branding-banner-section flex justify-center py-10">
+        <Image
+          src="/images/banner/banner.webp"
+          alt="Branding Banner"
+          width={1200}
+          height={250}
+          className="branding-banner-image w-[85%] h-auto rounded-2xl object-contain"
+        />
+      </section>
       {/* ========== SOCIAL MEDIA SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15">
         <div className="max-w-7xl mx-auto">

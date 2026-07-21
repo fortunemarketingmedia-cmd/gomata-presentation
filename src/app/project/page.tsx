@@ -33,6 +33,7 @@ import {
   Factory,
   Trees,
   LayoutGrid,
+  ExternalLink,
 } from "lucide-react";
 
 // Core Values Data
@@ -347,11 +348,14 @@ export default function AboutPage() {
       <Navbar />
 
       {/* ========== HERO SECTION WITH MISSION/VISION BACKGROUND IMAGE ========== */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
+      <section className="relative w-full min-h-[100vh] flex flex-col items-center justify-between pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden bg-gradient-to-br from-[#6105A3] via-[#3C0366] to-[#241F24]">
         {/* Background Image Layer */}
         <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] mix-blend-overlay pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center">
+        {/* Top Spacer */}
+        <div />
+
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 z-10 text-center my-auto">
           {/* Gomata Vision LLP Title */}
           <div className="mb-4">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
@@ -362,93 +366,22 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
 
-      {/* ========== YOUTUBE VIDEOS SECTION ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">Watch & Learn</span>
-            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Voices That Matter • Real Experiences</h2>
-            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
-              Hear directly from our leadership about this transformative opportunity
-            </p>
-          </div>
-          {/* 2-COLUMN GRID FOR VIDEOS & CARDS */}
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
-            {/* ROW 1: VIDEOS */}
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/AXsb1fpaWng" 
-                title="World-Class EduCity in New Mumbai"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/cL4f3nYfx-8?si=iKBXR16XauGDBTUU" 
-                title="Aerocity & EduCity in Mumbai 3.0"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            
-
-            {/* ROW 2: VIDEOS */}
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
-                title="Navi Mumbai Smart City Infrastructure (Dummy)"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/zBb1cJqPCsc" 
-                title="Mr. Madhav Shenoy - Testimonial"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+        {/* ==================== HERO BOTTOM CENTRE BUTTON ==================== */}
+        <div className="z-20 pt-8 pb-4 flex items-center justify-center w-full">
+          <a
+            href="/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
+            <span>Explore Interactive Map</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
         </div>
       </section>
 
-      {/* ========== PROJECT GALLERY IMAGES ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
-              <Image
-                src="/images/project/img1.webp"
-                alt="Gomata Vision LLP Project Development Phase 1"
-                width={900}
-                height={600}
-                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
-            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
-              <Image
-                src="/images/project/img2.webp"
-                alt="Gomata Vision LLP Project Development Phase 2"
-                width={900}
-                height={600}
-                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ========== WHY NAINA SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
@@ -487,6 +420,69 @@ export default function AboutPage() {
         </div>
       </section>
 
+{/* ========== YOUTUBE VIDEOS SECTION ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">Watch & Learn</span>
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Voices That Matter</h2>
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
+              Hear directly from our leadership about this transformative opportunity
+            </p>
+          </div>
+          {/* 2-COLUMN GRID FOR VIDEOS & CARDS */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            {/* ROW 1: VIDEOS */}
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/AXsb1fpaWng" 
+                title="World-Class EduCity in New Mumbai"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/cL4f3nYfx-8?si=iKBXR16XauGDBTUU" 
+                title="Aerocity & EduCity in Mumbai 3.0"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== PROJECT GALLERY IMAGES ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
+              <Image
+                src="/images/project/img1.webp"
+                alt="Gomata Vision LLP Project Development Phase 1"
+                width={900}
+                height={600}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-[32px] overflow-hidden shadow-2xl border border-[#C8A2C8]/30 bg-white">
+              <Image
+                src="/images/project/img2.webp"
+                alt="Gomata Vision LLP Project Development Phase 2"
+                width={900}
+                height={600}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* ========== WHY TPS-11 SECTION ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white overflow-hidden">
         {/* Background Image Overlay */}
@@ -547,136 +543,44 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-
-          {/* Current Plot Card */}
-          <div className="mt-12 bg-gradient-to-r from-[#6105A3] to-[#6105A3] rounded-3xl p-8 text-white">
-            <h3 className="text-2xl font-bold">Current Investment Plot (TPS-11)</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-              <div>
-                <p className="text-sm opacity-80">Village</p>
-                <p className="font-semibold">Vadavali Turmale</p>
-              </div>
-              <div>
-                <p className="text-sm opacity-80">FP No.</p>
-                <p className="font-semibold">TPS 11 - 585</p>
-              </div>
-              <div>
-                <p className="text-sm opacity-80">Size (sq.ft.)</p>
-                <p className="font-semibold">57,522</p>
-              </div>
-              <div>
-                <p className="text-sm opacity-80">Land (Guntha)</p>
-                <p className="font-semibold">133.6</p>
-              </div>
-            </div>
-            <div className="mt-6 pt-4 border-t border-white/20 flex items-center gap-2">
-              <TrainFront className="w-5 h-5" />
-              <p className="text-sm">📍 Located less than 500 meters from the proposed MMC Metro Station</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== INVESTMENT STRUCTURE ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
+{/* ========== YOUTUBE VIDEOS SECTION ========== */}
+      <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">
-              Wealth Creation
-            </span>
-            <h2 className="mt-4 text-5xl font-black text-[#241F24]">
-              Developer-Level Profit Participation
-            </h2>
-            <p className="mt-4 text-lg text-[#5F5660] mx-auto">
-              Land Pooling Concept by Gomata Vision LLP – Invest at the land acquisition stage
-              where maximum value creation begins.
+            <span className="text-[#6105A3] font-semibold uppercase tracking-[0.2em] text-2xl">Testimonials</span>
+            <h2 className="mt-4 text-5xl font-black text-[#241F24]">Real Experiences</h2>
+            <p className="mt-4 text-lg text-[#5F5660]  mx-auto">
+              Hear our testimonials from satisfied investors about this transformative opportunity
             </p>
           </div>
-
-          {/* Investment Card */}
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-[#6105A3] p-8 md:p-10 shadow-xl">
-            <h3 className="text-3xl font-bold text-center text-[#241F24]">
-              Total Investment: ₹39,70,000*
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
-              <div className="space-y-4">
-                <div className="border-b pb-3">
-                  <p className="font-bold text-[#6105A3]">To Landowner</p>
-                  <p className="text-2xl font-bold text-black">₹20,00,000</p>
-                  <p className="text-sm text-[#5F5660]">+ ₹2,00,000 (SD + Reg + Legal)</p>
-                </div>
-                <div>
-                  <p className="font-bold text-[#6105A3]">To Gomata Vision LLP</p>
-                  <p className="text-2xl font-bold text-black">₹15,00,000</p>
-                  <p className="text-sm text-[#5F5660]">+ ₹2,70,000 (18% GST)</p>
-                </div>
-              </div>
-              <div className="bg-[#6105A3] p-5 rounded-xl text-white">
-                <p className="font-semibold text-white">Payment Schedule (100% Cheque):</p>
-                <ul className="mt-3 space-y-2 text-sm text-white/90">
-                  <li>1️⃣ Booking (Immediate): ₹1,18,000 (incl. GST)</li>
-                  <li>2️⃣ 7 days later: ₹5,90,000 (incl. GST)</li>
-                  <li>3️⃣ Balance at Registration: ₹32,62,000</li>
-                </ul>
-                <div className="mt-4 p-3 bg-white/10 rounded-lg">
-                  <p className="text-xs font-semibold text-white">Bank Details:</p>
-                  <p className="text-xs text-white/90">Gomata Vision LLP, HDFC Bank, Sec 15 Belapur</p>
-                  <p className="text-xs text-white/90">A/c: 50200106979590 | IFSC: HDFC0002860</p>
-                </div>
-              </div>
+          {/* 2-COLUMN GRID FOR VIDEOS & CARDS */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            {/* ROW 2: VIDEOS */}
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/N6AG1g4DBO0" 
+                title="Navi Mumbai Smart City Infrastructure (Dummy)"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-            <div className="mt-8 text-center text-sm text-[#5F5660] border-t border-[#C8A2C8]/20 pt-6">
-              ✅ Your name appears on the 7/12 ownership document – most secure investment module
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-white border border-[#C8A2C8]/30">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/zBb1cJqPCsc" 
+                title="Mr. Madhav Shenoy - Testimonial"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
-
-      {/* ========== INVESTMENT MODELS & BENEFITS ========== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/15">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
-            <div className="flex flex-col h-full">
-              <h2 className="text-3xl text-center font-black text-[#241F24]">Unique Investment Models</h2>
-              <div className="mt-8 space-y-4 flex-1 flex flex-col justify-between">
-                {investmentModels.map((model, idx) => (
-                  <div key={idx} className="bg-white rounded-xl p-5 shadow-md border border-[#C8A2C8]/30 flex-1 flex flex-col justify-center">
-                    <h3 className="font-bold text-[#6105A3]">{model.title}</h3>
-                    <p className="text-[#5F5660] text-sm md:text-base mt-1">{model.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col h-full">
-              <h2 className="text-3xl font-black text-center text-[#241F24]">Investor Benefits</h2>
-              <div className="mt-8 bg-[#6105A3] rounded-3xl p-8 shadow-xl text-white flex-1 flex flex-col justify-between">
-                <ul className="space-y-5">
-                  {investorBenefits.map((benefit, idx) => (
-                    <li key={idx} className="flex gap-3 items-center">
-                      <LucideBadgeCheck className="w-6 h-6 text-[#C8A2C8] flex-shrink-0" />
-                      <span className="text-sm md:text-base">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 pt-6 border-t border-white/20 text-center">
-                  <p className="font-bold text-[#FFFFFF] text-lg">Planned Exit Strategy</p>
-                  <p className="text-sm opacity-90 mt-1">Resale • Rental • JV Models</p>
-                  <p className="text-xs text-[#FFFFFF] mt-3 leading-relaxed opacity-75">Exit before sale deed or after CC with 12% p.a. interest on net balance</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="branding-banner-section flex justify-center py-10">
-        <Image
-          src="/images/banner/banner.webp"
-          alt="Branding Banner"
-          width={1200}
-          height={250}
-          className="branding-banner-image w-[85%] h-auto rounded-2xl object-contain"
-        />
-      </section>
+      </div>
+</section>
       
       {/* ========== QUOTE + CTA ========== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24">

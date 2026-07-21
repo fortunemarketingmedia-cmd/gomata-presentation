@@ -51,7 +51,7 @@ export default function ObjectivePage() {
       <Navbar />
 
       {/* ==================== HERO SECTION (PURPLE GRADIENT THEME) ==================== */}
-      <section className="relative w-full min-h-[85vh] flex flex-col items-center justify-between pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-[#3B0764] via-[#6105A3] to-[#8E4585] text-white overflow-hidden shadow-2xl">
+      <section className="relative w-full min-h-[100vh] flex flex-col items-center justify-between pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-[#3B0764] via-[#6105A3] to-[#8E4585] text-white overflow-hidden shadow-2xl">
         {/* Subtle Ambient Pattern Layer */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/15 via-transparent to-transparent pointer-events-none" />
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#C8A2C8]/20 rounded-full blur-3xl pointer-events-none" />
@@ -61,13 +61,7 @@ export default function ObjectivePage() {
 
         {/* Hero Content Grid */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center my-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 shadow-lg">
-            <Sparkles className="w-4 h-4 text-[#FFD700]" />
-            <span className="text-xs font-bold text-white uppercase tracking-widest">
-              Gomata Vision LLP — Strategic Vision
-            </span>
-          </div>
+          
 
           {/* Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.15] drop-shadow-md">
@@ -81,61 +75,17 @@ export default function ObjectivePage() {
           <p className="text-lg md:text-2xl text-white/90 font-medium mt-6 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
             Partnering with Gomata Vision LLP to build generational prosperity through strategic land investments in NAINA & TPS-11.
           </p>
-
-          {/* Action Button */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={handleOpenMap}
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-[#6105A3] font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#FFD700] hover:text-[#180828] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
-            >
-              <span>Explore Interactive Map</span>
-              <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <Link
-              href="/about-gomata"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md text-white font-bold text-sm md:text-base uppercase tracking-wider border border-white/20 transition-all duration-300"
-            >
-              <span>About Gomata</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-
-        {/* ==================== HERO BOTTOM CENTRE BUTTON ==================== */}
-        <div className="z-20 pt-12 pb-4 flex flex-col items-center justify-center w-full">
-          <button
-            onClick={handleOpenMap}
-            className="group relative flex items-center gap-4 px-10 py-4 rounded-full bg-[#180828] border-2 border-[#FFD700] text-white shadow-[0_0_35px_rgba(255,215,0,0.35)] hover:shadow-[0_0_55px_rgba(255,215,0,0.6)] hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
-            {/* Pulse Indicator dot */}
-            <span className="relative flex h-3.5 w-3.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFD700] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#FFD700]"></span>
-            </span>
-
-            <span className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-white group-hover:text-[#FFD700] transition-colors">
-              Explore Map
-            </span>
-
-            <div className="w-8 h-8 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] group-hover:bg-[#FFD700] group-hover:text-[#180828] transition-all">
-              <ExternalLink className="w-4 h-4" />
-            </div>
-          </button>
-          <p className="mt-3 text-xs text-white/70 tracking-wider uppercase font-medium">
-            Opens full interactive map in new tab
-          </p>
         </div>
       </section>
 
       {/* ==================== SEPARATE SECTION 1: WHO IS VIKAS KOLI ==================== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#FAFAFC] border-b border-[#C8A2C8]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             {/* Left Image / Profile Card */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative group rounded-[32px] overflow-hidden bg-white p-4 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full">
-                <div className="relative h-[420px] w-full rounded-[24px] overflow-hidden">
+            <div className="lg:col-span-5 flex justify-center h-full">
+              <div className="relative group rounded-[32px] overflow-hidden bg-white p-4 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full h-full flex flex-col">
+                <div className="relative min-h-[480px] lg:min-h-0 h-full w-full rounded-[24px] overflow-hidden">
                   <Image
                     src="/images/team/vikas.webp"
                     alt="Vikas Koli - Founder & Visionary"
@@ -216,7 +166,7 @@ export default function ObjectivePage() {
       {/* ==================== SEPARATE SECTION 2: WHY NAINA & TPS 11 ==================== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-white border-b border-[#C8A2C8]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             {/* Left Details Content */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6105A3]/10 text-[#6105A3] w-fit mb-4">
@@ -274,15 +224,15 @@ export default function ObjectivePage() {
             </div>
 
             {/* Right Stat Highlight Card */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative group rounded-[32px] overflow-hidden bg-gradient-to-br from-[#6105A3] to-[#8E4585] p-8 text-white shadow-2xl max-w-md w-full">
+            <div className="lg:col-span-5 flex justify-center h-full">
+              <div className="relative group rounded-[32px] overflow-hidden bg-gradient-to-br from-[#6105A3] to-[#8E4585] p-8 text-white shadow-2xl max-w-md w-full h-full flex flex-col justify-between">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                 
-                <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFD700] text-[#180828] text-xs font-black uppercase tracking-wider mb-6">
+                <span className="inline-block px-3.5 py-1 rounded-full bg-[#FFD700] text-[#180828] text-xs font-black uppercase tracking-wider mb-6 w-fit">
                   NAINA Overview
                 </span>
 
-                <div className="space-y-6">
+                <div className="space-y-6 my-auto">
                   <div className="border-b border-white/20 pb-4">
                     <div className="text-4xl font-black text-[#FFD700]">600+ Sq. Km.</div>
                     <div className="text-xs text-white/80 uppercase tracking-wider font-semibold mt-1">Planned NAINA Smart City</div>
@@ -317,34 +267,70 @@ export default function ObjectivePage() {
       {/* ==================== SEPARATE SECTION 3: WHY GOMATA VISION ==================== */}
       <section className="relative px-6 md:px-16 lg:px-24 py-24 bg-[#C8A2C8]/10 border-b border-[#C8A2C8]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             {/* Left Card / Trust Badge */}
-            <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-              <div className="relative group rounded-[32px] overflow-hidden bg-white p-8 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full">
-                <div className="w-16 h-16 rounded-2xl bg-[#6105A3]/10 text-[#6105A3] flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-8 h-8" />
+            <div className="lg:col-span-5 flex justify-center order-2 lg:order-1 h-full">
+              <div className="relative group rounded-[32px] overflow-hidden bg-white p-8 border border-[#C8A2C8]/35 shadow-2xl max-w-md w-full h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-[#6105A3]/10 text-[#6105A3] flex items-center justify-center">
+                      <ShieldCheck className="w-8 h-8" />
+                    </div>
+                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#FFD700]/20 text-[#6105A3] uppercase tracking-wider">
+                      Guaranteed Security
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#241F24] mb-3">
+                    100% Legal & Transparent Trust
+                  </h3>
+
+                  <p className="text-sm text-[#5F5660] leading-relaxed mb-6 font-medium">
+                    We prioritize investor safety above everything. Every plot is backed by verified legal titles, 100% cheque transactions, and government-aligned documentation to guarantee zero-risk land ownership.
+                  </p>
+
+                  {/* Core Trust Framework Features */}
+                  <div className="space-y-3 mb-6">
+                    <div className="p-3.5 rounded-xl bg-[#FAFAFC] border border-[#C8A2C8]/20">
+                      <h4 className="text-xs font-bold text-[#6105A3] uppercase tracking-wider mb-1">
+                        CIDCO & RERA Compliant
+                      </h4>
+                      <p className="text-xs text-[#5F5660] font-medium leading-relaxed">
+                        Fully aligned with CIDCO Town Planning Scheme frameworks and government urban development norms.
+                      </p>
+                    </div>
+
+                    <div className="p-3.5 rounded-xl bg-[#FAFAFC] border border-[#C8A2C8]/20">
+                      <h4 className="text-xs font-bold text-[#6105A3] uppercase tracking-wider mb-1">
+                        Bank Escrow Audit Trail
+                      </h4>
+                      <p className="text-xs text-[#5F5660] font-medium leading-relaxed">
+                        Structured transfers executed via HDFC Bank escrow with complete GST tax invoices.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#241F24] mb-4">
-                  100% Legal & Transparent Trust
-                </h3>
-
-                <p className="text-sm text-[#5F5660] leading-relaxed mb-6 font-medium">
-                  We prioritize investor safety above everything. Every plot is backed by verified legal titles and government-aligned documentation.
-                </p>
-
-                <div className="space-y-3 pt-4 border-t border-[#C8A2C8]/20">
+                <div className="space-y-2.5 pt-5 border-t border-[#C8A2C8]/20 mt-auto">
                   <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
-                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3] shrink-0" />
                     <span>7/12 Land Record Direct Investor Names</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
-                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3] shrink-0" />
                     <span>100% Cheque Transaction Security</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
-                    <CheckCircle2 className="w-4 h-4 text-[#6105A3]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3] shrink-0" />
                     <span>Verified by 3 Independent Law Firms</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3] shrink-0" />
+                    <span>Zero Encumbrance Title Guarantee</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#241F24] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#6105A3] shrink-0" />
+                    <span>Flexible Resale & JV Exit Options</span>
                   </div>
                 </div>
               </div>
@@ -451,25 +437,6 @@ export default function ObjectivePage() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* ==================== BOTTOM CALL TO ACTION ==================== */}
-      <section className="relative px-6 md:px-16 lg:px-24 py-20 bg-[#C8A2C8]/15 border-t border-[#C8A2C8]/30 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black text-[#241F24] tracking-tight mb-4">
-            Start Your Wealth Creation Journey Today
-          </h2>
-          <p className="text-[#5F5660] text-base md:text-lg mb-8 max-w-2xl mx-auto">
-            Explore our interactive GIS map to inspect TPS-11 boundaries, upcoming airport infrastructure, and prime land plots.
-          </p>
-          <button
-            onClick={handleOpenMap}
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#6105A3] text-white font-extrabold text-sm md:text-base uppercase tracking-wider shadow-xl hover:bg-[#75386E] hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
-            <span>Explore Interactive Map</span>
-            <ExternalLink className="w-5 h-5" />
-          </button>
         </div>
       </section>
     </main>
