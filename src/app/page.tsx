@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import IntroGate from "@/components/IntroGate";
 import { 
   Target, 
   TrendingUp, 
@@ -68,8 +67,7 @@ export default function ObjectivePage() {
   };
 
   return (
-    <IntroGate>
-      <main className="min-h-screen bg-[#130721] text-white selection:bg-[#6105A3] selection:text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#130721] text-white selection:bg-[#6105A3] selection:text-white relative overflow-hidden">
         <Navbar />
 
         {/* Ambient Background Glows */}
@@ -255,6 +253,5 @@ export default function ObjectivePage() {
           </div>
         </section>
       </main>
-    </IntroGate>
   );
 }

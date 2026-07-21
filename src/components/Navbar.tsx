@@ -11,21 +11,18 @@ const navLinks = [
     label: "Objective",
   },
   {
-    href: "/home",
-    label: "Home",
-  },
-  {
     href: "/journey",
     label: "Journey",
+  },
+    {
+    href: "/project",
+    label: "Why NAINA/TPS-11?",
   },
   {
     href: "/about-gomata",
     label: "About Gomata",
   },
-  {
-    href: "/project",
-    label: "Why NAINA/TPS-11?",
-  },
+
   {
     href: "/near-by-project",
     label: "Near by Projects",
