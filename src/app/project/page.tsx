@@ -524,6 +524,7 @@ export default function AboutPage() {
             ))}
           </div>
 {/* ========== YOUTUBE VIDEOS SECTION ========== */}
+<br />
       <section className="relative px-6 md:px-16 lg:px-24 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
